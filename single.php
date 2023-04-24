@@ -1,17 +1,7 @@
 <?php
-
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage FIA
- * @since 1.0.0
- */
-
 get_header();
 ?>
+
 <section class="blogDetailSection">
 	<div class="wrapper">
 		<?php
@@ -41,5 +31,6 @@ get_header();
 		?>
 	</div>
 </section>
+
 <?php
 get_footer();

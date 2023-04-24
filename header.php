@@ -1,211 +1,104 @@
-<?php
+<?php 
+  $ua     = htmlentities($_SERVER['HTTP_USER_AGENT'], ENT_QUOTES, 'UTF-8');
+  $bot    = preg_match('/bot|crawl|slurp|spider|mediapartners/i', $ua);
+  $ie     = preg_match('~MSIE|Internet Explorer~i', $ua) || (strpos($ua, 'Trident/7.0; rv:11.0') !== false);
+  $safari = strpos($ua, 'Safari') && !strpos($ua, 'Chrome');
+  $edge   = strpos($ua, 'Edge');
+  $iPod   = stripos($ua,"iPod");
+  $iPhone = stripos($ua,"iPhone");
+  $iPad   = stripos($ua,"iPad");
+  $chrome = preg_match('/(Chrome|CriOS)\//i', $ua)
+    && !preg_match('/(Aviator|ChromePlus|coc_|Dragon|Edge|Flock|Iron|Kinza|Maxthon|MxNitro|Nichrome|OPR|Perk|Rockmelt|Seznam|Sleipnir|Spark|UBrowser|Vivaldi|WebExplorer|YaBrowser)/i', $ua);
 
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage FIA
- * @since 1.0.0
- */
+  // $rootClassList = ['no-grid', 'no-css-var'];
+  $rootClassList = [];
+
+  if ($bot) array_push($rootClassList, 'bot');
+  if ($iPod || $iPhone || $iPad) array_push($rootClassList, 'ios');
+  if ($ie) array_push($rootClassList, 'ie mouse no-grid no-grid-contents no-css-var');
+  if ($safari) array_push($rootClassList, 'apple');
+  if ($edge) array_push($rootClassList, 'edge');
+  if ($chrome) array_push($rootClassList, 'chrome');
+  
+  $rootClassName = implode(' ', $rootClassList);
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> <?php if ($rootClassName): ?>class="<?php echo $rootClassName; ?>"<?php endif; ?>>
 
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<?php wp_head(); ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+
+
+  <!-- <link rel='https://api.w.org/' href='<?php //echo get_site_url(); ?>/wp-json/' /> -->
+
+  <!-- Tenon font -->
+  <!-- <link rel="stylesheet" href="https://use.typekit.net/nfd8ydl.css"> -->
+
+  <!-- Tenon font -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;700;800&display=swap" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="<?php //echo get_template_directory_uri() ?>/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php //echo get_template_directory_uri() ?>/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php //echo get_template_directory_uri() ?>/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?php //echo get_template_directory_uri() ?>/assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="<?php //echo get_template_directory_uri() ?>/assets/favicon/safari-pinned-tab.svg" color="#db402b">
+  <meta name="msapplication-TileColor" content="#db402b">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <?php 
+    wp_head();
+    global $post;
+    global $template;
+    $post_slug = $post ? $post->post_name : '';
+    $template_name = basename($template);
+    
+    $queryObject = get_queried_object();
+
+    if (!!$template_name) $template_name = preg_replace('/\.php$/', '', $template_name);
+    if (isset($queryObject) && property_exists($queryObject, 'slug')) {
+      $queryObject_slug = get_queried_object()->slug;
+      $page_name = $queryObject_slug ? $queryObject_slug : 'category';
+    } else {
+      $page_name = $post_slug;
+    }
+
+    if (is_front_page()) $page_name = 'front-page';
+    // if (is_shop()) $page_name = 'shop';
+    // if (is_search()) $page_name = 'search';
+  ?>
+<!-- 
+<link rel="preload" href="<?php //echo get_stylesheet_directory_uri(); ?>/assets/fonts/AvenirNext/AvenirNext-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php //echo get_stylesheet_directory_uri(); ?>/assets/fonts/AvenirNext/AvenirNext-DemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="<?php //echo get_stylesheet_directory_uri(); ?>/assets/fonts/AvenirNext/AvenirNext-Bold.woff2" as="font" type="font/woff2" crossorigin> -->
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- <script src="https://kit.fontawesome.com/29c8d0bb71.js" crossorigin="anonymous"></script> -->
+
 </head>
 
-<body>
-	<!--Start header section -->
-	<section class="headerSectionMain">
-		<div class="headerSection uppercase">
-			<div class="wrapper">
-				<div class="LogoMenuMain">
-					<div class="headerlogo ib">
-						<a href="<?php echo get_home_url(); ?>"><img src=" <?php the_field("gen_site_logo", "option"); ?>" alt="">
-						</a>
-					</div>
-					<div class="MenuMain text-right ib">
+<body 
+  <?php body_class(); ?> 
+  data-template="<?php echo $template_name; ?>" 
+  data-page="<?php echo $page_name; ?>"
+  data-site-title="<?php echo bloginfo('title'); ?>"
+  <?php if (isset($queryObject_slug)): ?>data-term="<?php echo $queryObject_slug; ?>"<?php endif; ?>
+  id="site-body"
+>
 
-						<div class="menubar custom-menu-primary">
+<?php include get_template_directory() . '/partials/symbols.php'; ?>
 
-							<?php if (have_rows('gen_menu', 'option')) { ?>
-								<div class="menuParent">
-									<div class="navbar noListStyle">
-										<ul>
-											<?php
-											while (have_rows('gen_menu', 'option')) {
-												the_row();
-												$gen_menu_page = get_sub_field('gen_menu_page');
-												$row_index = get_row_index();
-												$is_mega_menu = get_sub_field('is_mega_menu');
-
-												if (have_rows('gen_menu_page_submenu') && $is_mega_menu == 'No') {
-											?>
-													<li class="childmenu Megachildmenu"><a href="<?php echo $gen_menu_page['url'] ?>" class="<?php echo ($row_index == 0) ? 'active' : ''; ?>">
-															<?php echo $gen_menu_page['title']; ?>
-															<span class="downAngle"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
-																	<path d="M20.9702 1.05039L11.3702 10.6504L1.77021 1.05039" stroke="#64D855" stroke-width="1.6" stroke-linecap="round" />
-																</svg></span></a>
-
-														<ul class="dropdown-menu dropdown-menu-icon dropdown-mob">
-															<?php
-															while (have_rows('gen_menu_page_submenu')) {
-																the_row();
-																$gen_menu_page_submenu_page = get_sub_field('gen_menu_page_submenu_page');
-															?>
-																<li class=" ">
-																	<a href="<?php echo $gen_menu_page_submenu_page['url']; ?>"><?php echo $gen_menu_page_submenu_page['title']; ?></a>
-																</li>
-															<?php
-															}
-															?>
-														</ul>
-													<?php
-												} else if (have_rows('gen_menu_page_submenu') && $is_mega_menu == 'Yes') {
-													?>
-													<li class="childmenu Megachildmenu childmenu-Mob">
-														<a href="javascript:void(0);"><?php echo $gen_menu_page['title']; ?></a>
-														<span class="childExpand"><i></i><i></i></span>
-														<ul class="Mega-dropdown-menu dropdown-menu-icon dropdown-mob">
-															<li>
-																<div class="wrapper">
-																	<div class="MegaMenuInner">
-																		<span class="CloseIcon"><img src="<?php echo get_template_directory_uri(); ?>/images/cress-icon.png"></span>
-																		<ul class="sublevel sublevelTop">
-																			<?php
-																			while (have_rows('gen_menu_page_submenu')) {
-																				the_row();
-																				$gen_menu_page_submenu_page = get_sub_field('gen_menu_page_submenu_page');
-																			?>
-																				<li class="item-has-children childmenu-Mob">
-																					<a href="<?php echo $gen_menu_page_submenu_page['url']; ?>"><?php echo $gen_menu_page_submenu_page['title']; ?> </a>
-																					<?php if (have_rows('gen_menu_page_submenu_inner')) {  ?>
-																						<ul class="dropdown-menu-Inner dropdown-menu-icon-Inner sublevel sublevelInner dropdown-menu-icon-Inner dropdown-mob">
-																							<?php
-																							while (have_rows('gen_menu_page_submenu_inner')) {
-																								the_row();
-																								$inner_submenu_page = get_sub_field('inner_submenu_page');
-																								if (!empty($inner_submenu_page)) {
-																									$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($inner_submenu_page->ID), 'medium');
-
-																							?>
-																									<li class="<?php echo (!empty($featured_image)) ?'child-item-has-children childmenu-Mob' :'' ;?>">
-																										<a href="<?php echo get_permalink($inner_submenu_page->ID); ?>"><?php echo get_the_title($inner_submenu_page->ID); ?></a>
-																										
-																										<?php if(!empty($featured_image)) { 
-																										?>
-																											<ul class="HeadPostBoxMain child-dropdown-menu-icon-Inner dropdown-mob">
-																												<li>
-																													<?php if (!empty($featured_image)) { ?>
-																														<div class="HeadPostBox bg" style="background-image: url(<?php echo $featured_image[0]; ?>);">
-																															<div class="HeadPostContentTop">
-																																<div class="HeadPostContent fontWhite">
-																																	<p><?php echo get_the_excerpt($inner_submenu_page->ID); ?></p>
-																																</div>
-																																<div class="HeadPostBtn opacity5"><a href="<?php echo get_permalink($inner_submenu_page->ID); ?>">read more</a></div>
-																															</div>
-																														</div>
-																													<?php } ?>
-																												</li>
-																											</ul>
-																										<?php 
-																										}?>
-																										
-																									</li>
-																							<?php
-																								}
-																							}
-																							?>
-																						</ul>
-																					<?php } ?>
-																				</li>
-
-
-																			<?php
-																			}
-																			?>
-																		</ul>
-																	</div>
-																</div>
-															</li>
-														</ul>
-													</li>
-												<?php
-												} else {
-												?>
-													<li><a href="<?php echo $gen_menu_page['url']; ?>"><?php echo $gen_menu_page['title']; ?> </a></li>
-												<?php
-												}
-												?>
-											<?php } ?>
-										</ul>
-									</div>
-								</div>
-							<?php
-							} ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--End Header Section  -->
-	<?php
-	if (is_page_template('templates/offsetting-template.php')||is_page_template('templates/article.php')) {
-	?>
-		<!-- Header Version 2 -->
-
-		<div class="V2headerSection">
-			<div class="wrapper">
-				<div class="V2MenuParent">
-					<div class="V2navbar noListStyle">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'header-menu',
-								'menu_class'        => '',
-								'container'       => '',
-							)
-						);
-						?>
-						<!-- <ul>
-							<li><a href="javascript:">mission</a></li>
-							<li><a href="javascript:">fia environmental strategy</a></li>
-							<li class="V2childmenu"><a href="javascript:" class="active">key acheivements</a>
-								<ul class="V2-dropdown-menu">
-									<li class="V2-item-has-children">
-										<a href="#">FIA Becomes Carbon Neutral</a>
-									</li>
-									<li class="V2-item-has-children">
-										<a href="#">reduction</a>
-									</li>
-									<li class="V2-item-has-children">
-										<a href="#">offsetting</a>
-									</li>
-									<li class="V2-item-has-children">
-										<a href="#">measurement</a>
-									</li>
-								</ul>
-							</li>
-							<li><a href="javascript:">flagship projects</a></li>
-							<li><a href="javascript:">contents</a></li>
-							<li><a href="javascript:">sustainability report</a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- End of Header Version 2 -->
-
-	<?php
-	}
-	?>
+<?php include get_template_directory() . '/partials/nav.php'; ?>

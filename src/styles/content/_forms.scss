@@ -1,0 +1,128 @@
+// .section-content, 
+.section-content {
+// .section-content-referral,
+// .section-content-contact {
+  form.wpcf7-form {
+    p {
+      &:first-of-type {
+        font-size: unset;
+      }
+    }
+    h3 {
+      margin-top: 2em;
+      font-weight: 600;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+    margin-top: 4rem;
+    [data-page=referrals] & {
+      margin-top: 0;
+    }
+    width: 100%;
+    // label {
+    //   font-size: 1.6rem;
+    // }
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    input, textarea, select {
+      background-color: color('light');
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      resize: none;
+      flex: 1 1; // TODO @fabio check confirm no problems from this approach
+      // This changes behaviour of submit button
+      
+      &::placeholder {
+        color: color('gray');
+        font-style: italic;
+      }
+      // font-size: 2.4rem;
+    }
+    input[type=submit] {
+      flex: 0 0;
+      display: flex;
+
+      font-size: unset;
+      border: none;
+      width: auto;
+      padding: .5em 1.5em;
+      background-color: color('green');
+      line-height: 1;
+      color: white;;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 300;
+      display: inline-block;
+      user-select: none;
+      &[disabled] {
+        opacity: .5;
+      }
+
+      &:hover {
+        filter: brightness(1.1);
+        transition: all .25s;
+      }
+    }
+    .wpcf7-list-item {
+      margin-left: 0;
+      margin-right: 1em;
+      label {
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: .5em;
+        }
+      }
+    }
+    .wpcf7-acceptance {
+      .wpcf7-list-item {
+        margin: 0;
+        label {
+          display: flex;
+          input {
+            // margin-right: 1em;
+            width: auto;
+            flex: 1 1 auto;
+          }
+        }
+      }
+    }
+    .wpcf7-response-output {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 1rem;
+      // background-color: color('red', .25);
+      // color: color('red');
+      // border: none;
+    }
+    p {
+      &:last-of-type {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &.sent {
+      .wpcf7-response-output {
+        border: none;
+        background-color: color('green', .1);
+        color: color('green');
+      }
+    }
+    &.invalid,
+    &.unaccepted ,
+    &.payment-required {
+      .wpcf7-response-output {
+        border: none;
+        background-color: color('red', .1);
+        color: color('red');
+      }
+    }
+    .wpcf7-not-valid-tip {
+      color: color('red');
+    }
+  }
+}

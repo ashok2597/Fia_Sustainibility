@@ -1,0 +1,46 @@
+.site-footer {
+// margin-top: -2rem;
+background-color: color('gray');
+color: white;
+
+
+
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 size(lg);
+
+    font-size: 1.6rem;
+
+    .footer__logo {
+      color: white;
+      position: absolute;
+      bottom: calc(100% - 1px);
+      // top: 0;
+      // bottom: 0;
+      left: 0;
+      z-index: 100;
+      margin-left: 4rem;
+      width: 180px;
+      height: auto;
+    }
+  }
+  [data-template=front-page] &,
+  [data-template=archive-services] &,
+  [data-template=single-team] &,
+  [data-page=emerge] &,
+  [data-page=pet-owners] &,
+  [data-page=about-us] &,
+  [data-page=referrals] &,
+  [data-template=archive-careers] &,
+  [data-template=single-careers] &,
+  [data-page=veterinary-community] &, 
+  [data-page=contact] & {
+    .footer__logo {
+      color: color('gray');
+    }
+  }
+}

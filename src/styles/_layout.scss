@@ -1,0 +1,88 @@
+:root {
+  --gap:6px; // intentionally left with no space
+}
+
+// .grid {
+//   display: grid;
+//   grid-gap: var(--gap);
+//   min-width: 0;
+//   width: 100%;
+//   grid-template-columns: repeat(2,minmax(0, 1fr));
+//   .no-grid & {
+//     display: flex;
+//     flex-wrap: wrap;
+//     > * {
+//       flex: 0 0 25%;
+//       width: 25%;
+//       max-width: 25%;
+//       border: 2px solid color('background');
+//     }
+//   }
+//   @media #{$tablet} {
+//     grid-template-columns: repeat(4,minmax(0, 1fr));
+//   }
+// }
+// @for $i from 1 through 4 {
+//   .grid-span-#{$i} {
+//     @if ($i > 1) {
+//       grid-column-end: span 2;
+//       .no-grid & {
+//         flex: 0 0 100%;
+//         width: 100%;
+//         max-width: 100%;
+//       }
+//     }
+//   }
+//   .grid-phone-span-#{$i} {
+//     @media #{$only-phone} {
+//       @if ($i > 1) {
+//         grid-column-end: span 2;
+//         .no-grid & {
+//           flex: 0 0 100%;
+//           width: 100%;
+//           max-width: 100%;
+//         }
+//       }
+//     }
+//   }
+//   .grid-tablet-span-#{$i} {
+//     @media #{$only-tablet} {
+//       grid-column-end: span $i;
+//       .no-grid & {
+//         flex: 0 0 100 / 4 * $i * 1%;
+//         width: 100 / 4 * $i * 1%;
+//         max-width: 100 / 4 * $i * 1%;
+//       }
+//     }
+//   }
+//   .grid-span-#{$i} {
+//     @media #{$desktop} {
+//       grid-column-end: span $i;
+//       .no-grid & {
+//         flex: 0 0 100 / 4 * $i * 1%;
+//         width: 100 / 4 * $i * 1%;
+//         max-width: 100 / 4 * $i * 1%;
+//       }
+//     }
+//   }
+// }
+
+.container {
+  // max-width: getBreakpoint(lg, lg); // 1440px;
+  // max-width: getBreakpoint(lg, lg);
+  // max-width: getBreakpoint(xl,md);
+  margin-left: auto;
+  margin-right: auto;
+  .page-section & {
+    // padding-left: size(lg, 2);
+    // padding-right: size(lg, 2);
+    // @media #{$tablet} {
+    //   padding-left: size(xl);
+    //   padding-right: size(xl);
+    // }
+  }
+}
+
+.page-section {
+  @extend %widthLimiter;
+}

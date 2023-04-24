@@ -1,9 +1,7 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <section class="BannerSection overlayNew">
-    <div class="BannerVideoParent">
+  <div class="BannerVideoParent">
         <video id="hero-video" class="video" muted="" autoplay="" loop="">
             <source src="<?php echo get_field("fp-banner_video"); ?>" type="video/mp4">
         </video>
@@ -431,6 +429,4 @@ get_header();
         </div>
 </section>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

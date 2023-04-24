@@ -1,0 +1,59 @@
+.button {
+  // border: 10px solid color('red');
+  //   font-size: 2.4rem;
+//   // font-weight: 600;
+//   font-weight: 400;
+//   // padding: .5em 1.5em;
+//   padding: .5em 1em .4em; // bottom slightly less due to typeface
+//   border: 2px solid transparent;
+//   background-color: color('green');
+//   line-height: 1;
+//   color:white;
+//   white-space: nowrap;
+//   text-transform: uppercase;
+//   display: inline-block;
+  
+//   // &:after {
+//   //   content: "+";
+//   //   margin-left: .5em;
+//   // }
+//   user-select: none;
+//   &:hover, &:focus {
+//     // transform: scale(1.05);
+//     filter: brightness(1.1);
+//     transition: all .25s;
+//   }
+//   [data-template=single-services][data-page=emerge] &,
+//   [data-template=single-services-emerge] & {
+//     background-color: color('red');
+//   }
+//   &.button-secondary {
+//     background-color: transparent;
+//     background-color: color('white', .10);
+//     border: 2px solid;
+//     &:hover, &:focus {
+//       background-color: color('white', .25);
+//     }
+//     [data-template=single-services][data-page=emerge] &,
+//     [data-template=single-services-emerge] & {
+//       background-color: color('red', .10);
+//       border: 2px solid color('red');
+//       color: color('red');
+//       &:hover, &:focus {
+//         background-color: color('red', .25);
+//       }
+//     }
+//     [data-template=single-careers] &  {
+//       background-color: transparent;
+//       background-color: color('green', .10);
+//       border: 2px solid color('green');
+//       color: color('green');
+//       &:hover, &:focus {
+//         background-color: color('green', .25);
+//       }
+//     }
+//   }
+//   section.section-content .section-content__container & {
+//     text-decoration: none;
+//   }
+}

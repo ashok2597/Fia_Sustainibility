@@ -1,44 +1,59 @@
 {
   "name": "fia-sustainability",
   "version": "1.0.0",
-  "description": "Default WP Theme",
-  "bugs": {
-    "url": "https://"
-  },
-  "homepage": "https://",
-  "devDependencies": {
-    "@wordpress/browserslist-config": "^2.2.2",
-    "autoprefixer": "^9.1.5",
-    "chokidar-cli": "^1.2.1",
-    "node-sass": "^4.9.3",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.0.1",
-    "postcss-focus-within": "^3.0.0",
-    "rtlcss": "^2.4.0"
-  },
-  "rtlcssConfig": {
-    "options": {
-      "autoRename": false,
-      "autoRenameStrict": false,
-      "blacklist": {},
-      "clean": true,
-      "greedy": false,
-      "processUrls": false,
-      "stringMap": []
-    },
-    "plugins": [],
-    "map": false
-  },
-  "browserslist": [
-    "extends @wordpress/browserslist-config"
-  ],
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "private": true,
   "scripts": {
-    "build:style": "node-sass style.scss style.css --output-style expanded && postcss -r style.css",
-    "build:style-editor": "node-sass style-editor.scss style-editor.css --output-style expanded && postcss -r style-editor.css",
-    "build:style-editor-customizer": "node-sass style-editor-customizer.scss style-editor-customizer.css --output-style expanded && postcss -r style-editor-customizer.css",
-    "build:rtl": "rtlcss style.css style-rtl.css",
-    "build:print": "node-sass print.scss print.css --output-style expanded && postcss -r print.css",
-    "build": "run-p \"build:*\"",
-    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+    "dev": "mix",
+    "start": "mix watch",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "mix --production"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-jsx": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "babel-cli": "^6.26.0",
+    "bowser": "^2.4.0",
+    "caniuse-lite": "^1.0.30001161",
+    "clean-css": "^4.2.1",
+    "core-js": "^3.12.1",
+    "laravel-mix-polyfill": "^3.0.0",
+    "store": "^2.0.12",
+    "swiper": "^8.0.7"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-react": "^7.12.7",
+    "@types/jquery": "^3.5.5",
+    "@types/swiper": "^5.4.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.6.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "laravel-mix": "^6.0.41",
+    "laravel-mix-imagemin": "^1.0.3",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^8.3.1",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^5.2.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.29.0",
+    "sass-loader": "7.*",
+    "sass-resources-loader": "^2.0.1",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.4"
   }
 }

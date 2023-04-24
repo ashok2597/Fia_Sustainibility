@@ -1,12 +1,4 @@
 <?php
-/**
- * The template for displaying image attachments
- *
- * @package WordPress
- * @subpackage FIA
- * @since 1.0.0
- */
-
 get_header();
 ?>
 
