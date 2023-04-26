@@ -75,6 +75,27 @@
 }
 
 body {
+  margin:0;
+  padding:0;
+  font-family: "futura-pt",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.29;
+  color: #041323;
+  &.lodaded {
+    opacity: 1;
+  } // @Pratiksha / Weboccult shouldn't this say 'loaded'?
+
+  // For hubspot // @Pratiksha / Weboccult. Is this necessary?
+  .row-fluid {
+    [class*="span"] {
+      min-height: 0px;
+      &.widget-type-space {
+        min-height: 1px;
+      }
+    }
+  }
+
   // padding-top: var(--nav-height); 
   @extend %flexColumnLayout;
   // color: color('foreground');
@@ -149,12 +170,11 @@ body {
 }
 
 ::selection {
-
-  background-color: color('gray', .5);
+  background-color: color('green', .5);
 }
 
 :focus {
-  outline-color: color('gray', .5);
+  outline-color: color('green', .5);
   // outline-color: transparent !important;
   // outline: 0 !important;
 }

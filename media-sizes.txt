@@ -1,0 +1,47 @@
+
+/*-=-=- Only Desktop CSS -=-=-*/
+@media (min-width:641px ) {
+
+@media (min-width:768px ) {
+
+@media (min-width:992px ) {
+
+@media (min-width:1081px ) {
+
+@media (min-width:1231px ) {
+
+@media (min-width:1700px ) {
+
+@media (min-width:1900px ){
+
+@media (min-width:2700px ){
+
+@media (min-width:4100px ){
+
+@media (max-width:1699px ){
+
+
+
+/*-=-=- Smaller Desktop Devices -=-=-*/
+@media (max-width:1280px ) {
+
+@media (max-width:1230px ) {
+
+@media (max-width:1230px ) and (min-width:992px ) {
+
+
+
+/*-=-=-  Tablet Landscape and Smaller Devices -=-=-*/
+@media (max-width:1080px ) {
+
+
+/*-=-=-  Tablet Portrait and Smaller Devices -=-=-*/
+@media (max-width:991px ) {
+  
+
+/*-=-=-  Mobile Devices -=-=-*/
+@media (max-width:767px )
+
+@media (max-width:640px ) {
+
+@media (max-width:480px ) {

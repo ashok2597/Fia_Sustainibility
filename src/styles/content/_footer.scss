@@ -1,46 +1,77 @@
-.site-footer {
-// margin-top: -2rem;
-background-color: color('gray');
-color: white;
+// .FooterSEction {
+//   //TODO: Please pay attention to the spelling, this 'FooterSEction' was in footer.php line 60
+// }
 
-
-
-
-  .container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 size(lg);
-
-    font-size: 1.6rem;
-
-    .footer__logo {
-      color: white;
-      position: absolute;
-      bottom: calc(100% - 1px);
-      // top: 0;
-      // bottom: 0;
-      left: 0;
-      z-index: 100;
-      margin-left: 4rem;
-      width: 180px;
-      height: auto;
-    }
+.FooterSection {
+  color: color('background');
+  a {
+    color: inherit;
   }
-  [data-template=front-page] &,
-  [data-template=archive-services] &,
-  [data-template=single-team] &,
-  [data-page=emerge] &,
-  [data-page=pet-owners] &,
-  [data-page=about-us] &,
-  [data-page=referrals] &,
-  [data-template=archive-careers] &,
-  [data-template=single-careers] &,
-  [data-page=veterinary-community] &, 
-  [data-page=contact] & {
-    .footer__logo {
-      color: color('gray');
-    }
+}
+
+.FooterLogoBox {  width: 220px;}
+.FooterNavbarBox {  width: calc(100% - 220px);}
+.FooterNavIteam  a {  font-size: 16px;  line-height: 1.25; text-transform: uppercase;}
+.FooterNavIteam li {  margin-bottom: 7px;}
+.FooterNavIteam li:last-child {  margin-bottom: 0;}
+.FooterCopyRightParent {  padding-top: 50px;  padding-bottom: 35px;}
+.FooterCopyRightParent {  font-size: 14px; }
+
+@media (min-width:641px ) {
+	.FooterParent {
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+	.FooterNavbarBox { text-align: right;}
+	// .CounterBoxParentV3Part .TwoColCounterParent {  width: 118px;}
+	// .CounterBoxParentV3Part .TwoColCounterRightPart {  width: calc(100% - 118px);}
+}
+
+@media (min-width:1700px ) {
+  	/* Footer */
+	.FooterLogoBox {  width: 272px;}
+	.FooterNavbarBox {  width: calc(100% - 272px);}
+	.FooterParent {
+    padding-top: 135px;
+    padding-bottom: 135px;
+  }
+	.FooterNavIteam li {  
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width:991px ) {
+  /* Footer */
+	.FooterParent {  
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+	.FooterLogoBox {
+    width: 180px;
+  }
+	.FooterNavbarBox { 
+    width: calc(100% - 180px);
+  }
+}
+
+@media (max-width:640px ) {
+	.FooterNavbarBox {
+    width: 100%;
+    padding-top: 30px;
+  }
+	.FooterCopyRightParent { 
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-size: 12px;
+  }
+	.FooterLogoBox {
+    width: 120px;
+    margin: 0 auto;
+  }
+	.FooterNavIteam a { 
+    font-size: 14px;
   }
 }

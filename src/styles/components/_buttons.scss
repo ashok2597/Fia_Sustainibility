@@ -1,59 +1,241 @@
 .button {
-  // border: 10px solid color('red');
-  //   font-size: 2.4rem;
-//   // font-weight: 600;
-//   font-weight: 400;
-//   // padding: .5em 1.5em;
-//   padding: .5em 1em .4em; // bottom slightly less due to typeface
-//   border: 2px solid transparent;
-//   background-color: color('green');
-//   line-height: 1;
-//   color:white;
-//   white-space: nowrap;
-//   text-transform: uppercase;
-//   display: inline-block;
+  a {
+    display: inline-flex;
+    align-items: center;
+    padding:15px 18px 14px 22px;
+    background:color('green');
+    border: 2px solid transparent;
+    color: color('black');
+    max-width:100%;
+    // display:inline-block;
+    font-size:32px;
+    line-height:1;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    font-size: 32px;
+    &:hover {
+      background:transparent;
+      // color: color('green');
+      border: 2px solid color('foreground');
+      .BtnIcon {
+        path {
+          stroke: color('foreground');
+        }
+      }
+    }
+    .BtnIcon {
+      path {
+        transition:all ease 0.3s;
+        -moz-transition:all ease 0.3s;
+        -webkit-transition:all ease 0.3s;
+        -o-transition:all ease 0.3s;
+      }
+      @media (max-width: 1230px) {
+        padding-left: 7px;
+      }
+    }
+    @media (max-width: 1699px) {
+      padding: 10px 20px 9px;
+      font-size: 24px;
+    }
+    @media (max-width: 1230px) {
+      padding: 10px 15px 9px;
+      font-size: 18px;
+    }
+    @media (max-width:767px ) {
+      padding: 10px 10px 9px;  font-size: 15px;
+    }
+    @media (max-width:480px ) {
+      padding: 10px 10px 9px;
+      font-size: 14px;
+    }
+  }
+  &.v2 {
+    a {
+      border-color: color('foreground');
+      background:transparent; 
+      color:color('foreground');
+      .BtnIcon {
+        path {
+          stroke: color('foreground');
+          transition:all ease 0.3s;
+          -moz-transition:all ease 0.3s;
+          -webkit-transition:all ease 0.3s;
+          -o-transition:all ease 0.3s;
+        }
+      }
+      &:hover {
+        border-color: transparent;
+        background: color('green');
+        color: color('foreground');
+        .BtnIcon {
+          path {
+            stroke: color('foreground');
+          }
+        }
+      }
+    }
+  }
+  .BtnIcon {
+    display: inline-block;  padding-left: 14px;
+  }
+}
+
+.BtnGrp {
+  gap: 20px;
+  .BtnIcon {
+    svg {
+      @media (max-width: 1699px) {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 0;
+      }
+      @media (max-width: 1230px) {  
+        width: 14px;
+        height: 14px;
+      }
+      @media (max-width:480px ) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.NormalBtn {
+  a {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:hover {
+      opacity: 0.5;
+    } 
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+    @media (max-width:767px ) {
+      font-size: 16px;
+    }
+    @media (min-width:1700px ) {
+      font-size: 32px;
+    }
+  }
+  .dIcon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    left: 7px;
+    outline: none;
+    @media (min-width:1700px ) {
+      width: 22px;
+      height: 23px;
+      left: 10px;
+      outline: none;
+      svg {
+        width: 22px;  height: 23px;
+      }
+    }
+  }
+}
+
+.NormalBtnV2 {
+  a {
+    font-size: 28px;
+    text-transform: uppercase;
+    outline: none;
+    border-bottom: 2px solid; 
+    font-weight: 300;
+    &:hover {
+      opacity: 0.5;
+    }
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+    @media (min-width:1700px ) {
+      font-size: 36px;
+    }
+  }
+}
+
+.NormalBtnSmall {
+  span {
+    display: inline-block;  position: relative; margin-right: 10px;
+  }
+  a {
+    font-size: 18px;
+    svg {
+      width: 14px;
+      height: 13px;
+
+      @media (min-width:1700px ) {
+        width: 16px;
+        height: 17px;
+      }
+    }
+    @media (max-width:767px ) {
+       font-size: 16px;
+    }
+    @media (min-width:1700px ) {
+      font-size: 24px;
+    }
+  }
+}
+
+.buttonBox {
+  a {
+    padding: 14px 11px;
+    background: #BEBEBEB2;
+    border: 1px solid #BEBEBEB2;
+    color: #000;
+    max-width: 100%;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    font-size: 16px;
+    &:hover {
+      background:transparent;
+      color: #BEBEBEB2;
+    }
+  }
+}
+
+.BtnAngle {
+  display: inline-block;
+  padding-left: 8px;
+  position: relative;
+  left: 5px;
+
+  @media (min-width:1700px ) {
+    padding-left: 10px;
+    left: 10px;
+  }
   
-//   // &:after {
-//   //   content: "+";
-//   //   margin-left: .5em;
-//   // }
-//   user-select: none;
-//   &:hover, &:focus {
-//     // transform: scale(1.05);
-//     filter: brightness(1.1);
-//     transition: all .25s;
-//   }
-//   [data-template=single-services][data-page=emerge] &,
-//   [data-template=single-services-emerge] & {
-//     background-color: color('red');
-//   }
-//   &.button-secondary {
-//     background-color: transparent;
-//     background-color: color('white', .10);
-//     border: 2px solid;
-//     &:hover, &:focus {
-//       background-color: color('white', .25);
-//     }
-//     [data-template=single-services][data-page=emerge] &,
-//     [data-template=single-services-emerge] & {
-//       background-color: color('red', .10);
-//       border: 2px solid color('red');
-//       color: color('red');
-//       &:hover, &:focus {
-//         background-color: color('red', .25);
-//       }
-//     }
-//     [data-template=single-careers] &  {
-//       background-color: transparent;
-//       background-color: color('green', .10);
-//       border: 2px solid color('green');
-//       color: color('green');
-//       &:hover, &:focus {
-//         background-color: color('green', .25);
-//       }
-//     }
-//   }
-//   section.section-content .section-content__container & {
-//     text-decoration: none;
-//   }
+  svg {
+    width: 20px;
+    height: 20px;
+    @media (max-width: 991px) {
+      width: 15px;
+      height: 15px;
+    }
+    @media (min-width:1700px ) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+
+@media (max-width: 991px) {
+  .ContentGrpBtnMain {  flex-wrap: wrap; }
+}
+
+@media (min-width:1700px ) {
+	.HeadPostBtn {  padding-top: 50px;} //Not sure
 }

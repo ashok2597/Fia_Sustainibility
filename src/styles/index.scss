@@ -1,3 +1,5 @@
+// @import '/styles-weboccult.css';
+
 @import 'base';
 @import 'normalize';
 @import 'definitions';
@@ -9,4 +11,5 @@
 @import 'utilities';
 @import 'z-index';
 
-@import '/styles-weboccult.css';
+@import '/styles-weboccult-clean.scss';
+// @import '/styles-weboccult.scss';

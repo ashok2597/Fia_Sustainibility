@@ -4,7 +4,7 @@ import Swiper from "swiper";
 import tick from "../helpers/async";
 import { setCSSCustomProperty } from "../helpers/css";
 import wait from '../helpers/wait';
-const ResizeObserver = window.ResizeObserver || Polyfill;
+// const ResizeObserver = window.ResizeObserver || Polyfill;
 
 const isPage = slug => document.body.classList.contains(slug);
 

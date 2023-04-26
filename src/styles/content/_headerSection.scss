@@ -1,0 +1,334 @@
+// @Pratiksha / @WebOccult
+// TODO: Please note all commented out scss is not included when we run 'npm run prod' to build the production ready compilation
+
+// .HeaderSection { // This was mispelled as .HeaderSection when it should be .headerSection
+//   position: relative;
+//   background-color: color('foreground');
+//   top:0;
+//   left:0;
+//   right:0;
+//   text-transform: uppercase;
+//   z-index: 9999;
+//   position: fixed;
+//   width: 100%;
+//   transition: all 0.3s;
+//   -webkit-transition: all 0.3s;
+//   padding: 20px 0 0;
+// }
+
+* {
+  // border: 1px solid red;
+}
+
+.headerSection {
+  .wrapper {
+    max-width: 100%;
+  }
+} 
+
+section.headerSectionMain {
+  background: color('white');
+  position: fixed;
+  // z-index: 99; // @Pratiksha added this to z-index.scss
+  width: 100%;
+  top: 0;
+  top: var(--wp-admin-bar-height);
+  left: 0;
+  right: 0;
+  color: color('black');
+  max-width: 100%;
+}
+
+.headerlogo {
+  width: 200px;
+  padding: 20px 0;
+  @media (min-width: 1700px) {
+    width: 413px;
+    padding: 32px 0; 
+  }
+}
+
+.MenuMain {
+  width: calc(100% - 200px);
+  @media (min-width: 1700px) {
+    width: calc(100% - 413px);
+  }
+}
+
+.dropdown-menu-icon-Inner {
+  display: none;
+}
+
+.Mega-dropdown-menu{
+  display: none;
+  li {
+    display: block !important;
+  }
+  @media(min-width: 992px) {
+    display: none;
+    background: linear-gradient(290.45deg, rgba(4, 19, 35, 0.95) 0%, #041323 100.89%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    z-index: 99;
+    text-align: left;
+    transition: none;
+    border: 0;
+    margin-top: 0;
+    a { 
+      font-size: 38px;
+      color: color('background', .5); 
+      font-weight: 300;
+    }
+    li:nth-child(1)  {
+      .dropdown-menu-icon {
+        display: block;
+      }
+    }
+    .CloseIcon {
+      position: absolute;
+      right: 0;
+      top: 55px;
+      cursor: pointer;
+      z-index: 2;
+    } 
+  }
+}
+
+.MegaMenuInner { 
+  position: relative;
+}
+
+@media(min-width: 992px) {
+  
+  .MegaMenuInner { 
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media(min-width:1700px) {
+  .MegaMenuInner {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+	.Mega-dropdown-menu a {
+    font-size: 48px;
+  }
+	.Mega-dropdown-menu{
+    height: calc(100vh - 145px);
+  }
+}
+
+@media (max-width: 1230px) and (min-width: 992px) {
+  .Mega-dropdown-menu a {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .Mega-dropdown-menu {
+    .wrapper {
+      max-width: 100%; 
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.navbar {
+  // a {
+  //   // text-transform: uppercase;
+  // }
+  > ul {
+    > li {
+      position: relative;
+      display: inline-block;
+      padding:24px 16px;
+      transition:all ease 0.3s;
+      -moz-transition:all ease 0.3s;
+      -webkit-transition:all ease 0.3s;
+      -o-transition:all ease 0.3s;
+      &:last-child {
+        padding-left: 12px;
+        padding-right: 0;
+      }
+      > a {
+        padding: 12px;
+        @media (min-width: 992px) {
+          &.open {
+            background: color('green');
+            svg {
+              path {
+                stroke: color('black');
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(1) {
+        @media (min-width: 992px) {
+          position: relative;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  ul {
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    &.dropdown-menu{
+      width: calc(100% - 32px);
+      background-color: color('green');
+      display: none;
+      position: absolute;
+      left: 16px;
+      top: 100%;
+      white-space: nowrap;
+      padding: 2px;
+      z-index: 99;
+      text-align: left;
+      transition: none;
+      border: 0;
+      margin-top: 0;
+      @media (max-width: 991px) {
+        width: 100%;
+        background-color: color('black');
+        transition: none;
+        position: static;
+      }
+
+      li {
+        display: block;
+        padding: 10px 15px;
+        @media (max-width: 991px) {
+          position: relative;
+          display: block;
+          float: left;
+          width: 100%;
+          padding:0;
+          
+          a {
+            background-color: color('black') !important; //
+            // position: relative;
+            // display: block;
+            // background: color('green');
+            // color: color('background');
+            // padding: 10px 15px;
+            // border-top: 1px solid color('background') !important;
+          }
+          &:last-child {
+            padding: 0;
+          }
+          ul {
+            &.dropdown-menu {
+              display: none;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      a {
+        @media (max-width: 991px) {
+          background-color: color('black') !important;
+        }
+      }
+      @media (min-width: 992px) {
+        background-color:color('green');
+        li {
+          background-color: color('background');
+          &:nth-child(even) {
+            background-color: color('green');
+          }
+        }
+      }
+    }
+    li {
+      @media (max-width:991px ) {
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%;
+        padding:0;
+        a {
+          position: relative;
+          display: block;
+          background: color('green');
+          color: color('black');
+          padding: 10px 15px;
+          border-top: 1px solid color('black') !important;
+        }
+        &:last-child {
+          padding: 0; 
+        }
+      }
+    }
+  }
+  span.downAngle {
+    display: inline-block;
+    padding-left: 7px;
+    @media(max-width: 991px) {
+      display: none;
+    }
+  }
+  @media (min-width: 992px) {
+    // position: initial;   
+    .Megachildmenu {
+      position: initial;
+    }
+  }
+
+  @media(max-width: 991px) {
+    display:none;
+    width: 100%;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    z-index: 999;
+    top: 100%;
+
+    span.CloseIcon {
+      display: none;
+    }
+
+    a {
+      br {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+	.V2navbar ul li:hover ul.V2-dropdown-menu{opacity: 1 !important; visibility: visible !important; top: 100%; -webkit-transform: rotateX(0) translateZ(0);   -moz-transform: rotateX(0) translateZ(0);    transform: rotateX(0) translateZ(0);}
+	.V2navbar ul.V2-dropdown-menu{ opacity: 0;  visibility: hidden !important; }
+}
+
+@media(max-width: 991px) {
+  .sublevelTop a {  background-color: #002D5F !important;}
+}
+
+@media (min-width: 1230px) and (min-width: 992px) {
+  .V2navbar ul li a{ font-size: 17px; }
+	.V2navbar>ul>li {  padding: 15px 8px; }
+}
+
+@media (max-width:1080px ) and (min-width:992px ) {
+	.V2navbar ul li a{ 
+    font-size: 15px;
+  }
+}
+
+@media(min-width: 767px) {
+  .navigation .hs-menu-wrapper { right: -15px;}
+}
+
+.noListStyle ul, .listStyleDoubleAngle ul, .listStyle ul, .listStyleDisk ul { margin:0; padding:0; list-style:none; } /* put listStyle class to "parent" tag of "ul" */

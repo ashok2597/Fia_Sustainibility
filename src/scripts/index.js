@@ -1,5 +1,5 @@
-import { polyfill } from './helpers/polyfill';
-polyfill();
+// import { polyfill } from './helpers/polyfill';
+// polyfill();
 
 import onDocumentLoad from "./helpers/on-document-load";
 import { NavController } from "./controller/nav.controller";

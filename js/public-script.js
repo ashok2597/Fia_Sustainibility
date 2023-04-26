@@ -144,6 +144,7 @@ $(document).ready(function () {
     centeredSlides: true,
     autoplay: false,
     autoHeight: true,
+    loop: true,
     // autoplay: {
     //   delay: 2400,
     //   disableOnInteraction: false,

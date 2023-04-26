@@ -1,0 +1,82 @@
+.BoxTabingSection {
+  &:after {
+    content: '';
+    position: absolute;
+    top: -11%;
+    left: 0;
+    // background-image: url('/images/word-img.png');
+    // background-image: url('../../../images/word-img.png');
+    background-image: url('../../../../../../wp-content/themes/wp_fiasustainability/images/word-img.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top left;
+    width: 480px;
+    height: 377px;
+    z-index: 2;
+  }
+  position: relative;
+  &:before {
+    content:'';
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    position:absolute;
+    background: color('background', .5);
+  
+  }
+  > * {
+    position:relative;
+    z-index:2;
+  }
+
+}
+
+.TabBoxContentBox {
+  width: 65%;
+}
+
+.TabListItemBox {
+  width: 35%;
+  padding-left: 80px;
+  .TabTitle {
+    a {
+      // color: rgb(100 216 85 / 60%);
+      color: color('blue', .5);
+      font-size: 36px;
+      font-weight: 300; 
+      text-transform: uppercase;
+      &.active {
+        color: color('blue');
+      }
+    }
+    li {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.tabPV2.TabBoxContentBoxV2 {  width: calc(100% - 490px);}
+
+// .overlay{ 
+//   position: relative;
+//   &:before {
+//     content:'';
+//     top:0;
+//     left:0;
+//     width:100%;
+//     height:100%;
+//     z-index:1;
+//     position:absolute;
+//     background: color('background', .5);
+  
+//   }
+//   > * {
+//     position:relative;
+//     z-index:2;
+//   }
+// }

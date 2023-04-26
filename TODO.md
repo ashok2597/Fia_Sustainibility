@@ -14,3 +14,6 @@ otherwise if this is needed we should migrate this to the UI / Home controller (
 TODO 6 Please review if folders 'include', 'inc' and 'classes' with php files are needed. If not please remove it
 
 TODO 7 For future style edits, let's use the Scss files and start organising and breaking down by section / page template / component, etc
+
+TODO: Unless otherwise specified, all swiper should be given as a loop by default
+

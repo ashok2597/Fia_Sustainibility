@@ -1,17 +1,30 @@
 $whitepointHsl: (0,0%,100%);
-$blackpointHsl: (210, 16%, 25%);
+$blackpointHsl: (226,29%,9%);
 
 $colors: (
-
-  'light': (
-    hsl: (280,6%,90%), 
+  'blue': ( // Equivalent to #002D5F
+    hsl: (212,100%,19%),
+    contrast: $whitepointHsl,
+  ),
+  
+  'lightBlue': ( // Equivalent to #00B4E1
+    hsl: (192,100%,44%),
     contrast: $blackpointHsl,
   ),
 
-  // Primary colour
-  'gray': (
+  'darkBlue': ( // Equivalent to #00B4E1
+    hsl: $blackpointHsl,
+    contrast: $whitepointHsl,
+  ),
+
+  'green': ( // Equivalent to #64D855
+    hsl: (113,63%,59%),
+    contrast: $blackpointHsl,
+  ),
+
+  'gray': ( // Equivalent to #BEBEBE
     // hsl: (20,2%,35%), 
-    hsl: (60,1%,34%), 
+    hsl: (0, 0%, 75%), 
     contrast: $whitepointHsl,
   ),
 
@@ -22,42 +35,39 @@ $colors: (
   ),
 
   // Background colour
-  'black': (
+  'black': ( // Equivalent to darkBlue
     hsl: $blackpointHsl,
     contrast: $whitepointHsl,
   ),
 
-  'dark': (
-    hsl: $blackpointHsl,
-    contrast: $whitepointHsl,
-  ),
-
-  'green': (
-    hsl: (122,100%,41%),
-    contrast: $whitepointHsl,
-  ),
+  // 'dark': (
+  //   hsl: $blackpointHsl,
+  //   contrast: $whitepointHsl,
+  // ),
   
-  'red': (
-    // hsl: (3,70%,45%),
-    hsl: (2,66%,34%),
-    contrast: $whitepointHsl,
-  ),
-
-  'blue': (
-    hsl: (206,51%,37%),
-    contrast: $whitepointHsl,
-  ),
+  // 'red': (
+  //   // hsl: (3,70%,45%),
+  //   hsl: (2,66%,34%),
+  //   contrast: $whitepointHsl,
+  // ),  
 );
 
 $contextColors: (
 
-  'alert': 'red',
+  'alert': 'green',
   // attention: yellow,
   'neutral': 'blue',
   'positive': 'green',
 
-  'foreground': $blackpointHsl,
-  'background': $whitepointHsl,
+  // 'foreground': $blackpointHsl,
+  // 'background': $whitepointHsl,
+
+  'foreground': 'black',
+  'background': 'white',
+
+  // 'foreground': 'white',
+  // 'background': 'black',
+
   // primary: $blackpointHsl,
   // secondary: $blackpointHsl,
   // accent: $blackpointHsl
