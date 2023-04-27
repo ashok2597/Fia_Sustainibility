@@ -27,7 +27,7 @@
 													<li class="childmenu Megachildmenu"><a href="<?php echo $gen_menu_page['url'] ?>" class="<?php echo ($row_index == 0) ? 'active' : ''; ?>">
 															<?php echo $gen_menu_page['title']; ?>
 															<span class="downAngle"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12" fill="none">
-																	<path d="M20.9702 1.05039L11.3702 10.6504L1.77021 1.05039" stroke="#64D855" stroke-width="1.6" stroke-linecap="round" />
+																	<path d="M20.9702 1.05039L11.3702 10.6504L1.77021 1.05039" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
 																</svg></span></a>
 
 														<ul class="dropdown-menu dropdown-menu-icon dropdown-mob">

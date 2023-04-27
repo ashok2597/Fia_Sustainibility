@@ -133,13 +133,13 @@ body .row-fluid [class*="span"].widget-type-space { min-height:1px; }
 
 .set-bg, .bg, .overlay { background-size:cover; background-position:center; position:relative; background-repeat: no-repeat; }
 
-.overlay.BlackOverlay:before { background: radial-gradient(106.06% 316.24% at 106.87% -4.37%, rgba(4, 19, 35, 0) 0%, #041323 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, rgba(4, 19, 35, 0.3), rgba(4, 19, 35, 0.3));
+.overlay.BlackOverlay:before { background: radial-gradient(106.06% 316.24% at 106.87% -4.37%, rgba(4, 19, 35, 0) 0%, color('foreground') 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, rgba(4, 19, 35, 0.3), rgba(4, 19, 35, 0.3));
 	opacity: 0.8; }
 .get-bg { display:none !important; }
-/* .themeBg { background:#041323; } */
+/* .themeBg { background:color('foreground'); } */
 .altThemeBg { background:#64D855; }
 .blueBg { background:#002D5F; }
-.blackBg { background:#000; }
+.blackBg { background:color('foreground'); }
 .whitebg { background:#fff; }
 .SpanGreenTxt span{ color: #64D855 !important; }
 .tablee{  display: table;  width: 100%; height: 100%;}
@@ -147,29 +147,6 @@ body .row-fluid [class*="span"].widget-type-space { min-height:1px; }
 
 [class*="fa-"] { font-family: fontawesome; font-style: normal}
 
-// .button a , a.button { padding:15px 18px 14px 22px; background:#64D855; border: 2px solid transparent; color:#041323;  max-width:100%; display:inline-block; font-size:32px; line-height:1;border-radius: 0px; text-transform: uppercase; font-weight: 500; position: relative; font-size: 32px;   }
-// .buttonBox a , a.buttonBox { padding: 14px 11px;  background: #BEBEBEB2;  border: 1px solid #BEBEBEB2;  color: #000;  max-width: 100%;  display: inline-block;  line-height: 1;  border-radius: 0px;  text-transform: uppercase;  font-weight: 500;  position: relative;  font-size: 16px;  }
-// .button.v2 a , a.button.v2 { border-color: color('foreground'); background:transparent; color:color('foreground');}
-// .button a:hover,a.button:hover { background:transparent; color:#64D855; }
-// .buttonBox a:hover,a.buttonBox:hover { background:transparent; color: #BEBEBEB2;}
-// .NormalBtnSmall span {  display: inline-block;  position: relative; margin-right: 10px;}
-// .NormalBtnSmall a svg {  width: 14px;  height: 13px;}
-// .button .BtnIcon {  display: inline-block;  padding-left: 14px;}
-// .button a .BtnIcon path, a.button .BtnIcon path {  transition:all ease 0.3s; -moz-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -o-transition:all ease 0.3s;}
-// .button.v2 a .BtnIcon path, a.button.v2 .BtnIcon path {  stroke: color('foreground'); transition:all ease 0.3s; -moz-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -o-transition:all ease 0.3s;}
-// .button.v2 a:hover , a.button.v2:hover { background: #64D855; color: #041323;  }
-// .button a:hover .BtnIcon path, a.button:hover .BtnIcon path{ stroke: color('foreground'); }
-// .button.v2 a:hover .BtnIcon path, a.button.v2:hover .BtnIcon path {  stroke: #041323;}
-// .BtnGrp {  gap: 20px;}
-// .NormalBtn a {  font-size: 24px;  text-transform: uppercase;  font-weight: 500;}
-// .NormalBtnSmall a {  font-size: 18px; }
-// .NormalBtn  .dIcon {  width: 18px;  height: 18px;  display: inline-block;  position: relative;  left: 7px; outline: none;}
-// .NormalBtn .dIcon svg {  width: 18px;  height: 18px;}
-// .NormalBtn a:hover {  opacity: 0.5;}
-// .NormalBtnV2 a {  font-size: 28px;  text-transform: uppercase;  outline: none;  border-bottom: 2px solid; font-weight: 300;}
-// .NormalBtnV2 a:hover {  opacity: 0.5;}
-// .BtnAngle svg {  width: 20px;  height: 20px;}
-// .BtnAngle {  display: inline-block;  padding-left: 8px;  position: relative;  left: 5px;}
 .titleStyle { position: relative; }
 .titleStyle:after { content: '';    height: 2px;  display: block; margin: 10px auto 7px; background-image: url(https://cdn2.hubspot.net/hubfs/4070598/titleStyle.png); background-position: top center;
 	background-repeat: no-repeat; background-size: 85px 2px; }
@@ -462,13 +439,14 @@ video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0
 	backdrop-filter: blur(15px); display: block;  position: absolute;  padding: 0;  left: 0;  top: -webkit-calc(100% + 15px);  top: -moz-calc(100% + 15px);  top: calc(100% + 15px);  min-width: 296px;  white-space: nowrap; z-index: 555;  text-align: left;  -webkit-transition: all .3s ease-in;  -o-transition: all .3s ease-in;  -moz-transition: all .3s ease-in;  transition: all .3s ease-in;  border: 0;  margin-top: 0;}
 .V2navbar ul.V2-dropdown-menu li{ display: block;  padding: 8px 24px;  border-bottom: 1px solid #fff;}
 .V2navbar ul.V2-dropdown-menu li:last-child {  border-bottom: 0; }
-.V2headerSection {  position: relative;  top: 145px;  background: #1e2b39; z-index: 3; }
+.V2headerSection {  position: relative;  top: 145px;  background: color('foreground', .75); z-index: 3; }
 .V2MenuParent {  text-align: right; }
 /* Common Banner */
 .BannerCommonsection {  padding-top: 57px;  padding-right: 48px; position: relative;  margin-top: 143px;}
 .BannerCommonInnerParent {  background-size: 75% 100%;  background-position: right;  height: 514px;}
 .BannerCommonContentMain {  padding-top: 40px;  padding-bottom: 40px;}
 .BannerCommonBotContentsTop {  position: absolute;  bottom: 60px;}
+.BannerCommonTopLink {position: relative; z-index: 2}
 /* NxtPrvBtn */
 .NextBtnBox a span {  margin-right: 0;  margin-left: 15px;}
 .PrevBtnBox a span { margin-right: 15px; }
@@ -495,7 +473,7 @@ video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0
 .GrpILogoParent { margin-left: -12px; margin-right: -12px; }
 .GrpILogoParent .GrpILogo {  padding-left: 13px;  padding-right: 13px;}
 /* GrpTitleListing */
-.GrpTitlesListingBox {  background: #172432;  border: 1px solid #64D855;  padding: 24px 24px 50px 24px;}
+.GrpTitlesListingBox {  background: color('background');  border: 1px solid #64D855;  padding: 24px 24px 50px 24px;}
 .GrpTitlesListingInnerParent .GrpTitlesListingBoxTitle h4 { margin-top: -15px; }
 .GrpTitlesListingParent {  gap: 31px; }
 /* AlternateSection */
@@ -507,7 +485,7 @@ video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0
 .AlternateParentMain .AlternateBoxRepeter:last-child {  padding-bottom: 0; }
 /* TwoColContent */
 .BoxSlidePartMain .BoxSlidePartTitle h6 {  text-transform: initial; }
-.GrpTitlesListingParent {  background: #041323;  position: relative;}
+.GrpTitlesListingParent {position: relative;}
 .NextPrevBtnParent { gap: 10px; }
 /* System Pages */
 .allPageBannerMain, .errorPage, .blogDetailSection { padding-top: 250px; padding-bottom: 70px; text-align: center;}
@@ -609,16 +587,6 @@ Responsive Media Queries CSS
 	h5, .h5 { font-size:36px;  }
 	h6, .h6 { font-size:32px;  }
 	* + p {  margin-top: 40px; }
-
-	// .NormalBtn a {  font-size: 32px; }
-	// .NormalBtnSmall a {  font-size: 24px;}
-	// .NormalBtn  .dIcon {  width: 22px;  height: 23px;  left: 10px; outline: none;}
-	// .NormalBtn .dIcon svg {  width: 22px;  height: 23px;}
-	// .NormalBtnV2 a {  font-size: 36px;}
-	// .BtnAngle { padding-left: 10px;  left: 10px;}
-	// .BtnAngle svg {  width: 25px;  height: 25px;}
-	// .NormalBtnSmall a svg {  width: 16px;  height: 17px;}
-	/* Header Section */
 
 	.sublevelTop>li {  margin-bottom: 38px;}
 	.sublevelInner>li{ margin-bottom: 24px; }
@@ -739,7 +707,7 @@ Responsive Media Queries CSS
 	.V2headerSection{ top: 80px; }
 	/* Common Banner */
 	.BannerCommonsection {  padding-top: 40px;  padding-right: 40px; margin-top: 75px; }
-	.BannerCommonInnerParent {  height: 450px;}
+	// .BannerCommonInnerParent {  height: 450px;}
 	/* Report */
 	.ReportParent .SectionContent {  max-width: 630px; }
 	/* Counter V3 */
@@ -804,7 +772,7 @@ Responsive Media Queries CSS
 	.BlogSliderLink .AngleBlog {  width: 20px;  height: 25px;  padding-left: 10px;}
 	.BlogSliderLink .AngleBlog svg{ width: 20px;  height: 25px; }
 	/* Common banner */
-	.BannerCommonInnerParent {  height: 400px; }
+	// .BannerCommonInnerParent {  height: 400px; }
 	/* GrpTitleListing */
 	.GrpTitlesListingInnerParent .GrpTitlesListingBoxTitle h4 {  margin-top: 0; }
 	.GrpTitlesListingBox {  padding: 25px; }
@@ -880,7 +848,7 @@ Responsive Media Queries CSS
 	/*mega menu css*/
 	.LogoMenuMain {position: initial;}
 	/* .Mega-dropdown-menu .wrapper {  max-width: 100%;  padding-left: 0;  padding-right: 0;} */
-	.HeadPostBoxMain li, .sublevelInner li a {  background-color: #041323 !important;}
+	.HeadPostBoxMain li, .sublevelInner li a {  background-color: color('foreground') !important;}
 	.HeadPostBox {  margin: 0 0 auto; padding: 25px;}
 	.HeadPostBoxMain li {  padding: 10px 15px !important;  border-top: 1px solid #fff;}
 
@@ -939,17 +907,14 @@ Responsive Media Queries CSS
 	.V2childExpand.open i+i { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); }
 	.V2navbar {display:none;  width: 100%; margin-right: 0; position: absolute; left: 0; text-align: left; z-index: 99; top: 100%;}
 	.V2navbar ul li{position: relative; display: block; float: left; width: 100%; padding:0;}
-	.V2navbar ul li a {position: relative; display: block; background: #36424f; color: #fff;  padding: 10px 15px; border-top: 1px solid #fff !important;}
+	.V2navbar ul li a {position: relative; display: block; background: color('foreground'); color: #fff;  padding: 10px 15px; border-top: 1px solid #fff !important;}
 	.V2navbar ul { display: block; width: 100%;}
 	.V2navbar ul li:last-child {  padding: 0; }
-	.V2navbar ul.V2-dropdown-menu{ width: 100%; background-color: #000; transition: none; position: static; display: none;}
+	.V2navbar ul.V2-dropdown-menu{ width: 100%; background-color: color('foreground'); transition: none; position: static; display: none;}
 	.V2navbar ul.V2-dropdown-menu li{padding: 0;}
 	.V2headerSection{ height: 65px; }
-	.V2navbar ul.V2-dropdown-menu li a {  background: #000; }
-	/* Banner Common */
-	.BannerCommonInnerParent {  height: 350px; }
-	/*Content grrp  */
-	// .ContentGrpBtnMain {  flex-wrap: wrap; }
+	.V2navbar ul.V2-dropdown-menu li a {  background: color('foreground'); }
+
 	/* Counter V3 */
 	.CounterBoxParentV3Part .RightImgRightCounterBox { width: 100%; padding-left: 0; padding-right: 0; order: 2;}
 	.CounterBoxParentV3Part .LeftImgRightCounterBox {  width: 100%; order: 1;}
@@ -1043,7 +1008,7 @@ Responsive Media Queries CSS
 	.SlideTitleContentBox .SlideTitle {  padding-left: 40px;  padding-right: 40px;}
 	.ConterTopParent ul{ gap: 25px; }
 	/* Banner Common */
-	.BannerCommonInnerParent {  height: auto;  background-size: 90% 100%;  padding-top: 30px;  padding-bottom: 30px;}
+	// .BannerCommonInnerParent {  height: auto;  background-size: 90% 100%;  padding-top: 30px;  padding-bottom: 30px;}
 	.BannerCommonBotContentsTop {  position: initial;  bottom: 60px;  padding-top: 40px;}
 	.BannerCommonsection {  padding-top: 20px;  padding-right: 15px;}
 	/*  */

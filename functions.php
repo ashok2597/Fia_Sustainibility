@@ -76,82 +76,82 @@ function wp_custom_post_type() {
   //   )
   // );
 
-  register_post_type(
-    'services',
-    array(
-      'labels' => array(
-        'name' => __('Services'),
-        'singular_name' => __('Service'),
-        'all_items'         => __('All Services'),
-      ),
-      // 'taxonomies' => array('brand', 'category'),
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
-      'show_ui' => true,
-      'show_in_rest' => true,
-      'menu_icon' => 'dashicons-pets',
-      'exclude_from_search' => true,
-      'taxonomies'          => array( 'category' ),
-    )
-  );
+  // register_post_type(
+  //   'services',
+  //   array(
+  //     'labels' => array(
+  //       'name' => __('Services'),
+  //       'singular_name' => __('Service'),
+  //       'all_items'         => __('All Services'),
+  //     ),
+  //     // 'taxonomies' => array('brand', 'category'),
+  //     'public' => true,
+  //     'has_archive' => true,
+  //     'publicly_queryable' => true,
+  //     'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
+  //     'show_ui' => true,
+  //     'show_in_rest' => true,
+  //     'menu_icon' => 'dashicons-pets',
+  //     'exclude_from_search' => true,
+  //     'taxonomies'          => array( 'category' ),
+  //   )
+  // );
 
-  register_post_type(
-    'team',
-    array(
-      'labels' => array(
-        'name' => __('Team Members'),
-        'singular_name' => __('Team Member'),
-        'all_items'         => __('All Team Members'),
-      ),
-      // 'taxonomies' => array('brand', 'category'),
-      'public' => true,
-      // 'has_archive' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
-      'show_ui' => true,
-      'show_in_rest' => true,
-      'menu_icon' => 'dashicons-admin-users',
-      'exclude_from_search' => true,
-      'taxonomies'          => array( 'category' ),
-    )
-  );
+  // register_post_type(
+  //   'team',
+  //   array(
+  //     'labels' => array(
+  //       'name' => __('Team Members'),
+  //       'singular_name' => __('Team Member'),
+  //       'all_items'         => __('All Team Members'),
+  //     ),
+  //     // 'taxonomies' => array('brand', 'category'),
+  //     'public' => true,
+  //     // 'has_archive' => true,
+  //     'has_archive' => true,
+  //     'publicly_queryable' => true,
+  //     'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
+  //     'show_ui' => true,
+  //     'show_in_rest' => true,
+  //     'menu_icon' => 'dashicons-admin-users',
+  //     'exclude_from_search' => true,
+  //     'taxonomies'          => array( 'category' ),
+  //   )
+  // );
 
-  register_post_type(
-    'careers',
-    array(
-      'labels' => array(
-        'name' => __('Careers'),
-        'singular_name' => __('Career'),
-        'all_items'         => __('All Careers'),
-      ),
-      // 'taxonomies' => array('brand', 'category'),
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
-      'show_ui' => true,
-      'show_in_rest' => true,
-      'menu_icon' => 'dashicons-welcome-learn-more',
-      'exclude_from_search' => true
-    )
-  );
+  // register_post_type(
+  //   'careers',
+  //   array(
+  //     'labels' => array(
+  //       'name' => __('Careers'),
+  //       'singular_name' => __('Career'),
+  //       'all_items'         => __('All Careers'),
+  //     ),
+  //     // 'taxonomies' => array('brand', 'category'),
+  //     'public' => true,
+  //     'has_archive' => true,
+  //     'publicly_queryable' => true,
+  //     'supports' =>  ['title', 'editor', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats', 'categories'],
+  //     'show_ui' => true,
+  //     'show_in_rest' => true,
+  //     'menu_icon' => 'dashicons-welcome-learn-more',
+  //     'exclude_from_search' => true
+  //   )
+  // );
 }
-add_action('init', 'wp_custom_post_type');
+// add_action('init', 'wp_custom_post_type');
 
 
-if( function_exists('acf_add_options_page') ) {
-  acf_add_options_page(array(
-    'page_title'     => 'Globals',
-    'menu_title'    => 'Globals',
-    'menu_slug'     => 'global-settings',
-    'capability'    => 'edit_posts',
-    'redirect'        => false,
-    // 'icon_url' => 'dashicons-phone'
-  ));
-}
+// if( function_exists('acf_add_options_page') ) {
+//   acf_add_options_page(array(
+//     'page_title'     => 'Globals',
+//     'menu_title'    => 'Globals',
+//     'menu_slug'     => 'global-settings',
+//     'capability'    => 'edit_posts',
+//     'redirect'        => false,
+//     // 'icon_url' => 'dashicons-phone'
+//   ));
+// }
 
 include get_template_directory() . '/functions-weboccult.php';
 
