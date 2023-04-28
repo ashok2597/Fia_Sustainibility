@@ -1,26 +1,26 @@
 $breakpoints: (
   sm: (
-    sm: 320, // iPhone 5
-    md: 360, // Samsung Galaxy S7+. iPhone 6-X @ 375.
-    lg: 412, // Google Pixel. iPhone Plus @ 414.
-    xl: 480, // SAMSUNG Galaxy Note
+    sm: 320, // $phone
+    md: 360, // $phone-md
+    lg: 412, // $phone-lg
+    xl: 480, 
   ),
   md: (
-    sm: 640,
-    md: 768, // iPad Portrait
-    lg: 920, 
+    sm: 640, // $tablet
+    md: 768, // $tablet-md
+    lg: 920, // $tablet-lg
   ),
   lg: (
-    sm: 1024, // iPad Pro Portrait, iPad Landscape
-    md: 1280, // Macbook 13"
+    sm: 1024, // $desktop
+    md: 1280, // $dektop-md
     ml: 1366, 
-    lg: 1440, // Macbook 15"
+    lg: 1440, // $desktop-lg
     xl: 1680,
   ),
   xl: (
-    sm: 1920, // iMac 21"
-    md: 2048,
-    ml: 2560, // iMac 27"
+    sm: 1920, 
+    md: 2048, // $desktop-xl
+    ml: 2560, 
     lg: 2880,
     xl: 3200,
   )

@@ -151,10 +151,10 @@ body .row-fluid [class*="span"].widget-type-space { min-height:1px; }
 [class*="fa-"] { font-family: fontawesome; font-style: normal}
 
 .button a , a.button { padding:15px 18px 14px 22px; background:  color('green'); border: 2px solid   color('green'); color:color('foreground');  max-width:100%; display:inline-block; font-size:32px; line-height:1;border-radius: 0px; text-transform: uppercase; font-weight: 500; position: relative; font-size: 32px;   }
-.buttonBox a , a.buttonBox { padding: 14px 11px;  background: #BEBEBEB2;  border: 1px solid #BEBEBEB2;  color:  color('foreground');  max-width: 100%;  display: inline-block;  line-height: 1;  border-radius: 0px;  text-transform: uppercase;  font-weight: 500;  position: relative;  font-size: 16px;  }
+.articleTag a , a.articleTag { padding: 14px 11px;  background: #BEBEBEB2;  border: 1px solid #BEBEBEB2;  color:  color('foreground');  max-width: 100%;  display: inline-block;  line-height: 1;  border-radius: 0px;  text-transform: uppercase;  font-weight: 500;  position: relative;  font-size: 16px;  }
 .button.v2 a , a.button.v2 { background:transparent; color:  color('green');}
 .button a:hover,a.button:hover { background:transparent; color:  color('green'); }
-.buttonBox a:hover,a.buttonBox:hover { background:transparent; color: #BEBEBEB2;}
+.articleTag a:hover,a.articleTag:hover { background:transparent; color: #BEBEBEB2;}
 .NormalBtnSmall span {  display: inline-block;  position: relative; margin-right: 10px;}
 .NormalBtnSmall a svg {  width: 14px;  height: 13px;}
 .button .BtnIcon {  display: inline-block;  padding-left: 14px;}

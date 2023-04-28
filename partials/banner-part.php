@@ -24,7 +24,7 @@
                         $parentpage = get_permalink($post->post_parent);
                         if ($post->post_parent) {
                         ?>
-                            <div class="BannerCommonBtn pt10 buttonBox">
+                            <div class="BannerCommonBtn pt10 articleTag">
                                 <a href="<?php echo $parentpage  ?>"><?php echo get_the_title($post->post_parent); ?></a>
                             </div>
                         <?php } ?>

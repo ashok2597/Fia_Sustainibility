@@ -25,7 +25,7 @@ if (!empty($previousPage) && !empty($nextPage)) {
                                 </svg></span></a>
                     </div>
                     <div class="BtnTitleNew medium fontWhite">
-                        <h6><? echo get_the_title($nextPage); ?></h6>
+                        <h6><?php echo get_the_title($nextPage); ?></h6>
                     </div>
                 </div>
             </div>

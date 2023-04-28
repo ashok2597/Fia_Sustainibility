@@ -1,4 +1,5 @@
 .button {
+  user-select: none;
   a {
     display: inline-flex;
     align-items: center;
@@ -106,6 +107,8 @@
 }
 
 .NormalBtn {
+  user-select: none;
+
   a {
     font-size: 24px;
     text-transform: uppercase;
@@ -185,23 +188,19 @@
   }
 }
 
-.buttonBox {
+.articleTag {
+  user-select: none;
   a {
     padding: 14px 11px;
-    background: #BEBEBEB2;
-    border: 1px solid #BEBEBEB2;
-    color: #000;
-    max-width: 100%;
+    background: color('foreground', .25);
+    color: color('foreground');
     display: inline-block;
     line-height: 1;
-    border-radius: 0px;
     text-transform: uppercase;
     font-weight: 500;
-    position: relative;
     font-size: 16px;
     &:hover {
-      background:transparent;
-      color: #BEBEBEB2;
+      background: color('foreground', .1);
     }
   }
 }

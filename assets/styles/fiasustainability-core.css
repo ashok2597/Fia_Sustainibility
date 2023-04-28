@@ -532,7 +532,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.29;
-  color: #041323;
+  color: hsla( 226, 29%, 9%, 1 );
+  color: hsla( var(--hi-c-foreground-hsl), 1 );
   min-height: 100vh;
   font-family: "futura-pt", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", sans-serif;
   font-family: var(--hi-f-ui);
@@ -578,8 +579,13 @@ body.admin-bar {
   outline-color: hsla(113, 63%, 59%, 0.5);
 }
 
-img {
+img,
+figure,
+svg {
   max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 figure {
@@ -636,6 +642,11 @@ a {
 .container {
   margin-left: auto;
   margin-right: auto;
+}
+.button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .button a {
   display: inline-flex;
@@ -751,6 +762,11 @@ a {
   }
 }
 
+.NormalBtn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .NormalBtn a {
   font-size: 24px;
   text-transform: uppercase;
@@ -845,23 +861,26 @@ a {
   }
 }
 
-.buttonBox a {
+.articleTag {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.articleTag a {
   padding: 14px 11px;
-  background: rgba(190, 190, 190, 0.6980392157);
-  border: 1px solid rgba(190, 190, 190, 0.6980392157);
-  color: #000;
-  max-width: 100%;
+  background: hsla( 226, 29%, 9%, 0.25 );
+  background: hsla( var(--hi-c-foreground-hsl), 0.25 );
+  color: hsla( 226, 29%, 9%, 1 );
+  color: hsla( var(--hi-c-foreground-hsl), 1 );
   display: inline-block;
   line-height: 1;
-  border-radius: 0px;
   text-transform: uppercase;
   font-weight: 500;
-  position: relative;
   font-size: 16px;
 }
-.buttonBox a:hover {
-  background: transparent;
-  color: rgba(190, 190, 190, 0.6980392157);
+.articleTag a:hover {
+  background: hsla( 226, 29%, 9%, 0.1 );
+  background: hsla( var(--hi-c-foreground-hsl), 0.1 );
 }
 
 .BtnAngle {
@@ -902,6 +921,11 @@ a {
   .HeadPostBtn {
     padding-top: 50px;
   }
+}
+.headerSection {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .headerSection .wrapper {
   max-width: 100%;
@@ -1486,6 +1510,71 @@ section.headerSectionMain {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+}
+.contentWysiwyg > * + * {
+  margin-top: 2em;
+}
+.contentWysiwyg strong {
+  font-weight: 500;
+}
+.contentWysiwyg a {
+  color: hsl(113, 63%, 59%);
+  font-weight: 500;
+  text-decoration: underline;
+  display: inline;
+}
+.contentWysiwyg ul, .contentWysiwyg ol {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.contentWysiwyg ul > * + *, .contentWysiwyg ol > * + * {
+  margin-top: 1em;
+}
+.contentWysiwyg ul {
+  list-style: none;
+}
+.contentWysiwyg ul li {
+  padding-left: 2em;
+  position: relative;
+}
+.contentWysiwyg ul li:before {
+  position: absolute;
+  display: inline-block;
+  margin-right: 1em;
+  height: 100%;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='39' viewBox='0 0 49 39' fill='none'%3E%3Cg clip-path='url(%23clip0_540_2032)'%3E%3Cpath d='M4.58838 0L20.6472 19.5L4.58838 40.1471' stroke='%2364D855' stroke-width='6.88235' stroke-linecap='square'/%3E%3Cpath d='M24.0884 0L40.1472 19.5L24.0884 40.1471' stroke='%2364D855' stroke-width='11.4706' stroke-linecap='square'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_540_2032'%3E%3Crect width='48.1765' height='39' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+.contentWysiwyg ol {
+  list-style-type: none;
+}
+.contentWysiwyg ol li {
+  position: relative;
+  counter-increment: li;
+  padding-left: 2em;
+}
+.contentWysiwyg ol li:before {
+  content: counter(li) ".";
+  color: hsl(113, 63%, 59%);
+  font-weight: 500;
+  position: absolute;
+  display: inline-block;
+  margin-right: 1em;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 1em;
+}
+.contentWysiwyg blockquote {
+  padding: 2em;
+  background-color: hsla(113, 63%, 59%, 0.5);
+  font-weight: 500;
 }
 .headerSectionMain {
   z-index: 10000 !important;

@@ -22,7 +22,7 @@ get_header();
                         <div class="BannerCommonTitle fontWhite pt10">
                             <h1><?php the_title(); ?></h1>
                         </div>
-                        <div class="BannerCommonBtn pt10 buttonBox">
+                        <div class="BannerCommonBtn pt10 articleTag">
                             <?php
                             $parent_page = get_the_title(wp_get_post_parent_id($post->ID));
                             ?>

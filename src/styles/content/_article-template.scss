@@ -1,0 +1,84 @@
+.contentWysiwyg {
+  > * {
+    + * {
+      margin-top: 2em; // All elements except first child from parent adds 1em (unit depending on the size of element) as margin top
+    }
+  }
+  // p {
+  //   strong {
+  //     font-weight: 500;
+  //   }
+  // }
+  strong {
+    font-weight: 500;
+  }
+  a {
+    color: color('green');
+    font-weight: 500;
+    text-decoration: underline;
+    display: inline;
+  }
+  ul, ol {
+    padding-inline-start: 0; // This inline-start / inline-end / block-start / block-end offer immediate support no effort for right to left languages
+    > * {
+      + * {
+        margin-top: 1em;
+      }
+    }
+  }
+  ul {
+    list-style:none;
+    li {
+      padding-left: 2em;
+      position: relative;
+      &:before {
+        position: absolute;
+        display: inline-block;
+        margin-right: 1em;
+        height: 100%;
+        content: '';
+        left:0;
+        top:0;
+        width: 1em;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='39' viewBox='0 0 49 39' fill='none'%3E%3Cg clip-path='url(%23clip0_540_2032)'%3E%3Cpath d='M4.58838 0L20.6472 19.5L4.58838 40.1471' stroke='%2364D855' stroke-width='6.88235' stroke-linecap='square'/%3E%3Cpath d='M24.0884 0L40.1472 19.5L24.0884 40.1471' stroke='%2364D855' stroke-width='11.4706' stroke-linecap='square'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_540_2032'%3E%3Crect width='48.1765' height='39' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain; 
+        background-position: top center;
+      }
+    }
+    
+  }
+
+  ol {
+    list-style-type: none;
+    li {
+      position: relative;
+      counter-increment: li;
+      padding-left: 2em;
+      &:before {
+        content: counter(li)".";
+        color: color('green');
+        font-weight: 500;
+      position: absolute;
+        display: inline-block;
+        margin-right: 1em;
+        height: 100%;
+        left:0;
+        top:0;
+        width: 1em;
+      }
+    }      
+  }
+
+  blockquote {
+    padding: 2em;
+    background-color: color('green', .5);
+    font-weight: 500;
+  }
+
+  img {
+    &.alignleft {
+      // Do something
+    }
+  }
+}

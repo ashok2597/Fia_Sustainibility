@@ -69,7 +69,7 @@
 																								the_row();
 																								$inner_submenu_page = get_sub_field('inner_submenu_page');
 																								if (!empty($inner_submenu_page)) {
-																									$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($inner_submenu_page->ID), 'medium');
+																									$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($inner_submenu_page->ID), 'large');
 
 																							?>
 																									<li class="<?php echo (!empty($featured_image)) ?'child-item-has-children childmenu-Mob' :'' ;?>">

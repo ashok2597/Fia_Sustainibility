@@ -1,8 +1,37 @@
+$breakpoints: (
+  sm: (
+    sm: 320, // $phone
+    md: 360, // $phone-md
+    lg: 412, // $phone-lg
+    xl: 480, 
+  ),
+  md: (
+    sm: 640, // $tablet
+    md: 768, // $tablet-md
+    lg: 920, // $tablet-lg
+  ),
+  lg: (
+    sm: 1024, // $desktop
+    md: 1280, // $dektop-md
+    ml: 1366, 
+    lg: 1440, // $desktop-lg
+    xl: 1680,
+  ),
+  xl: (
+    sm: 1920, 
+    md: 2048, // $desktop-xl
+    ml: 2560, 
+    lg: 2880,
+    xl: 3200,
+  )
+);
 
 /*-=-=- Only Desktop CSS -=-=-*/
 @media (min-width:641px ) {
+  FROM $tablet
 
 @media (min-width:768px ) {
+  FROM $tablet-md
 
 @media (min-width:992px ) {
 

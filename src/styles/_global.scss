@@ -81,7 +81,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.29;
-  color: #041323;
+  color: color('foreground');
   &.lodaded {
     opacity: 1;
   } // @Pratiksha / Weboccult shouldn't this say 'loaded'?
@@ -179,10 +179,12 @@ body {
   // outline: 0 !important;
 }
 
-img {
+img,
+figure,
+svg {
   max-width: 100%;
   // pointer-events: none;
-  // user-select: none;
+  user-select: none;
 } 
 
 // svg {
