@@ -27,7 +27,7 @@
                                      <?php } ?>
                                  </div>
                                  <?php if (!empty($horizone_card_inner_list)) { ?>
-                                     <div class="GrpTitlesListing pt24 fontWhite noListStyle listStyleDisk pt25">
+                                     <div class="GrpTitlesListing pt24  noListStyle listStyleDisk pt25">
                                          <?php echo $horizone_card_inner_list; ?>
                                      </div>
                                  <?php } ?>
@@ -46,7 +46,7 @@
     ?>
      <section class="SingleContentsection pt60">
          <div class="wrapper">
-             <div class="ContentGrpTop fontWhite max985 marginRight" data-aos="fade-up">
+             <div class="ContentGrpTop   marginRight" data-aos="fade-up">
                  <?php echo  $get_content; ?>
              </div>
          </div>

@@ -2,7 +2,7 @@
 <?php if (have_rows('counter_content')) : ?>
     <div class="GrpCounterV4Section">
         <div class="wrapper">
-            <div class="GrpCounterV4Parent pt60 max985 marginRight">
+            <div class="GrpCounterV4Parent pt60  marginRight">
                 <div class="ConterTopParent noListStyle" data-aos="fade-up">
                     <ul id="counterTopV4">
                         <?php while (have_rows('counter_content')) : the_row();
@@ -16,7 +16,7 @@
                                         <span class="CounterSign"><?php echo $cc_count_num_sign; ?></span>
                                     <?php } ?>
                                 </h2>
-                                <span class="CounterTxt normal fontWhite">
+                                <span class="CounterTxt normal ">
                                     <h4> <?php echo $cc_count_title; ?> </h4>
                                 </span>
                             </li>

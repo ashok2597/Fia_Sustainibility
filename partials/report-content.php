@@ -1,6 +1,6 @@
 <!-- Content Image Group Section -->
 
-<div class="CounterBoxParentV3Part max985 marginRight pt60" data-aos="fade-up">
+<div class="CounterBoxParentV3Part  marginRight pt60" data-aos="fade-up">
     <?php
     $measurement_sub_heading1 = get_field("measurement_sub_heading1");
     if (!empty($measurement_sub_heading1)) { ?>
@@ -42,7 +42,7 @@
                                     <div class="TwoColCounterRightTitle pt10">
                                         <h5><?php echo $mc_icon_title; ?></h5>
                                     </div>
-                                    <div class="TwoColCounterRightContent pt10 fontWhite">
+                                    <div class="TwoColCounterRightContent pt10 ">
                                         <?php echo $mc_icon_content; ?>
                                     </div>
                                 </div>
@@ -60,6 +60,6 @@
         </div>
     <?php   } ?>
 </div>
-<div class="ContentGrpTop fontWhite max985 marginRight pt60" data-aos="fade-up">
+<div class="ContentGrpTop   marginRight pt60" data-aos="fade-up">
     <?php echo get_field("measurement_chart_content"); ?>
 </div>

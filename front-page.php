@@ -170,7 +170,7 @@
                 <div class="TabImgContentParentV2 d_flex flex_wrap pt50">
                   <div class="TabContentBoxV2Top">
 
-                    <div class="TabContentBoxV2 fontWhite">
+                    <div class="TabContentBoxV2 ">
                       <?php echo get_sub_field('fp-fpt_tab_content'); ?>
                     </div>
 

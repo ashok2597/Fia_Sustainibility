@@ -7,7 +7,7 @@
  ?>
  <div class="GrpIconContBoxNewMain pt50">
      <div class="wrapper">
-         <div class="GrpIconContBoxNewTop max985 marginRight">
+         <div class="GrpIconContBoxNewTop  marginRight">
              <div class="BoxSlidePartMain altThemeBg fontTheme">
                  <div class="BoxSlidePartLogo" data-aos="fade-up">
                      <img src="<?php echo $fia_greenbox_logo; ?>">

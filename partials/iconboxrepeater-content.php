@@ -2,7 +2,7 @@
 <?php if (have_rows('cc_icon_box')) : ?>
     <div class="IconTitleNewV3Section">
         <div class="wrapper">
-            <div class="IconTitleParentMainNewV3 max985 marginRight">
+            <div class="IconTitleParentMainNewV3  marginRight">
                 <div class="IconTitleBtnParentNew pt70">
                     <div class="IconTitleParentNew d_flex justify_center flex_wrap">
                         <?php while (have_rows('cc_icon_box')) : the_row();

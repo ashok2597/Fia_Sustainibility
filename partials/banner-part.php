@@ -17,7 +17,7 @@
                             <p><?php echo $bannerReportyear; ?></p>
                         </div>
                         <?php } ?>
-                        <div class="BannerCommonTitle fontWhite pt10">
+                        <div class="BannerCommonTitle  pt10">
                             <h1><?php the_title(); ?></h1>
                         </div>
                         <?php

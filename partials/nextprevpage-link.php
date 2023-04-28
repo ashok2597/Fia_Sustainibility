@@ -13,7 +13,7 @@ if (!empty($previousPage) && !empty($nextPage)) {
                                     <path d="M10 1.5L2 9.5L10 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                 </svg></span>previous</a>
                     </div>
-                    <div class="BtnTitleNew medium fontWhite">
+                    <div class="BtnTitleNew medium ">
                         <h6><?php echo get_the_title($previousPage); ?>
                         </h6>
                     </div>
@@ -24,7 +24,7 @@ if (!empty($previousPage) && !empty($nextPage)) {
                                     <path d="M1 17.5L9 9.5L0.999999 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                                 </svg></span></a>
                     </div>
-                    <div class="BtnTitleNew medium fontWhite">
+                    <div class="BtnTitleNew medium ">
                         <h6><?php echo get_the_title($nextPage); ?></h6>
                     </div>
                 </div>

@@ -82,3 +82,69 @@
     }
   }
 }
+
+// .max985 {
+//   // max-width: 985px;
+//   // @media (max-width:1699px ){
+//   //   max-width: 738px;
+//   // }
+// }
+
+// .ContentGrpBtnMain,
+.IconTitleParentMainNewV3,
+.GrpCounterV4Parent,
+.GrpIconContBoxNewTop, 
+.GrpTwoColContensParent,
+.GrpTwoColImgContMain,
+.ImageGrpNew, // This will be deactivated
+.GrpILogoParentMain,
+.ContentGrpListItem,
+.ContentGrpListItemV2,
+.listStyleDoubleAngle,
+.ContentGrpTitleTop,
+// .ContentGrpTop, // This is Temp 1 with wysiwyg
+.CounterBoxParentV3Part,
+.ContentGrpBtnMain {
+  // margin-left: auto;
+  max-width: 985px;
+  @media (max-width:1699px ){
+    max-width: 738px;
+  }
+  
+}
+
+.contentWysiwyg {
+  margin-left: auto;
+  max-width: 985px;
+  @media (max-width:1699px ){
+    max-width: 738px;
+  }
+  // p {
+  //   img {
+  //     max-width: calc(100% + 738px);
+  //   }
+  // }
+  // > * {
+    
+  //   &:not(p img) {
+  //     margin-left: auto;
+  //     max-width: 985px;
+  //     @media (max-width:1699px ){
+  //       max-width: 738px;
+  //     }
+  //   }
+  // }
+}
+
+// @Fábio
+// PLAN FOR NEXT WEEK:
+
+// Add wysiwyg containers after each of the different components needed that aren't already in the 'main' one
+
+// Label the ACF fields that will be disabled
+
+// Large images for now will need to be a new component
+
+// Ask Matteo to repopulate
+
+// Continue with edits in Matteo's documents (for Article only)

@@ -82,7 +82,7 @@
 																													<?php if (!empty($featured_image)) { ?>
 																														<div class="HeadPostBox bg" style="background-image: url(<?php echo $featured_image[0]; ?>);">
 																															<div class="HeadPostContentTop">
-																																<div class="HeadPostContent fontWhite">
+																																<div class="HeadPostContent ">
 																																	<p><?php echo get_the_excerpt($inner_submenu_page->ID); ?></p>
 																																</div>
 																																<div class="HeadPostBtn opacity5"><a href="<?php echo get_permalink($inner_submenu_page->ID); ?>">read more</a></div>

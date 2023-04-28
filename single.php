@@ -21,7 +21,7 @@ get_header();
 						<img src="<?php echo $postImgurl ?>" />
 					</div>
 					<?php } ?>
-					<div class="postMainContent pt50 fontWhite">
+					<div class="postMainContent pt50 ">
 						<p><?php echo get_the_content($post->ID); ?></p>
 					</div>
 				</div>

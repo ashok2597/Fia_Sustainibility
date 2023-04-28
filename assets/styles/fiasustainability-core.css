@@ -1576,6 +1576,49 @@ section.headerSectionMain {
   background-color: hsla(113, 63%, 59%, 0.5);
   font-weight: 500;
 }
+.IconTitleParentMainNewV3,
+.GrpCounterV4Parent,
+.GrpIconContBoxNewTop,
+.GrpTwoColContensParent,
+.GrpTwoColImgContMain,
+.ImageGrpNew,
+.GrpILogoParentMain,
+.ContentGrpListItem,
+.ContentGrpListItemV2,
+.listStyleDoubleAngle,
+.ContentGrpTitleTop,
+.CounterBoxParentV3Part,
+.ContentGrpBtnMain {
+  max-width: 985px;
+}
+@media (max-width: 1699px) {
+  .IconTitleParentMainNewV3,
+  .GrpCounterV4Parent,
+  .GrpIconContBoxNewTop,
+  .GrpTwoColContensParent,
+  .GrpTwoColImgContMain,
+  .ImageGrpNew,
+  .GrpILogoParentMain,
+  .ContentGrpListItem,
+  .ContentGrpListItemV2,
+  .listStyleDoubleAngle,
+  .ContentGrpTitleTop,
+  .CounterBoxParentV3Part,
+  .ContentGrpBtnMain {
+    max-width: 738px;
+  }
+}
+
+.contentWysiwyg {
+  margin-left: auto;
+  max-width: 985px;
+}
+@media (max-width: 1699px) {
+  .contentWysiwyg {
+    max-width: 738px;
+  }
+}
+
 .headerSectionMain {
   z-index: 10000 !important;
 }
@@ -1769,10 +1812,6 @@ input[type=submit] {
 
 .Max700 {
   max-width: 700px;
-}
-
-.max985 {
-  max-width: 985px;
 }
 
 .marginAuto {
@@ -3813,9 +3852,6 @@ Responsive Media Queries CSS
   }
   .pt80, .p80-0 {
     padding-top: 60px;
-  }
-  .max985 {
-    max-width: 738px;
   }
   .listStyleDoubleAngle ul li {
     padding-left: 50px;

@@ -42,7 +42,7 @@
                             <h2><span class="count percent" data-count="<?php echo $datacounter; ?>">0</span>
                               <span class="CounterSign"><?php echo $counter_sign; ?></< /span>
                             </h2>
-                            <span class="CounterTxt normal fontWhite">
+                            <span class="CounterTxt normal ">
                               <h4><?php echo $counter_heading; ?></h4>
                             </span>
                           </li>

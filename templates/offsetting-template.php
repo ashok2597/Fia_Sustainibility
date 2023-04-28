@@ -19,7 +19,7 @@ get_header();
                         <div class="BannerCommonTopTitle medium fontGreen">
                             <p><?php the_field("op-report_year"); ?></p>
                         </div>
-                        <div class="BannerCommonTitle fontWhite pt10">
+                        <div class="BannerCommonTitle  pt10">
                             <h1><?php the_title(); ?></h1>
                         </div>
                         <div class="BannerCommonBtn pt10 articleTag">
@@ -38,13 +38,13 @@ get_header();
 <section class="ContentImgGrpSection pt80">
     <div class="wrapper">
         <div class="ContentImgGrpParent">
-            <div class="ContentGrpTop fontWhite max985 marginRight" data-aos="fade-up">
+            <div class="ContentGrpTop   marginRight" data-aos="fade-up">
                 <?php the_field("op-banner_content"); ?>
             </div>
             <div class="ImgGrpTop pt80" data-aos="fade-up">
                 <img src="<?php the_field("op-report_image"); ?>">
             </div>
-            <div class="ContentGrpTop pt70 fontWhite max985 marginRight" data-aos="fade-up">
+            <div class="ContentGrpTop pt70   marginRight" data-aos="fade-up">
                 <?php the_field("op-report_content"); ?>
             </div>
         </div>
