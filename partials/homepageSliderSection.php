@@ -132,10 +132,11 @@
                             $counter_svg = get_sub_field('fp-counter_svg');
                             $counter_heading = get_sub_field('fp-counter_heading');
                             $counter_contentff = get_sub_field('fp-counter_content');
+                            $color = get_sub_field('color');
                             if(!empty($counter_text) && !empty($counter_heading) && !empty($counter_svg) ){
                           ?>
-                            <div class="TwoColumnCounterRepeter d_flex text-left">
-                              <div class="TwoColumnCounterRepeter d_flex text-left">
+                            <!-- <div class="TwoColumnCounterRepeter d_flex text-left"> -->
+                              <div class="TwoColumnCounterRepeter d_flex text-left" <?php if($color):?>style="color: <?php echo $color;?>"<?php endif;?>>
                                 <div class="TwoColCounterParent">
                                   <div class="TwoColColuter">
                                     <h2><span class="count percent" data-count="<?php echo get_sub_field('fp-counter_per'); ?>">0</span>
@@ -160,7 +161,7 @@
                                   <?php } ?>
                                 </div>
                               </div>
-                            </div>
+                            <!-- </div> -->
                           <?php } endwhile; ?>
                         </div>
                       </div>

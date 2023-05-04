@@ -178,3 +178,8 @@ https://www.semrush.com/blog/semantic-html5-guide/
 1. We found in the front-page (please check front-page-weboccult-backup.php file) that the number of opening <div> tags doesn't match the closing </div> tags. This is another reason to write semantic tags, it makes it visually easier to see and close tags, etc
 
 1. for any future PHP: Please avoid using <?php if($condition) {?> with curly braces, and instead use <?php if($condition): ?> with the colon symbol ":" instead. We had errors and problems in the past due to the usage with curly brace
+
+1. Please right consistent naming conventions. For SCSS / Class names for example. We like to use BEM https://getbem.com/naming/ using camelCase. In css / class names provided by WebOccult sometimes you use camelCase sometimes PascalCase
+
+1. Implementations of icons in the backend CMS in ACF (Advanced custom fields) is inconsistent, sometimes (such as homepage mission 3 boxes) the icons are image file uploads, other times (in article page template) the icon is given as a svg code
+

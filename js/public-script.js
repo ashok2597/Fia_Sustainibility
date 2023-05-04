@@ -352,27 +352,26 @@ $(document).ready(function () {
   });
 
   // Logo Slider
-
-  $('.GrpILogoParent').slick({
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 6
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 4
-      }
-    }]
-  });
+  // $('.GrpILogoParent').slick({
+  //   slidesToShow: 8,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 1500,
+  //   arrows: false,
+  //   dots: false,
+  //   pauseOnHover: false,
+  //   responsive: [{
+  //     breakpoint: 767,
+  //     settings: {
+  //       slidesToShow: 6
+  //     }
+  //   }, {
+  //     breakpoint: 480,
+  //     settings: {
+  //       slidesToShow: 4
+  //     }
+  //   }]
+  // });
 
 });
 

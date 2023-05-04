@@ -655,11 +655,6 @@ Responsive Media Queries CSS
 	/* Header Version 2 */
 	.V2navbar ul li:hover ul.V2-dropdown-menu{opacity: 1 !important; visibility: visible !important; top: 100%; -webkit-transform: rotateX(0) translateZ(0);   -moz-transform: rotateX(0) translateZ(0);    transform: rotateX(0) translateZ(0);}
 	.V2navbar ul.V2-dropdown-menu{ opacity: 0;  visibility: hidden !important; }
-	/* AlternateSection */
-	.AlternateImgBoxTop {  width: 33%; }
-	.AlternateContentBoxTop {  width: 67%; }
-	.AlternateParentMain .AlternateBoxRepeter:nth-child(even) .AlternateImgBoxTop {  order: 2; }
-	.AlternateParentMain .AlternateBoxRepeter:nth-child(even) .AlternateContentBoxTop  {  order: 1; }
 	/* Icon Title V3 */
 	.IconTitleParentMainNewV3 .IconTitleBoxNewRepeter {  width: 30%; }
 	.IconTitleParentMainNewV3 .IconTitleParentNew {  max-width: 860px;  justify-content: flex-start;}
@@ -1109,7 +1104,7 @@ Responsive Media Queries CSS
 
 /*-=-=-  Mobile Devices -=-=-*/
 @media (max-width:767px ) {
-
+  .Mobile_wrap { flex-wrap: wrap;}
 	h1 { font-size:32px; }
 	h2 { font-size:28px; }
 	h3 { font-size:22px; }
@@ -1147,7 +1142,7 @@ Responsive Media Queries CSS
 	.pdLR60 {   padding-left: 0;   padding-right: 0;  }
 	.SectionSpace {  padding-top: 60px;  padding-bottom: 60px;}
 	.button a, a.button {  padding: 10px 10px 9px;  font-size: 15px;}
-	.Mobile_wrap { flex-wrap: wrap;}
+	
 	.NormalBtnSmall a, .NormalBtn a {  font-size: 16px;}
 
 	/* Banner */

@@ -4,7 +4,7 @@
   .BannerBtn,
   .AngleImgTxt {
     a, span {
-      color: color('green');
+      color: color('accent');
     }
   }
 
@@ -47,7 +47,7 @@
 .IconTitleSection {
   color: color('darkBlue');
   .IconTitleBox  {
-    border: 1px solid color('green');
+    border: 1px solid color('accent');
     // background: #041323;
     background: color('background');
     // color: color('darkBlue');
@@ -81,4 +81,8 @@
   .SectionTitle {
     color: color('white');
   }
+}
+
+@media (max-width:767px ) {
+  .Mobile_wrap { flex-wrap: wrap;}
 }

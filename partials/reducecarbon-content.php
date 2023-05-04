@@ -1,3 +1,4 @@
+<!-- DEACTIVATED -->
 <?php if (have_rows('rc_emission')) : ?>
     <?php while (have_rows('rc_emission')) : the_row();
         $subheading = get_sub_field('rc_subheading');

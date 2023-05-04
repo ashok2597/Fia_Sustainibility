@@ -27,3 +27,15 @@
         </div>
     </div>
 <?php endif; ?>
+
+<!-- Single Content section -->
+<?php $get_content = get_field("counter_content_after");?>
+<?php if (!empty($get_content)):?>
+  <section class="SingleContentsection pt60">
+    <div class="wrapper">
+      <div class="ContentGrpTop contentWysiwyg marginRight" data-aos="fade-up">
+        <?php echo  $get_content; ?>
+      </div>
+    </div>
+  </section>
+<?php endif;?>

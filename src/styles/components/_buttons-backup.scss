@@ -6,7 +6,7 @@
 //   // padding: .5em 1.5em;
 //   padding: .5em 1em .4em; // bottom slightly less due to typeface
 //   border: 2px solid transparent;
-//   background-color: color('green');
+//   background-color: color('accent');
 //   line-height: 1;
 //   color:white;
 //   white-space: nowrap;
@@ -45,11 +45,11 @@
 //     }
 //     [data-template=single-careers] &  {
 //       background-color: transparent;
-//       background-color: color('green', .10);
-//       border: 2px solid color('green');
-//       color: color('green');
+//       background-color: color('accent', .10);
+//       border: 2px solid color('accent');
+//       color: color('accent');
 //       &:hover, &:focus {
-//         background-color: color('green', .25);
+//         background-color: color('accent', .25);
 //       }
 //     }
 //   }

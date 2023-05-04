@@ -38,13 +38,13 @@ get_header();
 <section class="ContentImgGrpSection pt80">
     <div class="wrapper">
         <div class="ContentImgGrpParent">
-            <div class="ContentGrpTop   marginRight" data-aos="fade-up">
+            <div class="ContentGrpTop marginRight" data-aos="fade-up">
                 <?php the_field("op-banner_content"); ?>
             </div>
             <div class="ImgGrpTop pt80" data-aos="fade-up">
                 <img src="<?php the_field("op-report_image"); ?>">
             </div>
-            <div class="ContentGrpTop pt70   marginRight" data-aos="fade-up">
+            <div class="ContentGrpTop pt70 marginRight" data-aos="fade-up">
                 <?php the_field("op-report_content"); ?>
             </div>
         </div>

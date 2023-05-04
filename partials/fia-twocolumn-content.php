@@ -1,3 +1,4 @@
+ <!-- DEACTIVATED -->
  <!-- TwoColContentBox -->
  <?php if (have_rows('fia_two_column_main_content')) : ?>
      <div class="GrpTwoColContensMain pt80">

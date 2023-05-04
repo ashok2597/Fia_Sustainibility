@@ -170,11 +170,11 @@ body {
 }
 
 ::selection {
-  background-color: color('green', .5);
+  background-color: color('accent', .5);
 }
 
 :focus {
-  outline-color: color('green', .5);
+  outline-color: color('accent', .5);
   // outline-color: transparent !important;
   // outline: 0 !important;
 }

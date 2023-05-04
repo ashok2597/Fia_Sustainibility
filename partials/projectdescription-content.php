@@ -1,3 +1,4 @@
+<!-- THIS WILL BE DEACTIVATED -->
 <?php
 $project_image_content = get_field("project_image_content");
 if (!empty($project_image_content)) {

@@ -22,6 +22,12 @@ $colors: (
     contrast: $blackpointHsl,
   ),
 
+  'newGreen': ( // Equivalent to #64D855
+    hsl: (87,48%,52%),
+    contrast: $blackpointHsl,
+  ),
+
+
   'gray': ( // Equivalent to #BEBEBE
     // hsl: (20,2%,35%), 
     hsl: (0, 0%, 75%), 
@@ -58,6 +64,7 @@ $contextColors: (
   // attention: yellow,
   'neutral': 'blue',
   'positive': 'green',
+  'accent': 'newGreen',
 
   // 'foreground': $blackpointHsl,
   // 'background': $whitepointHsl,

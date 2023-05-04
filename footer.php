@@ -33,7 +33,7 @@ if (is_front_page()) {
     <section class="ReportSection ReportSectionV3 SectionSpace">
       <div class="wrapper">
         <div class="ReportParent">
-          <div class="Sectionhttps://fia.test4you.in/key-acheivements/measurement/Title uppercase" data-aos="fade-up">
+          <div class="SectionTitle uppercase" data-aos="fade-up">
             <h2><?php the_field("fp-srs_heading", "option"); ?></h2>
           </div>
           <div class="SectionContent pt60 " data-aos="fade-up">

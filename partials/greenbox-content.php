@@ -1,3 +1,4 @@
+ <!-- DEACTIVATED -->
  <!-- Box -->
  <?php
  $fia_greenbox_logo=get_field("fia_greenbox_logo");
