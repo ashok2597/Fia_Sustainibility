@@ -135,11 +135,11 @@ body .row-fluid [class*="span"].widget-type-space { min-height:1px; }
 .overlay.BlackOverlay:before { background: radial-gradient(106.06% 316.24% at 106.87% -4.37%, rgba(4, 19, 35, 0) 0%, color('foreground') 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(0deg, rgba(4, 19, 35, 0.3), rgba(4, 19, 35, 0.3));
 	opacity: 0.8; }
 .get-bg { display:none !important; }
-.altThemeBg { background:#64D855; }
+.altThemeBg { background:color('accent'); }
 .blueBg { background:#002D5F; }
 .blackBg { background:color('foreground'); }
 .whitebg { background:#fff; }
-.SpanGreenTxt span{ color: #64D855 !important; }
+.SpanGreenTxt span{ color: color('accent') !important; }
 .tablee{  display: table;  width: 100%; height: 100%;}
 .TableCell { display: table-cell;    vertical-align: middle;}
 
@@ -332,7 +332,7 @@ textarea:focus, input[type="text"]:focus, input[type="number"]:focus, input[type
 /*Body css*/
 
 .HeadPostBoxMain {  display: none;}
-.HeadPostBox .HeadPostBtn a {  font-size: 18px !important;  color: #64D855;  font-weight: 500; border: 0 !important;}
+.HeadPostBox .HeadPostBtn a {  font-size: 18px !important;  color: color('accent');  font-weight: 500; border: 0 !important;}
 .HeadPostBtn {  padding-top: 20px;}
 .HeadPostContent {  text-transform: initial; }
 .HeadPostBox {  padding-top: 30px;  padding-right: 60px;  padding-bottom: 16px;  height: 230px;  max-width: 300px;  margin: 0 0 0 auto;  display: flex;  align-items: center; border-right: 1px solid #fff; }
@@ -411,7 +411,7 @@ video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0
 .BlogSliderSection{ overflow-x: hidden; }
 .BlogSliderParentInner {  position: relative; }
 .BlogSliderFeatureImg {  opacity: .5; height: 495px; padding: 25px; background: linear-gradient(180deg, rgba(4, 19, 35, 0) 28.13%, rgba(4, 19, 35, 0.428571) 100%), rgba(255, 255, 255, 0.2);     background-size: cover !important;  background-position: center !important;  position: relative;  background-repeat: no-repeat !important;  border: 2px solid transparent;}
-.BlogSlideRepeter.swiper-slide-active .BlogSliderFeatureImg{ border-color: #64D855; opacity: 1; }
+.BlogSlideRepeter.swiper-slide-active .BlogSliderFeatureImg{ border-color: color('accent'); opacity: 1; }
 .BlogSlideTitleBoxTop {  position: absolute;  bottom: 12px;  left: 24px; }
 .BlogSlideTopTitle { text-transform: uppercase; color:color('accent'); font-weight: 500; }
 .BlogSliderLink a {  font-weight: 500;  color: #fff;  display: flex;  align-items: center;  max-width: 570px;}
@@ -434,10 +434,10 @@ video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0
 /* Article */
 /* Nxt prev Btn */
 .PrevBtnTopV2 h6 { color: rgb(255 255 255 / 5%);}
-.PrevBtnTopV2 a svg path{ stroke: rgb(100 216 85 / 5%); transition: all ease 0.3s;  -moz-transition: all ease 0.3s;  -webkit-transition: all ease 0.3s;  -o-transition: all ease 0.3s; }
-.PrevBtnTopV2 a{ color: rgb(100 216 85 / 5%); }
-.PrevBtnTopV2 .NormalBtn a:hover {  opacity: 1; color: rgb(100 216 85); }
-.PrevBtnTopV2 .NormalBtn a:hover svg path{ stroke: rgb(100 216 85); }
+.PrevBtnTopV2 a svg path{ stroke: color('accent', .05); transition: all ease 0.3s;  -moz-transition: all ease 0.3s;  -webkit-transition: all ease 0.3s;  -o-transition: all ease 0.3s; }
+.PrevBtnTopV2 a{ color: color('accent', .05); }
+.PrevBtnTopV2 .NormalBtn a:hover {  opacity: 1; color: color('accent'); }
+.PrevBtnTopV2 .NormalBtn a:hover svg path{ stroke: color('accent'); }
 .ContentGrpBtnMain {  gap: 20px;}
 /* Counter V3 */
 .CounterBoxParentV3Part .RightImgRightCounterBox {  padding-left: 0;  padding-right: 40px; }
@@ -486,7 +486,7 @@ Responsive Media Queries CSS
 	.expandTabbV2 { display: none;  cursor: pointer;}
 	/* IconContent */
 	.IconTitleInnerParentMain{ position: relative; }
-	.IconTitleInnerParentMain:before{ content: '';  position: absolute;  left: 0;  top: 65%;  height: 1px;  width: 100%;  background-color: #64D855; }
+	.IconTitleInnerParentMain:before{ content: '';  position: absolute;  left: 0;  top: 65%;  height: 1px;  width: 100%;  background-color: color('accent'); }
 	/* Two column */
 	.GrpTwoColImgContParent .GrpTwoColImg {  width: 44%;}
 	.GrpTwoColImgContParent .GrpTwoColImgCont {  width: 56%;  padding-right: 28px; }
@@ -500,18 +500,13 @@ Responsive Media Queries CSS
 	.tabblock{ display:none; }
 	.sublevel { position: absolute;}
 	.sublevelTop { top: auto; left: 0; width: 45%; padding: 50px 50px 50px 0 !important;}
-	.sublevelInner { width: calc(100% + 23%); padding-right: 0; padding-left: 70px; top: 0; left: 100%; padding: 50px 0 50px 50px !important;}
-	.sublevelInner:before {  content: '';  position: absolute;  background: #fff;  pointer-events: none;  right: auto;  left: 0;  top: 45px; bottom: 70px;  width: 1px;  height: 100%;}
 	.sublevelTop>li {  margin-bottom: 20px;}
-	.sublevelInner>li{ margin-bottom: 15px; }
 
-	.sublevelInner a {  font-size: 30px;}
 	.sublevelTop>li .Angle_Icon svg path, .sublevelTop>li>a:after { transition:all ease 0.3s; -moz-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -o-transition:all ease 0.3s; }
-	.sublevelTop>li:hover .Angle_Icon svg path{ stroke: #64D855; opacity: 1;}
-	.sublevelTop>li>a:hover, .sublevelTop>li>a.open, .sublevelInner>li>a.open, .sublevelInner>li>a:hover {  color: #64D855;}
+	.sublevelTop>li:hover .Angle_Icon svg path{ stroke: color('accent'); opacity: 1;}
 	.sublevelTop>li>a {  position: relative; display: block;}
 	.sublevelTop>li>a:after {  content: '';  position: absolute;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath opacity='0.5' d='M1.62988 25.9492L15.3442 13.9492L1.62988 1.94922' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");  right: 0;  top: 18px;  width: 33px;  height: 25px;  background-repeat: no-repeat;  background-size: auto;  background-position: right;}
-	.sublevelTop>li>a:hover:after, .sublevelTop>li>a.open::after{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+	// .sublevelTop>li>a:hover:after, .sublevelTop>li>a.open::after{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
 	.HeadPostBoxMain { padding-top: 5px !important;}
 	.HeadPostContentTop {  margin-left: -88px; }
 	.HeadPostBoxMain>li {  position: relative;}
@@ -550,9 +545,6 @@ Responsive Media Queries CSS
 	* + p {  margin-top: 40px; }
 
 	.sublevelTop>li {  margin-bottom: 38px;}
-	.sublevelInner>li{ margin-bottom: 24px; }
-	.sublevelInner a {  font-size: 36px;}
-	.sublevelInner { padding: 120px 0px 50px 80px !important;}
 	.sublevelTop{ padding: 115px 113px 115px 0 !important; }
 	.HeadPostBox .HeadPostBtn a {  font-size: 24px !important;}
 	.HeadPostBtn {  padding-top: 50px;}
@@ -717,16 +709,9 @@ Responsive Media Queries CSS
 	.BlogSliderLink .AngleBlog svg{ width: 20px;  height: 25px; }
 	/* Common banner */
 	/* GrpTitleListing */
-	
-	// .GrpTitlesListingBox {  padding: 25px; }
-	// .AlternateContentBoxInner { padding: 1em; }
 	.AlternateFiaSign {  max-width: 170px; }
 	/* Border */
 	.AlternateFiaDetails { max-width: 100%; }
-
-}
-@media (max-width:1230px ) and (min-width:992px ) {
-	.sublevelInner a {  font-size: 24px;}
 }
 
 /*-=-=-  Tablet Landscape and Smaller Devices -=-=-*/
@@ -774,7 +759,7 @@ Responsive Media Queries CSS
 	/*-=-=-=-= Mobile menu JS USE  MENU ICON as '<a class="expandMenu"><i></i><i></i><i></i></a>' -=-=-=*/
 	a.expandMenu i:first-child { margin-top: 0;}
 	a.expandMenu { width: 30px; height: 30px;    display: block;  cursor: pointer; padding: 3px;  position: absolute;    top: 35px;    right: 15px;    transform: translateY(-50%);}
-	a.expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: #64D855;  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
+	a.expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('accent');  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
 	a.expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
 	a.expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
 	a.expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
@@ -787,7 +772,6 @@ Responsive Media Queries CSS
 
 	/*mega menu css*/
 	.LogoMenuMain {position: initial;}
-	.HeadPostBoxMain li, .sublevelInner li a {  background-color: color('foreground') !important;}
 	.HeadPostBox {  margin: 0 0 auto; padding: 25px;}
 	.HeadPostBoxMain li {  padding: 10px 15px !important;  border-top: 1px solid #fff;}
 
@@ -843,9 +827,6 @@ Responsive Media Queries CSS
 	/* Counter V3 */
 	.CounterBoxParentV3Part .RightImgRightCounterBox { width: 100%; padding-left: 0; padding-right: 0; order: 2;}
 	.CounterBoxParentV3Part .LeftImgRightCounterBox {  width: 100%; order: 1;}
-	
-	/* Border */
-	
 }
 
 /*-=-=-  Mobile Devices -=-=-*/
@@ -891,7 +872,7 @@ Responsive Media Queries CSS
 	.BannerSection {  height: 380px; }
 	.AngleImgTxt img {  max-width: 40%; }
 	/* tab */
-	.expandTabb { border-radius: 2px; cursor: pointer;   border: 0;  display: block;  color: #fff;  position: relative;  font-size: 20px;  padding: 10px 40px 10px 15px;  background-color: #64D855;  text-transform: uppercase;}
+	.expandTabb { border-radius: 2px; cursor: pointer;   border: 0;  display: block;  color: #fff;  position: relative;  font-size: 20px;  padding: 10px 40px 10px 15px;  background-color: color('accent');  text-transform: uppercase;}
 	.tabsToggle {  display: none; }
 	a.tab.active:after {display:none;}
 	label.expandTabb.change:before {  content: '\f106';}
@@ -904,20 +885,20 @@ Responsive Media Queries CSS
     -o-transform: translateY(-50%);
         -ms-transform: translateY(-50%);    transform: translateY(-50%); font-family: fontawesome; font-size: 30px;}
 	.TabListItemBox ul {  padding-top: 15px;}
-	.TabListItemBox .TabTitle li {  margin-bottom: 8px;  border-bottom: 1px solid #64D855;  padding-bottom: 8px;}
+	.TabListItemBox .TabTitle li {  margin-bottom: 8px;  border-bottom: 1px solid color('accent');  padding-bottom: 8px;}
 	.TabBoxContentBox {  width: 100%;  order: 2;  margin-top: 25px;}
 	.TabListItemBox {  padding-left: 0;  width: 100%;  order: 1;}
 	.equal_ContentMain {  min-height: auto;}
 	.TabListItemBox .TabTitle a {  font-size: 18px;}
 	/* tabV2 */
-	.expandTabbV2 {  border-radius: 2px; cursor: pointer;   border: 0;  display: block;  color: #fff;  position: relative;  font-size: 20px;  padding: 10px 40px 10px 15px;  background-color: #64D855;  text-transform: uppercase;}
+	.expandTabbV2 {  border-radius: 2px; cursor: pointer;   border: 0;  display: block;  color: #fff;  position: relative;  font-size: 20px;  padding: 10px 40px 10px 15px;  background-color: color('accent');  text-transform: uppercase;}
 	.tabsToggleV2 {  display: none; }
 	a.tabV2.activeV2:after {display:none;}
 	label.expandTabbV2.changeV2:before {  content: '\f106';}
 	label.expandTabbV2:before { content: '\f107'; position: absolute; right: 12px;  top: 50%;  -webkit-transform: translateY(-50%);  -moz-transform: translateY(-50%);    -o-transform: translateY(-50%);    -ms-transform: translateY(-50%);    transform: translateY(-50%); font-family: fontawesome; font-size: 30px;}
 	.TabListItemBoxV2 .TabTitleV2 a {  font-size: 18px;}
 	.TabListItemBoxV2 ul {  padding-top: 15px;}
-	.TabListItemBoxV2 .TabTitleV2 li {  margin-bottom: 8px;  border-bottom: 1px solid #64D855;  padding-bottom: 8px;}
+	.TabListItemBoxV2 .TabTitleV2 li {  margin-bottom: 8px;  border-bottom: 1px solid color('accent');  padding-bottom: 8px;}
 	.TabBoxContentBoxV2 {  width: 100%;  order: 2;  margin-top: 25px;}
 	.TabListItemBoxV2 {  padding-left: 0;  width: 100%;  order: 1;}
 	.tabPV2.TabBoxContentBoxV2 {  width: 100%;}

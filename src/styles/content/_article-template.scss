@@ -541,3 +541,23 @@
     }
   }
 }
+
+.ImageGridSection {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    figure {
+      flex: 0 0 50%;
+      @media #{$desktop} {
+        flex: 0 0 25%;
+      }
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  // figure {
+
+  // }
+}

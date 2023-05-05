@@ -22,7 +22,7 @@
 
 .headerSection {
   .wrapper {
-    max-width: 100%;
+    // max-width: 100%;
   }
   user-select: none;
 } 
@@ -67,7 +67,9 @@ section.headerSectionMain {
   }
   @media(min-width: 992px) {
     display: none;
-    background: linear-gradient(290.45deg, rgba(4, 19, 35, 0.95) 0%, #041323 100.89%);
+    // background: linear-gradient(290.45deg, rgba(4, 19, 35, 0.95) 0%, #041323 100.89%);
+    background: color('foreground');
+    // background: color('accent', .5);
     position: absolute;
     left: 0;
     right: 0;
@@ -82,7 +84,10 @@ section.headerSectionMain {
     margin-top: 0;
     a { 
       font-size: 38px;
-      color: color('background', .5); 
+      // color: color('background', .5); 
+      color: contrastColor('foreground', .5);
+      // TODO: @Pratiksha / WebOccult please note above the use of contrastColor as specified in colours.scss
+      // Test changing the foreground and background colours in the colours.scss file and you will see the result
       font-weight: 300;
     }
     li:nth-child(1)  {
@@ -100,8 +105,114 @@ section.headerSectionMain {
   }
 }
 
+.HeadPostContent  {
+  color: color('background');
+}
+
+.HeadPostContentTop {
+  z-index: 2;
+  position: relative;
+}
+
+.HeadPostBox {
+  position: relative;
+  &:before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // background: color('accent', .5);
+    background: radial-gradient(100% 221.79% at 0% 100%, color('foreground', 1) 0%, color('foreground', 0) 100%);
+  }
+}
+
+@media (min-width:992px ) {
+
+  // TODO: @Pratiksha / WebOccult: See below from plain css
+  .sublevelTop>li>a:hover:after, .sublevelTop>li>a.open::after{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+  // TO scss:
+  // .sublevelTop {
+  //   > li {
+  //     > a{
+  //       color: color('background');
+  //       &:hover{
+  //         &:after {
+  //           background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  //         }           
+  //       }
+  //       &.open {
+  //         &:after {
+  //           background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
+
+	.sublevelInner {
+    width: calc(100% + 23%);
+    padding-right: 0;
+    padding-left: 70px;
+    top: 0;
+    left: 100%;
+    padding: 50px 0 50px 50px !important;
+  }
+	.sublevelInner:before {  content: '';
+    position: absolute;
+    background: contrastColor('foreground', .5);
+    // TODO: @Pratiksha / WebOccult please note above the use of contrastColor as specified in colours.scss
+      // Test changing the foreground and background colours in the colours.scss file and you will see the result
+    pointer-events: none;
+    right: auto;
+    left: 0;
+    top: 45px;
+    bottom: 70px;
+    width: 1px;
+    height: 100%;
+  }
+	.sublevelInner>li{ margin-bottom: 15px;
+   }
+	.sublevelInner a {  font-size: 30px;
+  }
+  .sublevelTop>li>a:hover, .sublevelTop>li>a.open, .sublevelInner>li>a.open, .sublevelInner>li>a:hover {
+    color: color('accent');
+  }
+}
+
+@media (min-width:1700px ) {
+	.sublevelInner>li{
+    margin-bottom: 24px;
+   }
+	.sublevelInner a { 
+    font-size: 36px;
+  }
+	.sublevelInner {
+    padding: 120px 0px 50px 80px !important;
+  }
+}
+
+@media (max-width:1230px ) and (min-width:992px ) {
+	.sublevelInner a { 
+    font-size: 24px;
+  }
+}
+// 
+
+@media (max-width:991px ) {
+  .HeadPostBoxMain li, .sublevelInner li a {  background-color: color('foreground') !important;
+  }
+}
+
 .MegaMenuInner { 
   position: relative;
+
 }
 
 @media(min-width: 992px) {

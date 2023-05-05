@@ -140,14 +140,17 @@
       </div>
     </div>
     <!-- <a href="/">Read more</a> -->
-    <!-- <a href="<?php //echo ''; ?>">
-      read more
-      <span class="BtnAngle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
-          <path d="M1 26.5L14 14L0.999999 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </span>
-    </a> -->
+    <div class="TabBtn NormalBtnV2 pt50">
+      <a href="<?php //echo ''; ?>" class="aos-init aos-animate" data-aos="fade-up">
+        read more
+        <span class="BtnAngle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28" fill="none">
+            <path d="M1 26.5L14 14L0.999999 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </span>
+      </a>
+    </div>
+
   </div>
 </section>
 

@@ -1,6 +1,7 @@
 <!-- Title Listing Section -->
 <!-- Wysiswyg after -->
 
+<?php if (have_rows('horizone_sec_card')) : ?>
 <section class="TitleListingSection pt60">
   <div class="wrapper">
     <div class="GrpTitlesListingMain">
@@ -11,7 +12,6 @@
           </h5>
         </div>
       <?php } ?>
-      <?php if (have_rows('horizone_sec_card')) : ?>
         <div class="GrpTitlesListingParent">
           <?php while (have_rows('horizone_sec_card')) : the_row();
               $horizone_year = get_sub_field('horizone_year');
@@ -29,10 +29,10 @@
             </div>
           <?php endwhile; ?>
         </div>
-      <?php endif; ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<?php endif; ?>
 
 <!-- Single Content section -->
 <?php $get_content = get_field("horizone_content");?>
