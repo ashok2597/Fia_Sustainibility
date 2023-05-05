@@ -40,12 +40,21 @@ section.headerSectionMain {
   max-width: 100%;
 }
 
+.LogoMenuMain {
+  display: flex;
+  align-items: center;
+}
+
 .headerlogo {
-  width: 200px;
+  // width: 200px;
   padding: 20px 0;
   @media (min-width: 1700px) {
     width: 413px;
     padding: 32px 0; 
+  }
+  img {
+    height: 39px;
+    width: auto;
   }
 }
 
@@ -439,7 +448,11 @@ section.headerSectionMain {
 
 @media (min-width: 1230px) and (min-width: 992px) {
   .V2navbar ul li a{ font-size: 17px; }
-	.V2navbar>ul>li {  padding: 15px 8px; }
+  // TODO: Sub nav issue
+	.V2navbar>ul>li {
+      // padding: 15px 8px;
+      padding: .5em;
+    }
 }
 
 @media (max-width:1080px ) and (min-width:992px ) {
@@ -455,10 +468,10 @@ section.headerSectionMain {
 .noListStyle ul, .listStyleDoubleAngle ul, .listStyle ul, .listStyleDisk ul { margin:0; padding:0; list-style:none; } /* put listStyle class to "parent" tag of "ul" */
 
 .V2headerSection { 
-  position: relative; 
-  // position: sticky; 
+  // position: relative; 
+  position: sticky; 
+  top: calc(145px + #{var(--wp-admin-bar-height)});
   top: 145px;
-  // top: calc(145px + #{var(--wp-admin-bar-height)});
   background: color('foreground', .75);
   backdrop-filter: blur(15px);
   z-index: 3;
@@ -474,7 +487,12 @@ section.headerSectionMain {
 .V2navbar ul li a {  font-size: 18px;  text-transform: uppercase;  font-weight: 300;  color:color('background');}
 .V2navbar ul.V2-dropdown-menu li a{ color: #fff; }
 .V2navbar>ul li:hover>a{ color: color('accent'); }
-.V2navbar>ul>li{ padding:20px 24px; }
+// TODO: Sub nav issue
+.V2navbar>ul>li{
+  // padding: 1em; 
+  // padding:20px 24px; 
+}
+
 .V2navbar>ul>li:last-child {  padding-right: 10px; }
 .V2navbar ul li { position: relative;  display: inline-block;  transition:all ease 0.3s; -moz-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -o-transition:all ease 0.3s; 	 }
 
@@ -501,17 +519,45 @@ section.headerSectionMain {
   border: 0;
   margin-top: 0;
 }
-.V2navbar ul.V2-dropdown-menu li{ display: block;  padding: 8px 24px;  border-bottom: 1px solid #fff;}
+// TODO: Sub nav issue
+.V2navbar ul.V2-dropdown-menu li{
+  display: block;
+  padding: .5em;
+    // padding: 8px 24px;
+      border-bottom: 1px solid #fff;
+    }
 .V2navbar ul.V2-dropdown-menu li:last-child {  border-bottom: 0; }
 
+// TODO: Sub nav issue
 @media(max-width: 991px) {
   .V2navbar {display:none;  width: 100%; margin-right: 0; position: absolute; left: 0; text-align: left; z-index: 99; top: 100%;}
-	.V2navbar ul li{position: relative; display: block; float: left; width: 100%; padding:0;}
-	.V2navbar ul li a {position: relative; display: block; background: color('foreground'); color: #fff;  padding: 10px 15px; border-top: 1px solid #fff !important;}
+	.V2navbar ul li{
+    position: relative;
+     display: block;
+      float: left;
+       width: 100%;
+        // padding:0;
+      }
+      // TODO: Sub nav issue
+	.V2navbar ul li a {position: relative;
+     display: block;
+      background: color('foreground');
+       color: #fff;
+        //  padding: 10px 15px;
+          border-top: 1px solid #fff !important;
+        }
 	.V2navbar ul { display: block; width: 100%;}
-	.V2navbar ul li:last-child {  padding: 0; }
+  // TODO: Sub nav issue
+	.V2navbar ul li:last-child {  
+    // padding: 0;
+   }
 	.V2navbar ul.V2-dropdown-menu{ width: 100%; background-color: color('foreground'); transition: none; position: static; display: none;}
-	.V2navbar ul.V2-dropdown-menu li{padding: 0;}
+
+  // TODO: Sub nav issue
+	.V2navbar ul.V2-dropdown-menu li{
+    padding: 0;
+  }
+
 	// .V2headerSection{ height: 65px; }
 	.V2navbar ul.V2-dropdown-menu li a {  background: color('foreground'); }
 }

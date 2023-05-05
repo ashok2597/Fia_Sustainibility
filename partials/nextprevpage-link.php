@@ -7,7 +7,7 @@ if (!empty($previousPage) || !empty($nextPage)):?>
       <div class="NextPrevBtnParent d_flex justify_space-between">
 
         <div class="PrevBtnBoxTop" data-aos="fade-up">
-          <?php if(!empty($previous_page)): ?>
+          <?php if(!empty($previousPage)): ?>
           <div class="PrevBtnBox NormalBtn NormalBtnSmall">
             <a href="<?php echo get_permalink($previousPage); ?>"><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none">
                   <path d="M10 1.5L2 9.5L10 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
