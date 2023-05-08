@@ -358,6 +358,14 @@ template {
   --hi-c-gray_s: 0%;
   --hi-c-gray_l: 100%;
   --hi-c-gray_hsl: 0, 0%, 100%;
+  --hi-c-light-gray-h: 87.273;
+  --hi-c-light-gray-s: 44%;
+  --hi-c-light-gray-l: 95%;
+  --hi-c-light-gray-hsl: 87.273, 44%, 95%;
+  --hi-c-light-gray_h: 0;
+  --hi-c-light-gray_s: 0%;
+  --hi-c-light-gray_l: 100%;
+  --hi-c-light-gray_hsl: 0, 0%, 100%;
   --hi-c-white-h: 0;
   --hi-c-white-s: 0%;
   --hi-c-white-l: 100%;
@@ -1553,6 +1561,131 @@ section.headerSectionMain {
 
 .tabPV2.TabBoxContentBoxV2 {
   width: calc(100% - 490px);
+}
+
+.ChampionSliderSection {
+  position: relative;
+}
+@media (min-width: 1700px) {
+  .ChampionSliderSection {
+    padding-bottom: 120px;
+  }
+}
+
+.ListItemParentMainNewOne {
+  max-width: 1250px;
+  gap: 30px;
+}
+@media (max-width: 1699px) {
+  .ListItemParentMainNewOne {
+    max-width: 1100px;
+  }
+}
+@media (min-width: 768px) {
+  .ListItemParentMainNewOne .ListItemBoxNewOneRepeter {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (min-width: 1700px) {
+  .ListiteamNewBox.listStyleDoubleAngle ul li:before {
+    top: -3px;
+  }
+}
+
+@media (min-width: 920px) {
+  .ChampionIconTitleBtnParentNew .IconTitleBoxNewRepeter {
+    width: calc(33.33% - 50px);
+  }
+}
+@media (min-width: 1699px) {
+  .ListItemArrowCenter .ListiteamNewBox.listStyleDoubleAngle ul li:before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.TimeLineSliderSection {
+  background: hsl(87.273, 44%, 95%);
+}
+
+.TimeLineContentBox {
+  border-top: 1px solid hsl(212, 100%, 19%);
+  margin-top: 20px;
+}
+.TimeLineContentBox p {
+  margin-top: 0;
+}
+
+.TimeLineSlideParentMain {
+  position: relative;
+}
+.TimeLineSlideParentMain:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 55px;
+  transform: translateY(-50%);
+  background-color: hsl(113, 63%, 59%);
+  width: 100%;
+  height: 24px;
+}
+@media (min-width: 1698px) {
+  .TimeLineSlideParentMain:before {
+    top: 77px;
+  }
+}
+@media (max-width: 991px) {
+  .TimeLineSlideParentMain:before {
+    top: 44px;
+    height: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .TimeLineSlideParentMain:before {
+    top: 34px;
+    height: 15px;
+  }
+}
+.TimeLineSlideParentMain .TimeLineSlideDate h4 {
+  display: inline-block;
+  background-color: hsl(87.273, 44%, 95%);
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.TimeLineSlideParentMain .TimeLineSlideBottomBox {
+  background-color: hsl(113, 63%, 59%);
+  padding: 12px;
+  position: relative;
+}
+.TimeLineSlideParentMain .TimeLineSlideBottomBox:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -46px;
+  width: 5px;
+  height: 48px;
+  background-color: hsl(113, 63%, 59%);
+}
+.TimeLineSlideParentMain .TimeLineSlideBottomBox .TimeLineSlideImg {
+  height: 448px;
+}
+@media (max-width: 1899px) {
+  .TimeLineSlideParentMain .TimeLineSlideBottomBox .TimeLineSlideImg {
+    height: 340px;
+  }
+}
+.TimeLineSlideParentMain .TimeLineSlideBottomBox .TimeLineSlideContentBox {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .TimeLineSlideParentMain .TimeLineSlideParent {
+    padding-right: 15px;
+  }
+}
+
+.TimeLineSliderBtn a {
+  border-bottom: 0;
 }
 
 .BannerSection {

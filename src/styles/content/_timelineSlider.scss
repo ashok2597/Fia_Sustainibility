@@ -1,0 +1,98 @@
+.TimeLineSliderSection {
+  background: color('light-gray');
+}
+
+.TimeLineContentBox {
+  border-top: 1px solid color('blue');
+  margin-top: 20px;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.TimeLineSlideParentMain {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 55px;
+    transform: translateY(-50%);
+    background-color: color('green');
+    width: 100%;
+    height: 24px;
+    $breakpoint-large: 1698px;
+
+    @media (min-width: $breakpoint-large) {
+      top: 77px;
+    }
+
+    $tablet-max: 991px;
+
+    @media (max-width: $tablet-max) {
+      top: 44px;
+      height: 18px;
+    }
+
+    $tablet-min: 767px;
+
+    @media (max-width: $tablet-min) {
+      top: 34px;
+      height: 15px;
+    }
+  }
+
+  .TimeLineSlideDate {
+    h4 {
+      display: inline-block;
+      background-color: color('light-gray');
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  .TimeLineSlideBottomBox {
+    background-color: color('green');
+    padding: 12px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -46px;
+      width: 5px;
+      height: 48px;
+      background-color: color('green');
+    }
+
+    .TimeLineSlideImg {
+      height: 448px;
+      $breakpoint-Large-screen: 1899px;
+
+      @media (max-width: $breakpoint-Large-screen) {
+        height: 340px;
+      }
+    }
+
+    .TimeLineSlideContentBox {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  $phone-lg: 480px;
+
+  @media (max-width: $phone-lg) {
+    .TimeLineSlideParent {
+      padding-right: 15px;
+    }
+  }
+}
+
+
+.TimeLineSliderBtn a {
+  border-bottom: 0;
+}
