@@ -34,6 +34,11 @@ $colors: (
     contrast: $whitepointHsl,
   ),
 
+  'light-gray': ( // Equivalent to #f3f8ed
+  hsl: (87.273, 44%, 95%),
+  contrast: $whitepointHsl,
+),
+
   // Foreground colour
   'white': (
     hsl: $whitepointHsl,

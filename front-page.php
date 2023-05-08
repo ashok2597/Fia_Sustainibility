@@ -78,9 +78,13 @@
 
     <div class="BoxTabParentMain d_flex flex_wrap align_center pt80">
       <div class="tabP TabBoxContentBox altThemeBg" data-aos="fade-up">
-        <?php if (have_rows('fp-ess_tab')) : ?>
-          <?php while (have_rows('fp-ess_tab')) : the_row(); ?>
-            <div id="fiaTab1_<?php echo get_row_index(); ?>" class="showcontent <?php if (get_row_index() == 1) { echo "show";} ?>">
+        <?php if (have_rows('fp-ess_tab')): ?>
+          <?php while (have_rows('fp-ess_tab')):
+            the_row();
+
+            ?>
+            <div id="fiaTab1_<?php echo get_row_index(); ?>"
+              class="showcontent <?php echo (get_row_index() == 1) ? "show" : " "; ?>">
               <div class="TabInnerContent fadein">
                 <div class="TabBackWordTxt">
                   <?php the_sub_field("fp-ess_tab_bg_svg"); ?>
@@ -128,7 +132,8 @@
               <ul>
                 <?php while (have_rows('fp-ess_tab')) : the_row(); ?>
                   <li data-aos="fade-up">
-                    <a class="tab <?php if (get_row_index() == 1) { echo "active";} ?>" href="#fiaTab1_<?php echo get_row_index(); ?>">
+                    <a class="tab <?php echo (get_row_index() == 2) ? "active" : " "; ?>"
+                      href="#fiaTab1_<?php echo get_row_index(); ?>">
                       <?php the_sub_field("fp-ess_tab_heading"); ?>
                     </a>
                   </li>
@@ -170,12 +175,17 @@
     <div class="BoxTabParentMainV2  d_flex flex_wrap pt50">
       <?php if (have_rows('fp-fpt_main_tab_content')) : ?>
         <div class="tabPV2 TabBoxContentBoxV2" data-aos="fade-up">
-          <?php while (have_rows('fp-fpt_main_tab_content')) : the_row(); ?>
-            <div id="fiaTab2_<?php echo get_row_index(); ?>" class="showcontentV2 <?php if (get_row_index() == 2) { echo "showV2";} ?>">
+          <?php while (have_rows('fp-fpt_main_tab_content')):
+            the_row(); ?>
+            <div id="fiaTab2_<?php echo get_row_index(); ?>"
+              class="showcontentV2 <?php echo (get_row_index() == 2) ? "showV2" : " "; ?>">
               <div class="TabInnerContentV2 fadein">
-
-                <div class="TabHeadV2 <?php if (get_row_index() == 4){echo" ForFont82";} ?>">
-                  <h2><?php echo get_sub_field('fp-fpt_tab_heading'); ?></h2>
+                <div class="TabHeadV2 <?php if (get_row_index() == 4) {
+                  echo " ForFont82";
+                } ?>">
+                  <h2>
+                    <?php echo get_sub_field('fp-fpt_tab_heading'); ?>
+                  </h2>
                 </div>
 
                 <div class="TabImgContentParentV2 d_flex flex_wrap pt50">
@@ -232,6 +242,10 @@
   </div>
 </section>
 <!-- end of tab -->
+
+<!-- championshipSlider -->
+<?php include get_template_directory() . '/partials/championshipSliderSection.php' ?>
+<?php include get_template_directory() . '/partials/timelineSlider.php' ?>
 
 <!-- Blog Slider -->
 <section class="BlogSliderSection blueBg SectionSpace">

@@ -1,0 +1,62 @@
+.ChampionSliderSection{ 
+  position: relative;
+  $breakpoint-min-large: 1700px;
+  @media (min-width: $breakpoint-min-large) {
+    padding-bottom: 120px;
+  }
+  }
+  
+  .ListItemParentMainNewOne {
+    max-width: 1250px;
+    gap: 30px;
+    $breakpoint-max-large: 1699px;
+    @media (max-width: $breakpoint-max-large) {
+    max-width: 1100px;
+    }
+    @media #{$tablet-md} {
+    .ListItemBoxNewOneRepeter {
+      width: calc(50% - 40px);
+    }
+  }
+  }
+  .ListiteamNewBox
+  {
+  &.listStyleDoubleAngle{
+    ul{
+      li{
+        $breakpoint-min-large: 1700px;
+        @media (min-width: $breakpoint-min-large) {
+        &:before{ 
+          top: -3px;
+        }
+      }
+      }
+    } 
+  }
+  }
+  @media #{$tablet-lg} {
+  .ChampionIconTitleBtnParentNew{
+  .IconTitleBoxNewRepeter {
+    width: calc(33.33% - 50px);
+  } 
+  } 
+  }
+  
+  $breakpoint-large-one: 1699px;
+  @media (min-width: $breakpoint-large-one) {
+  .ListItemArrowCenter{
+    .ListiteamNewBox{
+      &.listStyleDoubleAngle{
+      ul {
+        li{
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+    }
+    }
+  }
+  } 
+    }
+  } 
+  
+  }
