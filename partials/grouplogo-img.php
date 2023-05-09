@@ -2,7 +2,7 @@
 <!-- Wysiswyg after -->
 
 <?php $image_grid_gallery = get_field('image_grid_gallery'); ?>
-<?php if ($image_grid_gallery) : ?>
+<?php if (!empty($image_grid_gallery)) : ?>
   <div class="GrpILogoParentMain  marginRight pt70">
     <div class="GrpILogoParent">
       <?php foreach($image_grid_gallery as $image):?>

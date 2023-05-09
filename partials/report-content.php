@@ -1,6 +1,7 @@
 <!-- Content Image Group Section -->
 <!-- Wysiswyg after -->
 
+<?php if (have_rows('measurement_counter')): ?>
 <div class="CounterBoxParentV3Part  marginRight pt60" data-aos="fade-up">
 
   <?php
@@ -64,7 +65,11 @@
     </div>
   <?php endif; ?>
 </div>
+<?php endif;?>
 
+<?php $get_content = get_field("measurement_chart_content");?>
+<?php if (!empty($get_content)):?>
 <div class="ContentGrpTop marginRight pt60 contentWysiwyg" data-aos="fade-up">
   <?php echo get_field("measurement_chart_content"); ?>
 </div>
+<?php endif;?>
