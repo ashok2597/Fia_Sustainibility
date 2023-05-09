@@ -24,6 +24,7 @@ export const UIController = {
         // this.checkStoredHash();
 
         this.initBrochureSlider();
+        this.initforHeaderMenubar();
 
         this.initFAQTriggers();
         // this.initAccordionTriggers();
