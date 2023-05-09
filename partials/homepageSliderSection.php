@@ -21,14 +21,16 @@
                     </div>
                   <?php } ?>
                   <?php if (!empty($content)) { ?>
-                    <div class="SlideContent pt40 Max600 marginAuto" data-aos="fade-up">
+                    <!-- <div class="SlideContent pt40 Max600 marginAuto" data-aos="fade-up"> -->
+                    <div class="SlideContent pt40 Max650 marginAuto" data-aos="fade-up">
                       <?php echo $content ?>
                     </div>
                   <?php } ?>
                 </div>
 
                 <?php if (have_rows('fp-kas_counter')) : ?>
-                  <div class="CounterTopBoxMain pt25 Max600 marginAuto">
+                  <!-- <div class="CounterTopBoxMain pt25 Max600 marginAuto"> -->
+                  <div class="CounterTopBoxMain pt25 Max650 marginAuto">
                     <div class="ConterTopParent noListStyle" data-aos="fade-up">
                       <ul id="counterTop">
                         <?php while (have_rows('fp-kas_counter')) : the_row();

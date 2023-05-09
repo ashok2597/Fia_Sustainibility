@@ -38,7 +38,7 @@ include get_template_directory() . '/partials/banner-part.php';
   ?>
 
   </main>
-  <?php include get_template_directory() . '/partials/nextprevpage-link.php'; ?>
+  <?php // include get_template_directory() . '/partials/nextprevpage-link.php'; ?>
 
 
 

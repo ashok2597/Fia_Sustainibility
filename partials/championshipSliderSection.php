@@ -212,7 +212,8 @@ $championship_bg_img = get_field("championship_bg_img");
                                   </div>
                                   <div class="IconNewTitle pt20 text-center" data-aos="fade-up">
                                     <h6>
-                                      <?php echo $championship_lists_r_title; ?>
+                                      <?php //echo $championship_lists_r_title; ?>
+                                      <?php echo $ch_content_lists_r_title; ?>
                                     </h6>
                                   </div>
                                 </div>

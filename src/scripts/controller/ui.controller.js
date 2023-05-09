@@ -1,8 +1,10 @@
 // import { ResizeObserver as Polyfill } from '@juggle/resize-observer';
 // import scrollToElement from "scroll-to-element";
-import Swiper from "swiper";
+// import Swiper from "swiper";
 import tick from "../helpers/async";
 import { setCSSCustomProperty } from "../helpers/css";
+import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
+
 import wait from '../helpers/wait';
 // const ResizeObserver = window.ResizeObserver || Polyfill;
 
@@ -797,23 +799,24 @@ export const UIController = {
     });
   },
   initBlogslider() {
-    var swiper =  new Swiper(".SwiperBlogSlider", {
+    new Swiper(".SwiperBlogSlider", {
+      modules: [ Navigation, Pagination, Autoplay ],
       slidesPerView: 1.5,
-      autoplay: true,
+      // autoplay: true,
       spaceBetween: 48,
       centeredSlides: true,
       centeredSlidesBounds: true,
-      freeMode: true,
-      grabCursor: true,
+      // freeMode: true,
+      // grabCursor: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false
-      // },
+      autoplay: {
+        delay: 4000,
+        // disableOnInteraction: false
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
@@ -830,20 +833,21 @@ export const UIController = {
   },
   initTimeLineSlideMain() {
     var swiper = new Swiper(".TimeLineSlideMain", {
+      modules: [ Navigation, Pagination, Autoplay ],
       slidesPerView: 1,
       autoplay: true,
+      // loop: true,
       spaceBetween: 88,
       freeMode: true,
       grabCursor: true,
-      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
-      // autoplay: {
-      //   delay: 4000,
-      //   disableOnInteraction: false
-      // },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"

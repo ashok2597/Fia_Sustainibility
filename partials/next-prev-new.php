@@ -14,9 +14,7 @@
             <span>
               previous
             </span>
-            <span class="LabelPageName">
-              <?php echo get_the_title($previousPage); ?>
-            </span>
+            <span class="LabelPageName"><?php echo get_the_title($previousPage); ?></span>
           </p>
         </a>
       <?php endif; ?>
@@ -30,9 +28,7 @@
             <span>
               next
             </span>
-            <span class="LabelPageName">
-              <?php echo get_the_title($nextPage); ?>
-            </span>
+            <span class="LabelPageName"><?php echo get_the_title($nextPage); ?></span>
           </p>
         </a>
       </div>
