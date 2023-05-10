@@ -1378,24 +1378,17 @@ section.headerSectionMain {
 } /* put listStyle class to "parent" tag of "ul" */
 .V2headerSection {
   position: sticky;
-  top: calc(145px + 0);
-  top: calc(145px + var(--wp-admin-bar-height));
-  top: 145px;
+  top: 0;
+  top: var(--wp-admin-bar-height);
+  top: calc(75px + 0);
+  top: calc(var(--nav-height) + var(--wp-admin-bar-height));
+  box-shadow: 0px 1px 5px hsla( 226, 29%, 9%, 0.25 );
+  box-shadow: 0px 1px 5px hsla( var(--hi-c-foreground-hsl), 0.25 );
   background: hsla( 226, 29%, 9%, 0.75 );
   background: hsla( var(--hi-c-foreground-hsl), 0.75 );
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 3;
-}
-@media (max-width: 1699px) {
-  .V2headerSection {
-    top: 80px;
-  }
-}
-@media (max-with: 991px) {
-  .V2headerSection {
-    height: 65px;
-  }
 }
 
 /* Header Version 2 */
@@ -1930,6 +1923,36 @@ section.headerSectionMain {
     background-size: 90% 100%;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+}
+.BannerSection {
+  position: relative;
+  height: calc(100vh - 75px);
+  height: calc(100vh - var(--nav-height));
+  margin-top: 75px;
+  margin-top: var(--nav-height);
+}
+
+@media (max-width: 1699px) {
+  .BannerSection {
+    position: relative;
+    height: calc(100vh - 80px);
+    margin-top: 79px;
+  }
+}
+@media (max-width: 991px) {
+  .BannerSection {
+    height: 420px;
+  }
+}
+@media (max-width: 767px) {
+  .BannerSection {
+    height: 380px;
+  }
+}
+@media (max-width: 640px) {
+  .BannerSection {
+    height: 310px;
   }
 }
 .contentWysiwyg > * + * {
@@ -3645,12 +3668,6 @@ textarea:focus, input[type=text]:focus, input[type=number]:focus, input[type=ema
 }
 
 /* Banner section */
-.BannerSection {
-  position: relative;
-  height: calc(100vh - 145px);
-  margin-top: 145px;
-}
-
 .BannerVideoParent {
   position: absolute;
   left: 0;
@@ -4562,11 +4579,6 @@ Responsive Media Queries CSS
     padding-top: 120px;
     padding-bottom: 120px;
   }
-  .BannerSection {
-    position: relative;
-    height: calc(100vh - 80px);
-    margin-top: 79px;
-  }
   .AngleImgTxt {
     max-width: 120px;
     margin: 0 0 0 auto;
@@ -4997,9 +5009,6 @@ Responsive Media Queries CSS
     border-top: 1px solid #fff;
   }
   /* Banner */
-  .BannerSection {
-    height: 420px;
-  }
   .bannerContentParent {
     max-width: 500px;
   }
@@ -5306,9 +5315,6 @@ Responsive Media Queries CSS
     padding-bottom: 60px;
   }
   /* Banner */
-  .BannerSection {
-    height: 380px;
-  }
   .AngleImgTxt img {
     max-width: 40%;
   }
@@ -5471,9 +5477,6 @@ Responsive Media Queries CSS
   .TwoColumnCounterRepeter {
     gap: 10px;
     padding-bottom: 25px;
-  }
-  .BannerSection {
-    height: 310px;
   }
   video#hero-video {
     width: 100vh;

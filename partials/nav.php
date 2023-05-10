@@ -1,5 +1,5 @@
 <!--Start header section -->
-<section class="headerSectionMain">
+<section class="headerSectionMain nav"><?php // Need class nav in the header to measure height in ui.controller.js?>
 		<div class="headerSection uppercase">
 			<div class="wrapper">
 				<div class="LogoMenuMain">

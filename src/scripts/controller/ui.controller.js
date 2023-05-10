@@ -363,6 +363,7 @@ export const UIController = {
 
   initBannerSlider() {
     new Swiper('.banner-slider', {
+      modules: [ Navigation, Pagination, Autoplay ],
       // Optional parameters
       // direction: 'vertical',
       // modules: [EffectFade],
@@ -397,6 +398,7 @@ export const UIController = {
   },
   initGallerySlider() {
     new Swiper('.gallery-slider', {
+      modules: [ Navigation, Pagination, Autoplay ],
       // Optional parameters
       // direction: 'vertical',
       loop: true,
@@ -429,6 +431,7 @@ export const UIController = {
 
   initAccreditationsSlider() {
     new Swiper('.accreditations-slider', {
+      modules: [ Navigation, Pagination, Autoplay ],
       // Optional parameters
       // direction: 'vertical',
       loop: true,
@@ -515,6 +518,7 @@ export const UIController = {
   // },
   initBrochureSlider() {
     new Swiper('.section-brochures__slider-container', {
+      modules: [ Navigation, Pagination, Autoplay ],
       preventClicks: false,
       loop: true,
       // loop: true,
@@ -642,6 +646,7 @@ export const UIController = {
   },
   inithomePageslider() {
     var swiper = new Swiper(".mySwiperCounterSlider", {
+      modules: [ Navigation, Pagination, Autoplay ],
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: false,

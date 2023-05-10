@@ -34,7 +34,7 @@ section.headerSectionMain {
   position: fixed;
   // z-index: 99; // @Pratiksha added this to z-index.scss
   width: 100%;
-  top: 0;
+  top: 0; // Fallback
   top: var(--wp-admin-bar-height);
   left: 0;
   right: 0;
@@ -472,17 +472,19 @@ section.headerSectionMain {
 .V2headerSection { 
   // position: relative; 
   position: sticky; 
-  top: calc(145px + #{var(--wp-admin-bar-height)});
-  top: 145px;
+  top: var(--wp-admin-bar-height); // Fallback when no WP bar is present
+  top: calc(#{var(--nav-height)} + #{var(--wp-admin-bar-height)});
+  box-shadow: 0px 1px 5px color('foreground', .25);
+  // top: 145px;
   background: color('foreground', .75);
   backdrop-filter: blur(15px);
   z-index: 3;
-  @media(max-width: 1699px) {
-    top: 80px; 
-  }
-  @media(max-with: 991px) {
-    height: 65px;
-  }
+  // @media(max-width: 1699px) {
+  //   top: 80px; 
+  // }
+  // @media(max-with: 991px) {
+  //   height: 65px;
+  // }
 }
 
 /* Header Version 2 */

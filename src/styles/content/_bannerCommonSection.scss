@@ -82,3 +82,32 @@
   .BannerCommonInnerParent { 
     height: auto;  background-size: 90% 100%;  padding-top: 30px;  padding-bottom: 30px;}
 }
+
+.BannerSection {
+  position: relative;
+  // TODO: @Pratiksha / WebOccult
+  // Please check below how we dynamically calculate the site-nav height with the help of javascript
+  // Please use the global search to search for --nav-height 
+  // and also check the ui.controller.js file and search for --nav-height to learn how this is done
+
+  // height: calc(100vh - 145px); // Old / wrong - fixed and hardcoded absolute values
+  // margin-top: 145px; // Old / wrong - fixed and hardcoded absolute values
+  height: calc(100vh - #{var(--nav-height)}); // --nav-height is Dynamically calculated, check in inspector at the root/html and resize the window
+  margin-top: var(--nav-height);
+}
+
+@media (max-width:1699px ){
+	.BannerSection {  position: relative;  height: calc(100vh - 80px); margin-top: 79px;}
+}
+
+@media (max-width:991px ) {
+  .BannerSection {  height: 420px; }
+}
+
+@media (max-width:767px ) {
+  .BannerSection {  height: 380px; }
+}
+
+@media (max-width:640px ) {
+	.BannerSection {  height: 310px;}
+}

@@ -352,7 +352,6 @@ textarea:focus, input[type="text"]:focus, input[type="number"]:focus, input[type
 .HeadPostBox {  padding-top: 30px;  padding-right: 60px;  padding-bottom: 16px;  height: 230px;  max-width: 300px;  margin: 0 0 0 auto;  display: flex;  align-items: center; border-right: 1px solid #fff; }
 
 /* Banner section */
-.BannerSection {  position: relative;  height: calc(100vh - 145px); margin-top: 145px;}
 .BannerVideoParent {  position: absolute;  left: 0;  top: 0;  right: 0;  bottom: 0;  overflow: hidden; display: flex;  flex-direction: column;  justify-content: center;}
 video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0;  width: 100%;}
 .VideoContentsMain {  position: relative;  z-index: 3; padding-top: 50px;  padding-bottom: 50px;}
@@ -640,7 +639,6 @@ Responsive Media Queries CSS
 	span.downAngle svg { width: 18px;}
 	.sublevelTop>li>a:after{ top: 7px; background-size: 40%;}
 	.SectionSpace {  padding-top: 120px;  padding-bottom: 120px;}
-	.BannerSection {  position: relative;  height: calc(100vh - 80px); margin-top: 79px;}
 	.AngleImgTxt {  max-width: 120px;  margin: 0 0 0 auto;}
 	.AngleImgTxt span{ font-size: 16px; }
 	.IconTitleInnerParentMain::before{ top: 61%; }
@@ -790,7 +788,7 @@ Responsive Media Queries CSS
 	.HeadPostBoxMain li {  padding: 10px 15px !important;  border-top: 1px solid #fff;}
 
 	/* Banner */
-	.BannerSection {  height: 420px; }
+	
 	.bannerContentParent {  max-width: 500px;}
 	.AngleBoxMain {  top: 90%;}
 	.AngleImgTxt span {  font-size: 14px;  padding-top: 10px;}
@@ -883,7 +881,6 @@ Responsive Media Queries CSS
 	.SectionSpace {  padding-top: 60px;  padding-bottom: 60px;}
 
 	/* Banner */
-	.BannerSection {  height: 380px; }
 	.AngleImgTxt img {  max-width: 40%; }
 	/* tab */
 	.expandTabb { border-radius: 2px; cursor: pointer;   border: 0;  display: block;  color: #fff;  position: relative;  font-size: 20px;  padding: 10px 40px 10px 15px;  background-color: color('accent');  text-transform: uppercase;}
@@ -933,7 +930,6 @@ Responsive Media Queries CSS
 
 @media (max-width:640px ) {
   .TwoColumnCounterRepeter {  gap: 10px;  padding-bottom: 25px;}
-	.BannerSection {  height: 310px;}
 	video#hero-video{ width: 100vh; }
 	.AngleImgTxt img {  max-width: 25%;}
 	.AngleImgTxt span {  font-size: 12px;}
