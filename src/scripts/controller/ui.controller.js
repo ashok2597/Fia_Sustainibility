@@ -26,24 +26,30 @@ export const UIController = {
         // this.checkStoredHash();
 
         this.initBrochureSlider();
-        this.initforHeaderMenubar();
-
         this.initFAQTriggers();
         // this.initAccordionTriggers();
 
         //this.initBannerSlider();
+
+        this.initforHeaderMenubar();
+
         if (isPage('home')) {
           this.initGallerySlider();
           this.initscrolltoptobottum();
           this.inithomePageslider();
         }
+        // if(isPage('offset')){
+        this.initMobviewmenuforOffsetPage();
+        // }
 
         // if (isPage('single') || isPage('page-template-page')) {
         //   this.initPostGridSwiper();
         // }
 
         // if (isPage('archive-team')) {
-          this.initAccreditationsSlider()
+
+        this.initAccreditationsSlider();
+
         // }
 
         this.initanimationForallPage();
@@ -90,6 +96,9 @@ export const UIController = {
       this.equalheight('.equal_Title');
       this.equalheight('.equal_Content');
       this.equalheight('.equal_height');
+      this.wrapperPadding();
+      this.recordWpAdminBarHeight();
+      // this.recordNavBarHeight();
       // this.recordNavSearchBarHeight();
     }
     const handleWindowResize = () => {
@@ -98,6 +107,9 @@ export const UIController = {
       this.equalheight('.equal_Title');
       this.equalheight('.equal_Content');
       this.equalheight('.equal_height');
+      this.wrapperPadding();
+      this.recordWpAdminBarHeight();
+      this.recordNavBarHeight();
       // this.recordNavSearchBarHeight();
     }
     // const handleScroll = () => {
@@ -106,6 +118,7 @@ export const UIController = {
     window.addEventListener('load', handleWindowLoad);
     // window.addEventListener('scroll', handleWindowLoad);
     window.addEventListener('resize', handleWindowResize);
+    window.addEventListener('load', AOS.refresh);
   },
   // initAnchorLinksScroller() {
   //   const els = document.querySelectorAll('.section-nav a[href*="#"], .view-main a[href*="#"]');
@@ -845,6 +858,7 @@ export const UIController = {
       spaceBetween: 88,
       freeMode: true,
       grabCursor: true,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
