@@ -450,13 +450,32 @@ section.headerSectionMain {
   .sublevelTop a {  background-color: #002D5F !important;}
 }
 
+.V2navbar ul li a{ 
+  @media (max-width:991px ) {
+    // position: relative;
+    // display: block;
+    // background: #36424f;
+    // color: #fff;
+    // border-top: 1px solid #fff !important;
+    padding: 10px 15px;
+  }
+}
+
 @media (min-width: 1230px) and (min-width: 992px) {
-  .V2navbar ul li a{ font-size: 17px; }
-  // TODO: Sub nav issue
+  .V2navbar ul li a{ 
+    font-size: 17px; 
+    // @media (max-width:991px ) {
+    //   // position: relative;
+    //   // display: block;
+    //   // background: #36424f;
+    //   // color: #fff;
+    //   // border-top: 1px solid #fff !important;
+    //   padding: 10px 15px;
+    // }
+  }
 	.V2navbar>ul>li {
-      // padding: 15px 8px;
-      padding: .5em;
-    }
+    padding: .5em;
+  }
 }
 
 @media (max-width:1080px ) and (min-width:992px ) {
@@ -472,6 +491,10 @@ section.headerSectionMain {
 .noListStyle ul, .listStyleDoubleAngle ul, .listStyle ul, .listStyleDisk ul { margin:0; padding:0; list-style:none; } /* put listStyle class to "parent" tag of "ul" */
 
 .V2headerSection { 
+  // height: 65px;
+  @media (max-width:991px ) {
+    height: 65px;
+  }
   // position: relative; 
   position: sticky; 
   top: var(--wp-admin-bar-height); // Fallback when no WP bar is present
@@ -567,4 +590,14 @@ section.headerSectionMain {
 
 	// .V2headerSection{ height: 65px; }
 	.V2navbar ul.V2-dropdown-menu li a {  background: color('foreground'); }
+}
+
+@media (max-width:991px ) {
+	a.V2expandMenu i:first-child { margin-top: 0;}
+	a.V2expandMenu { width: 30px; height: 30px;    display: block;  cursor: pointer; padding: 3px;  position: absolute; top: 35px; left: 15px; transform: translateY(-50%); }
+	// a.V2expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('foreground', .5);  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
+	a.V2expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('background', 1);  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
+	a.V2expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
+	a.V2expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
+	a.V2expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
 }

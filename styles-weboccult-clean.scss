@@ -823,12 +823,7 @@ Responsive Media Queries CSS
 	.BlogSlideBoxImg {  padding-top: 10px; }
 	/* Header Vesrion 2 */
 	/*-=-=-=-= Mobile menu JS USE  MENU ICON as '<a class="expandMenu"><i></i><i></i><i></i></a>' -=-=-=*/
-	a.V2expandMenu i:first-child { margin-top: 0;}
-	a.V2expandMenu { width: 30px; height: 30px;    display: block;  cursor: pointer; padding: 3px;  position: absolute; top: 35px; left: 15px; transform: translateY(-50%); }
-	a.V2expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: #fff;  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
-	a.V2expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
-	a.V2expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
-	a.V2expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
+
 	/*-=-=-=-= Mobile Submenu JS USE  SUBMENU ICON as '<a class="childExpand"><i></i><i></i></a>' -=-=-=*/
 	.V2childExpand { position: absolute; top: 15px; right: 10px; width: 24px; text-align: center; height: 24px; margin: 0; padding:5px; cursor:pointer; }
 	.V2childExpand i { position:relative; width: 15px; left:0; height: 1px; opacity:1; display: block; background:#fff; margin: 6px 0; transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -moz-transition:all ease 0.3s; }
