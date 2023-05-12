@@ -1,43 +1,12 @@
 .BannerCommonInnerParent {
-  // display: block;
-  // background-size: 75% 100%;
   position: relative;
   background-position: right;
   height: 514px;
-  // &:before {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: linear-gradient(90deg, color('background', 1), color('background', 0));
-  //   z-index: 0;
-  // }
-  .wrapper {
-    // &:before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   bottom: 0;
-    //   right: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background: linear-gradient(90deg, color('background', 1), color('background', 0));
-    //   z-index: 0;
-    // }
-  }
 }
 
 .BannerCommonContentMain {
   padding-left: 15px;
   padding-right: 15px;
-  // z-index: 10;
   display: flex;
   width: 100%;
   height: 100%;
@@ -46,19 +15,14 @@
 }
 
 .BannerCommonBotContentsTop {
-  // z-index: 2; // TODO: @Fábio
   bottom: 60px;
-  // position: absolute;
 }
-
-// .BannerCommonBotContentsTop {  position: absolute;  bottom: 60px;}
 
 @media (max-width:767px ) {
   .BannerCommonBotContentsTop {  
-    // position: initial;
-      bottom: 60px;  padding-top: 40px;}
+    bottom: 60px;  padding-top: 40px;
+  }
 }
-
 
 @media (max-width:1699px ){
   .BannerCommonInnerParent {
@@ -89,15 +53,29 @@
   // Please check below how we dynamically calculate the site-nav height with the help of javascript
   // Please use the global search to search for --nav-height 
   // and also check the ui.controller.js file and search for --nav-height to learn how this is done
-
   // height: calc(100vh - 145px); // Old / wrong - fixed and hardcoded absolute values
   // margin-top: 145px; // Old / wrong - fixed and hardcoded absolute values
+
   height: calc(100vh - #{var(--nav-height)}); // --nav-height is Dynamically calculated, check in inspector at the root/html and resize the window
   margin-top: var(--nav-height);
+  .SectionTitle {
+    h1 {
+      @media #{$only-phone} {
+        font-size: 3.6rem;
+      }
+    }
+  }
 }
 
+// * {
+//   border: 1px solid red;
+// }
+
 @media (max-width:1699px ){
-	.BannerSection {  position: relative;  height: calc(100vh - 80px); margin-top: 79px;}
+	.BannerSection {  position: relative; 
+    // height: calc(100vh - 80px);
+    height: calc(100vh - #{var(--nav-height)});
+  }
 }
 
 @media (max-width:991px ) {
@@ -110,4 +88,24 @@
 
 @media (max-width:640px ) {
 	.BannerSection {  height: 310px;}
+}
+
+video#hero-video { 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 125vh;
+}
+
+@media (max-width:640px ) {
+	video#hero-video{
+    height: 100%;
+    width: auto;
+    margin-left: auto;
+  }
 }

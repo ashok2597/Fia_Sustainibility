@@ -496,6 +496,8 @@ body {
 }
 
 :root {
+  overflow-x: hidden;
+  max-width: 100vw;
   font-family: "futura-pt", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue", sans-serif;
   font-family: var(--hi-f-ui);
   display: block;
@@ -550,6 +552,8 @@ body {
 }
 
 body {
+  overflow-x: hidden;
+  width: 100vw;
   margin: 0;
   padding: 0;
   font-family: "futura-pt", sans-serif;
@@ -961,7 +965,7 @@ section.headerSectionMain {
   position: fixed;
   box-shadow: 0px 1px 5px hsla( 226, 29%, 9%, 0.25 );
   box-shadow: 0px 1px 5px hsla( var(--hi-c-foreground-hsl), 0.25 );
-  width: 100%;
+  width: 100vw;
   top: 0;
   top: 0;
   top: var(--wp-admin-bar-height);
@@ -975,6 +979,9 @@ section.headerSectionMain {
 .LogoMenuMain {
   display: flex;
   align-items: center;
+}
+.LogoMenuMain .headerlogo {
+  flex: 1 1 auto;
 }
 
 @media (min-width: 1700px) {
@@ -1566,7 +1573,7 @@ section.headerSectionMain {
 }
 @media (max-width: 991px) {
   a.expandMenu {
-    margin-left: 30px;
+    margin-left: 15px;
     width: 30px;
     display: block;
     cursor: pointer;
@@ -1996,6 +2003,7 @@ section.headerSectionMain {
   background-position: right;
   height: 514px;
 }
+
 .BannerCommonContentMain {
   padding-left: 15px;
   padding-right: 15px;
@@ -2046,12 +2054,17 @@ section.headerSectionMain {
   margin-top: 75px;
   margin-top: var(--nav-height);
 }
+@media (max-width: 639px) {
+  .BannerSection .SectionTitle h1 {
+    font-size: 3.6rem;
+  }
+}
 
 @media (max-width: 1699px) {
   .BannerSection {
     position: relative;
-    height: calc(100vh - 80px);
-    margin-top: 79px;
+    height: calc(100vh - 75px);
+    height: calc(100vh - var(--nav-height));
   }
 }
 @media (max-width: 991px) {
@@ -2067,6 +2080,25 @@ section.headerSectionMain {
 @media (max-width: 640px) {
   .BannerSection {
     height: 310px;
+  }
+}
+video#hero-video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 125vh;
+}
+
+@media (max-width: 640px) {
+  video#hero-video {
+    height: 100%;
+    width: auto;
+    margin-left: auto;
   }
 }
 .contentWysiwyg > * + * {
@@ -3133,7 +3165,6 @@ body .row-fluid [class*=span].widget-type-space {
 .ib {
   display: inline-block;
   vertical-align: middle;
-  margin-right: -4px;
 }
 
 .ib.vt {
@@ -3793,15 +3824,6 @@ textarea:focus, input[type=text]:focus, input[type=number]:focus, input[type=ema
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-video#hero-video {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 .VideoContentsMain {
@@ -5496,9 +5518,6 @@ Responsive Media Queries CSS
   .TwoColumnCounterRepeter {
     gap: 10px;
     padding-bottom: 25px;
-  }
-  video#hero-video {
-    width: 100vh;
   }
   .AngleImgTxt img {
     max-width: 25%;

@@ -34,7 +34,7 @@ section.headerSectionMain {
   position: fixed;
   box-shadow: 0px 1px 5px color('foreground', .25);
   // z-index: 99; // @Pratiksha added this to z-index.scss
-  width: 100%;
+  width: 100vw;
   top: 0; // Fallback
   top: var(--wp-admin-bar-height);
   left: 0;
@@ -47,6 +47,9 @@ section.headerSectionMain {
 .LogoMenuMain {
   display: flex;
   align-items: center;
+  .headerlogo {
+    flex: 1 1 auto;
+  }
 }
 
 .headerlogo {
@@ -614,7 +617,7 @@ section.headerSectionMain {
 @media (max-width:991px ) {
 
 a.expandMenu {
-  margin-left: 30px;
+  margin-left: 15px;
   width: 30px;
   //  height: 30px;
       display: block;

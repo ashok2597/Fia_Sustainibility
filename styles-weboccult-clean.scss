@@ -194,7 +194,7 @@ body .row-fluid [class*="span"].widget-type-space { min-height:1px; }
 /* Widths */
 .fl { float:left; }
 .fr { float:right; }
-.ib { display: inline-block; vertical-align:middle; margin-right:-4px; }
+.ib { display: inline-block; vertical-align:middle;}
 .ib.vt { vertical-align:top !important;  }
 .w15 { width: 15%; }
 .w20 { width: 20%; }
@@ -353,7 +353,7 @@ textarea:focus, input[type="text"]:focus, input[type="number"]:focus, input[type
 
 /* Banner section */
 .BannerVideoParent {  position: absolute;  left: 0;  top: 0;  right: 0;  bottom: 0;  overflow: hidden; display: flex;  flex-direction: column;  justify-content: center;}
-video#hero-video {  position: absolute;  left: 0;  right: 0;  top: 0;  bottom: 0;  width: 100%;}
+
 .VideoContentsMain {  position: relative;  z-index: 3; padding-top: 50px;  padding-bottom: 50px;}
 .bannerContentParentMain{ position: relative; }
 .AngleBoxMain {  width: 200px;  position: absolute;  right: 0; top: 55%;}
@@ -918,7 +918,6 @@ Responsive Media Queries CSS
 
 @media (max-width:640px ) {
   .TwoColumnCounterRepeter {  gap: 10px;  padding-bottom: 25px;}
-	video#hero-video{ width: 100vh; }
 	.AngleImgTxt img {  max-width: 25%;}
 	.AngleImgTxt span {  font-size: 12px;}
 	.TabBackWordTxt svg {  width: 100px;  height: 100px;}
