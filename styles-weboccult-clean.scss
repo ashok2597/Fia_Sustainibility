@@ -730,13 +730,14 @@ Responsive Media Queries CSS
 @media (max-width:1080px ) {
 
 	.wrapper { max-width:900px }
-	/*-=-=-=-= Mobile menu JS USE  MENU ICON as '<a class="expandMenu"><i></i><i></i><i></i></a>' -=-=-=*/
 	.BannerSection{ height: 560px;}
 	.TabListItemBoxV2 .TabTitleV2 a {  font-size: 24px;}
 }
 
 /*-=-=-  Tablet Portrait and Smaller Devices -=-=-*/
 @media (max-width:991px ) {
+  
+
 	.wrapper { max-width:700px }
 
 	h1 { font-size:36px; }
@@ -768,13 +769,7 @@ Responsive Media Queries CSS
 
 	.tabnone{ display: none; }
 	.tabdisplayblock ul li{ display: block; }
-	/*-=-=-=-= Mobile menu JS USE  MENU ICON as '<a class="expandMenu"><i></i><i></i><i></i></a>' -=-=-=*/
-	a.expandMenu i:first-child { margin-top: 0;}
-	a.expandMenu { width: 30px; height: 30px;    display: block;  cursor: pointer; padding: 3px;  position: absolute;    top: 35px;    right: 15px;    transform: translateY(-50%);}
-	a.expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('accent');  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
-	a.expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
-	a.expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
-	a.expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
+
 	/*-=-=-=-= Mobile Submenu JS USE  SUBMENU ICON as '<a class="childExpand"><i></i><i></i></a>' -=-=-=*/
 	.childExpand { position: absolute;z-index: 5; top: 10px; right: 10px; width: 32px; text-align: center; height: 32px; margin: 0; padding:6px; cursor:pointer; }
 	.childExpand i { position:relative; width: 15px; left:0; height: 1px; opacity:1; display: block; background:#fff; margin: 6px 0; transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -moz-transition:all ease 0.3s; }
@@ -782,8 +777,7 @@ Responsive Media Queries CSS
 	.childExpand.open i { transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); }
 	.childExpand.open i+i { transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); }
 
-	/*mega menu css*/
-	.LogoMenuMain {position: initial;}
+	
 	.HeadPostBox {  margin: 0 0 auto; padding: 25px;}
 	.HeadPostBoxMain li {  padding: 10px 15px !important;  border-top: 1px solid #fff;}
 
@@ -822,7 +816,6 @@ Responsive Media Queries CSS
 	.BlogSlideBoxImg img {  width: 125px;}
 	.BlogSlideBoxImg {  padding-top: 10px; }
 	/* Header Vesrion 2 */
-	/*-=-=-=-= Mobile menu JS USE  MENU ICON as '<a class="expandMenu"><i></i><i></i><i></i></a>' -=-=-=*/
 
 	/*-=-=-=-= Mobile Submenu JS USE  SUBMENU ICON as '<a class="childExpand"><i></i><i></i></a>' -=-=-=*/
 	.V2childExpand { position: absolute; top: 15px; right: 10px; width: 24px; text-align: center; height: 24px; margin: 0; padding:5px; cursor:pointer; }

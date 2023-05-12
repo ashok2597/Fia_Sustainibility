@@ -21,7 +21,7 @@
 }
 
 .headerSection {
-  box-shadow: 0px 1px 5px color('foreground', .25);
+  // box-shadow: 0px 1px 5px color('foreground', .25);
 
   .wrapper {
     // max-width: 100%;
@@ -32,6 +32,7 @@
 section.headerSectionMain {
   background: color('white');
   position: fixed;
+  box-shadow: 0px 1px 5px color('foreground', .25);
   // z-index: 99; // @Pratiksha added this to z-index.scss
   width: 100%;
   top: 0; // Fallback
@@ -40,6 +41,7 @@ section.headerSectionMain {
   right: 0;
   color: color('black');
   max-width: 100%;
+  padding: 15px 0; 
 }
 
 .LogoMenuMain {
@@ -49,14 +51,18 @@ section.headerSectionMain {
 
 .headerlogo {
   // width: 200px;
-  padding: 20px 0;
+  // padding: 20px 0;
   @media (min-width: 1700px) {
     width: 413px;
     padding: 32px 0; 
   }
   img {
-    height: 39px;
+    // height: 39px;
+    height: 100%;
     width: auto;
+  }
+  a {
+    display: block;
   }
 }
 
@@ -64,6 +70,9 @@ section.headerSectionMain {
   width: calc(100% - 200px);
   @media (min-width: 1700px) {
     width: calc(100% - 413px);
+  }
+  @media(max-width: 991px) {
+    width: auto;
   }
 }
 
@@ -600,4 +609,50 @@ section.headerSectionMain {
 	a.V2expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
 	a.V2expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
 	a.V2expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
+}
+
+@media (max-width:991px ) {
+
+a.expandMenu {
+  margin-left: 30px;
+  width: 30px;
+  //  height: 30px;
+      display: block;
+    cursor: pointer;
+   i {
+    width: 100%;
+    height: 4px;
+   }
+}
+a.expandMenu i { position: relative;
+   opacity: 1;
+    display: block;
+    background: color('accent');
+    margin: 5px 0;
+      transition: all ease .3s;
+      -webkit-transition: all ease .3s;
+      -moz-transition: all ease .3s;
+}
+a.expandMenu.active i:first-child { transform: rotate(135deg);
+   -webkit-transform: rotate(135deg);
+      top: 10px;
+      position: relative;
+}
+a.expandMenu.active i:nth-child(2) { position: relative;
+   left: -46px;
+   opacity: 0;
+}
+a.expandMenu.active i:last-child { transform: rotate(-135deg);
+   -webkit-transform: rotate(-135deg);
+   top: -8px;
+   position: relative;
+}
+}
+
+@media (max-width:991px ) {
+  /*mega menu css*/
+	.LogoMenuMain {position: initial;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
