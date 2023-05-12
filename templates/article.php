@@ -43,13 +43,8 @@ include get_template_directory() . '/partials/banner-part.php';
 
 
 <?php
-// print_r(get_post_ancestors( $post ));
-if(empty(get_post_ancestors( $post ))) { // Works
-  // echo "<h1>PARENT PAGE</h1>";
+if(empty(get_post_ancestors( $post ))) {
   include get_template_directory() . '/partials/blog-slider-section.php';
-
-// } else {
-  // echo "<h1>else</h1>";
 }
 ?>
 

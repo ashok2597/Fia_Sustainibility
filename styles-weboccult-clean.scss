@@ -431,7 +431,6 @@ textarea:focus, input[type="text"]:focus, input[type="number"]:focus, input[type
 
 .V2MenuParent {  text-align: right; }
 /* Common Banner */
-.BannerCommonsection {  padding-top: 57px;  padding-right: 48px; position: relative;  margin-top: 143px;}
 .BannerCommonContentMain {  padding-top: 40px;  padding-bottom: 40px;}
 .BannerCommonTopLink {position: relative; z-index: 2}
 /* NxtPrvBtn */
@@ -655,7 +654,6 @@ Responsive Media Queries CSS
 	.BlogSliderFeatureImg {  height: 440px; }
 	/* Header V2 */
 	/* Common Banner */
-	.BannerCommonsection {  padding-top: 40px;  padding-right: 40px; margin-top: 75px; }
 	/* Report */
 	.ReportParent .SectionContent {  max-width: 630px; }
 	/* Counter V3 */
@@ -819,6 +817,7 @@ Responsive Media Queries CSS
 /*-=-=-  Mobile Devices -=-=-*/
 @media (max-width:767px ) {
   
+  
 	h1 { font-size:32px; }
 	h2 { font-size:28px; }
 	h3 { font-size:22px; }
@@ -894,7 +893,6 @@ Responsive Media Queries CSS
 	.SlideTitleContentBox .SlideTitle {  padding-left: 40px;  padding-right: 40px;}
 	.ConterTopParent ul{ gap: 25px; }
 	/* Banner Common */
-	.BannerCommonsection {  padding-top: 20px;  padding-right: 15px;}
 	/*  */
 	.listStyleDoubleAngle ul li:before {  width: 20px;  height: 15px;  background-size: 80%;}
 	.listStyleDoubleAngle ul li {  padding-left: 30px; }

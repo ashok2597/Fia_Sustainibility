@@ -7,7 +7,6 @@ if(!empty($project_main_image)){ ?>
 }
 ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("main_image_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

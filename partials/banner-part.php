@@ -1,6 +1,4 @@
-<!-- Banner Section -->
 <section class="BannerCommonsection themeBg">
-  <!-- <div class="BannerCommonInnerParent bg" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"> -->
   <div class="BannerCommonInnerParent bg">
     <div class="wrapper">
 

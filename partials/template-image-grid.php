@@ -9,11 +9,12 @@
  * This can be seen live on the link below:
  * https://sustainability.fia.axon.host/members/survey-2022/
  * Use password: FIAsus2023! 
+ * 
+ * PS: Using this type of comment inside PHP tags doesn't output to the DOM
  *  
 */
 
 ?>
-<!-- Image Grid Repeater Section -->
 <?php $image_grid_repeater = get_field('image_grid_repeater'); ?>
 <?php if($image_grid_repeater): ?>
 <section class="ImageGridSection pt60">
@@ -33,7 +34,6 @@
 </section>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("image_grid_repeater_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

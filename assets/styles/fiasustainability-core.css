@@ -960,6 +960,7 @@ a {
      -moz-user-select: none;
           user-select: none;
 }
+
 section.headerSectionMain {
   background: hsl(0, 0%, 100%);
   position: fixed;
@@ -1312,6 +1313,9 @@ section.headerSectionMain {
     padding: 10px 50px 10px 15px;
     border-top: 1px solid hsl(0, 0%, 100%) !important;
   }
+  .navbar ul li.childmenu:first-child a {
+    border-top: 0;
+  }
   .navbar ul li:last-child {
     padding: 0;
   }
@@ -1398,7 +1402,6 @@ section.headerSectionMain {
   list-style: none;
 } /* put listStyle class to "parent" tag of "ul" */
 .V2headerSection {
-  position: sticky;
   top: 0;
   top: var(--wp-admin-bar-height);
   top: calc(75px + 0);
@@ -1417,7 +1420,6 @@ section.headerSectionMain {
   }
 }
 
-/* Header Version 2 */
 .V2navbar ul li a {
   font-size: 18px;
   text-transform: uppercase;
@@ -1508,6 +1510,9 @@ section.headerSectionMain {
     display: block;
     width: 100%;
   }
+  .V2navbar ul li:last-child {
+    padding: 0;
+  }
   .V2navbar ul.V2-dropdown-menu {
     width: 100%;
     background-color: hsla( 226, 29%, 9%, 1 );
@@ -1524,25 +1529,25 @@ section.headerSectionMain {
     background: hsla( var(--hi-c-foreground-hsl), 1 );
   }
 }
+.V2headerSection {
+  position: fixed;
+  width: 100%;
+  top: 75px;
+  top: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 991px) {
-  a.V2expandMenu i:first-child {
-    margin-top: 0;
-  }
   a.V2expandMenu {
     width: 30px;
-    height: 30px;
     display: block;
     cursor: pointer;
-    padding: 3px;
-    position: absolute;
-    top: 35px;
-    left: 15px;
-    transform: translateY(-50%);
   }
   a.V2expandMenu i {
     position: relative;
     width: 30px;
-    left: 0;
     height: 4px;
     opacity: 1;
     display: block;
@@ -1612,7 +1617,6 @@ section.headerSectionMain {
   }
 }
 @media (max-width: 991px) {
-  /*mega menu css*/
   .LogoMenuMain {
     position: initial;
     justify-content: space-between;
@@ -2139,6 +2143,26 @@ video#hero-video {
   align-items: center;
 }
 
+.BannerCommonsection {
+  padding-top: 57px;
+  padding-right: 48px;
+  position: relative;
+  margin-top: calc(75px + 100px);
+  margin-top: calc(var(--nav-height) + 100px);
+}
+
+@media (max-width: 1699px) {
+  .BannerCommonsection {
+    padding-top: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .BannerCommonsection {
+    padding-top: 20px;
+    padding-right: 15px;
+  }
+}
 .contentWysiwyg > * + * {
   margin-top: 2em;
 }
@@ -2660,14 +2684,10 @@ main.article-page-wrapper {
 .sectionNextPrevNew {
   padding: 2.4rem 0;
   padding: var(--size-lg) 0;
-  overflow: hidden;
   position: sticky;
   width: 100%;
   height: 100%;
   top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4172,13 +4192,6 @@ textarea:focus, input[type=text]:focus, input[type=number]:focus, input[type=ema
 }
 
 /* Common Banner */
-.BannerCommonsection {
-  padding-top: 57px;
-  padding-right: 48px;
-  position: relative;
-  margin-top: 143px;
-}
-
 .BannerCommonContentMain {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -4772,11 +4785,6 @@ Responsive Media Queries CSS
   }
   /* Header V2 */
   /* Common Banner */
-  .BannerCommonsection {
-    padding-top: 40px;
-    padding-right: 40px;
-    margin-top: 75px;
-  }
   /* Report */
   .ReportParent .SectionContent {
     max-width: 630px;
@@ -5466,10 +5474,6 @@ Responsive Media Queries CSS
     gap: 25px;
   }
   /* Banner Common */
-  .BannerCommonsection {
-    padding-top: 20px;
-    padding-right: 15px;
-  }
   /*  */
   .listStyleDoubleAngle ul li:before {
     width: 20px;

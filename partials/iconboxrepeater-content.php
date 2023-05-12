@@ -1,4 +1,3 @@
-<!-- Title Icon -->
 <?php if (have_rows('cc_icon_box')) : ?>
   <div class="IconTitleNewV3Section">
     <div class="wrapper">
@@ -31,7 +30,6 @@
   </div>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("icon_box_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

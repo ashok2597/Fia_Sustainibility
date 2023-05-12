@@ -176,3 +176,25 @@ video#hero-video {
     align-items: center;
   }
 }
+
+.BannerCommonsection {  
+  padding-top: 57px;
+  padding-right: 48px;
+  position: relative;
+  margin-top: calc(var(--nav-height) + 100px);
+}
+
+@media (max-width:1699px ){
+  .BannerCommonsection {  
+    padding-top: 40px;
+    padding-right: 40px;
+    // margin-top: 75px;
+  }
+}
+
+@media (max-width:767px ) {
+  .BannerCommonsection {  
+    padding-top: 20px;
+    padding-right: 15px;
+  }
+}

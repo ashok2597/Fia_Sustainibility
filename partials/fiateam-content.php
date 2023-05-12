@@ -1,6 +1,3 @@
- <!-- AlterNateSection -->
- <!-- Wysiswyg after -->
-
 <?php if (have_rows('fia_team')) : ?>
   <section class="AlternateSection pt60 ">
     <div class="wrapper">
@@ -46,7 +43,6 @@
   </section>
  <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("image_box_block_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

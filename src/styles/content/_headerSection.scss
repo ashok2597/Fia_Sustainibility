@@ -1,31 +1,4 @@
-// @Pratiksha / @WebOccult
-// TODO: Please note all commented out scss is not included when we run 'npm run prod' to build the production ready compilation
-
-// .HeaderSection { // This was mispelled as .HeaderSection when it should be .headerSection
-//   position: relative;
-//   background-color: color('foreground');
-//   top:0;
-//   left:0;
-//   right:0;
-//   text-transform: uppercase;
-//   z-index: 9999;
-//   position: fixed;
-//   width: 100%;
-//   transition: all 0.3s;
-//   -webkit-transition: all 0.3s;
-//   padding: 20px 0 0;
-// }
-
-* {
-  // border: 1px solid red;
-}
-
 .headerSection {
-  // box-shadow: 0px 1px 5px color('foreground', .25);
-
-  .wrapper {
-    // max-width: 100%;
-  }
   user-select: none;
 } 
 
@@ -33,7 +6,6 @@ section.headerSectionMain {
   background: color('white');
   position: fixed;
   box-shadow: 0px 1px 5px color('foreground', .25);
-  // z-index: 99; // @Pratiksha added this to z-index.scss
   width: 100vw;
   top: 0; // Fallback
   top: var(--wp-admin-bar-height);
@@ -53,14 +25,11 @@ section.headerSectionMain {
 }
 
 .headerlogo {
-  // width: 200px;
-  // padding: 20px 0;
   @media (min-width: 1700px) {
     width: 413px;
     padding: 32px 0; 
   }
   img {
-    // height: 39px;
     height: 100%;
     width: auto;
   }
@@ -90,9 +59,7 @@ section.headerSectionMain {
   }
   @media(min-width: 992px) {
     display: none;
-    // background: linear-gradient(290.45deg, rgba(4, 19, 35, 0.95) 0%, #041323 100.89%);
     background: color('foreground');
-    // background: color('accent', .5);
     position: absolute;
     left: 0;
     right: 0;
@@ -107,7 +74,6 @@ section.headerSectionMain {
     margin-top: 0;
     a { 
       font-size: 38px;
-      // color: color('background', .5); 
       color: contrastColor('foreground', .5);
       // TODO: @Pratiksha / WebOccult please note above the use of contrastColor as specified in colours.scss
       // Test changing the foreground and background colours in the colours.scss file and you will see the result
@@ -149,36 +115,14 @@ section.headerSectionMain {
     bottom: 0;
     left: 0;
     right: 0;
-    // background: color('accent', .5);
     background: radial-gradient(100% 221.79% at 0% 100%, color('foreground', 1) 0%, color('foreground', 0) 100%);
   }
 }
 
 @media (min-width:992px ) {
 
-  // TODO: @Pratiksha / WebOccult: See below from plain css
   .sublevelTop>li>a:hover:after, .sublevelTop>li>a.open::after{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
-
-  // TO scss:
-  // .sublevelTop {
-  //   > li {
-  //     > a{
-  //       color: color('background');
-  //       &:hover{
-  //         &:after {
-  //           background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-  //         }           
-  //       }
-  //       &.open {
-  //         &:after {
-  //           background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='27' viewBox='0 0 17 27' fill='none'%3E%3Cpath d='M1.62988 25.6152L15.3442 13.6152L1.62988 1.61523' stroke='%2364D855' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
   
-
 	.sublevelInner {
     width: calc(100% + 23%);
     padding-right: 0;
@@ -190,8 +134,6 @@ section.headerSectionMain {
 	.sublevelInner:before {  content: '';
     position: absolute;
     background: contrastColor('foreground', .5);
-    // TODO: @Pratiksha / WebOccult please note above the use of contrastColor as specified in colours.scss
-      // Test changing the foreground and background colours in the colours.scss file and you will see the result
     pointer-events: none;
     right: auto;
     left: 0;
@@ -226,7 +168,6 @@ section.headerSectionMain {
     font-size: 24px;
   }
 }
-// 
 
 @media (max-width:991px ) {
   .HeadPostBoxMain li, .sublevelInner li a {  background-color: color('foreground') !important;
@@ -276,9 +217,6 @@ section.headerSectionMain {
 }
 
 .navbar {
-  // a {
-  //   // text-transform: uppercase;
-  // }
   > ul {
     > li {
       position: relative;
@@ -350,12 +288,6 @@ section.headerSectionMain {
           
           a {
             background-color: color('black') !important; //
-            // position: relative;
-            // display: block;
-            // background: color('accent');
-            // color: color('background');
-            // padding: 10px 15px;
-            // border-top: 1px solid color('background') !important;
           }
           &:last-child {
             padding: 0;
@@ -399,6 +331,14 @@ section.headerSectionMain {
           padding: 10px 50px 10px 15px;
           border-top: 1px solid color('white') !important;
         }
+        &.childmenu {
+
+          &:first-child {
+            a {
+              border-top: 0;
+            }
+          }
+        }
         &:last-child {
           padding: 0; 
         }
@@ -413,7 +353,6 @@ section.headerSectionMain {
     }
   }
   @media (min-width: 992px) {
-    // position: initial;   
     .Megachildmenu {
       position: initial;
     }
@@ -464,11 +403,6 @@ section.headerSectionMain {
 
 .V2navbar ul li a{ 
   @media (max-width:991px ) {
-    // position: relative;
-    // display: block;
-    // background: #36424f;
-    // color: #fff;
-    // border-top: 1px solid #fff !important;
     padding: 10px 15px;
   }
 }
@@ -476,14 +410,6 @@ section.headerSectionMain {
 @media (min-width: 1230px) and (min-width: 992px) {
   .V2navbar ul li a{ 
     font-size: 17px; 
-    // @media (max-width:991px ) {
-    //   // position: relative;
-    //   // display: block;
-    //   // background: #36424f;
-    //   // color: #fff;
-    //   // border-top: 1px solid #fff !important;
-    //   padding: 10px 15px;
-    // }
   }
 	.V2navbar>ul>li {
     padding: .5em;
@@ -503,44 +429,25 @@ section.headerSectionMain {
 .noListStyle ul, .listStyleDoubleAngle ul, .listStyle ul, .listStyleDisk ul { margin:0; padding:0; list-style:none; } /* put listStyle class to "parent" tag of "ul" */
 
 .V2headerSection { 
-  // height: 65px;
   @media (max-width:991px ) {
     height: 65px;
-  }
-  // position: relative; 
-  position: sticky; 
+  } 
   top: var(--wp-admin-bar-height); // Fallback when no WP bar is present
   top: calc(#{var(--nav-height)} + #{var(--wp-admin-bar-height)});
   box-shadow: 0px 1px 5px color('foreground', .25);
-  // top: 145px;
   background: color('foreground', .75);
   backdrop-filter: blur(15px);
   z-index: 3;
-  // @media(max-width: 1699px) {
-  //   top: 80px; 
-  // }
-  // @media(max-with: 991px) {
-  //   height: 65px;
-  // }
 }
 
-/* Header Version 2 */
 .V2navbar ul li a {  font-size: 18px;  text-transform: uppercase;  font-weight: 300;  color:color('background');}
 .V2navbar ul.V2-dropdown-menu li a{ color: #fff; }
 .V2navbar>ul li:hover>a{ color: color('accent'); }
-// TODO: Sub nav issue
-.V2navbar>ul>li{
-  // padding: 1em; 
-  // padding:20px 24px; 
-}
-
 .V2navbar>ul>li:last-child {  padding-right: 10px; }
 .V2navbar ul li { position: relative;  display: inline-block;  transition:all ease 0.3s; -moz-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; -o-transition:all ease 0.3s; 	 }
 
 .V2navbar ul.V2-dropdown-menu {
-  // width: 296px;
   background: color('foreground', .75);
-  // box-shadow: 19px 25px 14px color('foreground', .25);
   box-shadow: 0px 1px 5px color('foreground', .25);
 	backdrop-filter: blur(15px);
   display: block;
@@ -561,16 +468,13 @@ section.headerSectionMain {
   border: 0;
   margin-top: 0;
 }
-// TODO: Sub nav issue
 .V2navbar ul.V2-dropdown-menu li{
   display: block;
   padding: .5em;
-    // padding: 8px 24px;
-      border-bottom: 1px solid #fff;
-    }
+  border-bottom: 1px solid #fff;
+}
 .V2navbar ul.V2-dropdown-menu li:last-child {  border-bottom: 0; }
 
-// TODO: Sub nav issue
 @media(max-width: 991px) {
   .V2navbar {display:none;  width: 100%; margin-right: 0; position: absolute; left: 0; text-align: left; z-index: 99; top: 100%;}
 	.V2navbar ul li{
@@ -578,82 +482,111 @@ section.headerSectionMain {
      display: block;
       float: left;
        width: 100%;
-        // padding:0;
       }
-      // TODO: Sub nav issue
 	.V2navbar ul li a {position: relative;
      display: block;
       background: color('foreground');
        color: #fff;
-        //  padding: 10px 15px;
           border-top: 1px solid #fff !important;
         }
 	.V2navbar ul { display: block; width: 100%;}
-  // TODO: Sub nav issue
 	.V2navbar ul li:last-child {  
-    // padding: 0;
+    padding: 0;
    }
 	.V2navbar ul.V2-dropdown-menu{ width: 100%; background-color: color('foreground'); transition: none; position: static; display: none;}
 
-  // TODO: Sub nav issue
 	.V2navbar ul.V2-dropdown-menu li{
     padding: 0;
   }
 
-	// .V2headerSection{ height: 65px; }
 	.V2navbar ul.V2-dropdown-menu li a {  background: color('foreground'); }
 }
 
-@media (max-width:991px ) {
-	a.V2expandMenu i:first-child { margin-top: 0;}
-	a.V2expandMenu { width: 30px; height: 30px;    display: block;  cursor: pointer; padding: 3px;  position: absolute; top: 35px; left: 15px; transform: translateY(-50%); }
-	// a.V2expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('foreground', .5);  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
-	a.V2expandMenu i { position: relative;  width: 30px;    left: 0;  height: 4px; opacity: 1;  display: block;  background: color('background', 1);  margin: 5px 0;    transition: all ease .3s;    -webkit-transition: all ease .3s;    -moz-transition: all ease .3s;}
-	a.V2expandMenu.active i:first-child { transform: rotate(135deg); -webkit-transform: rotate(135deg);    top: 10px;    position: relative;}
-	a.V2expandMenu.active i:nth-child(2) { position: relative; left: -46px; opacity: 0;}
-	a.V2expandMenu.active i:last-child { transform: rotate(-135deg); -webkit-transform: rotate(-135deg); top: -8px; position: relative;}
+.V2headerSection {
+  position: fixed;
+  width: 100%;
+  top: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width:991px ) {
-
-a.expandMenu {
-  margin-left: 15px;
-  width: 30px;
-  //  height: 30px;
-      display: block;
+	a.V2expandMenu { width: 30px;
+    display: block;
     cursor: pointer;
-   i {
-    width: 100%;
+  }
+	a.V2expandMenu i { 
+    position: relative;
+    width: 30px;
     height: 4px;
-   }
+    opacity: 1;
+    display: block;
+    background: color('background', 1);
+    margin: 5px 0;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+  }
+	a.V2expandMenu.active i:first-child {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    top: 10px;
+    position: relative;
+  }
+	a.V2expandMenu.active i:nth-child(2) {
+    position: relative;
+    left: -46px;
+    opacity: 0;
+  }
+	a.V2expandMenu.active i:last-child { 
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    top: -8px;
+    position: relative;
+  }
 }
-a.expandMenu i { position: relative;
-   opacity: 1;
+
+@media (max-width:991px ) {
+  a.expandMenu {
+    margin-left: 15px;
+    width: 30px;
+    display: block;
+    cursor: pointer;
+    i {
+      width: 100%;
+      height: 4px;
+    }
+  }
+  a.expandMenu i { position: relative;
+    opacity: 1;
     display: block;
     background: color('accent');
     margin: 5px 0;
-      transition: all ease .3s;
-      -webkit-transition: all ease .3s;
-      -moz-transition: all ease .3s;
-}
-a.expandMenu.active i:first-child { transform: rotate(135deg);
-   -webkit-transform: rotate(135deg);
-      top: 10px;
-      position: relative;
-}
-a.expandMenu.active i:nth-child(2) { position: relative;
-   left: -46px;
-   opacity: 0;
-}
-a.expandMenu.active i:last-child { transform: rotate(-135deg);
-   -webkit-transform: rotate(-135deg);
-   top: -8px;
-   position: relative;
-}
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+  }
+  a.expandMenu.active i:first-child {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    top: 10px;
+    position: relative;
+  }
+  a.expandMenu.active i:nth-child(2) {
+    position: relative;
+    left: -46px;
+    opacity: 0;
+  }
+  a.expandMenu.active i:last-child {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    top: -8px;
+    position: relative;
+  }
 }
 
 @media (max-width:991px ) {
-  /*mega menu css*/
 	.LogoMenuMain {position: initial;
     justify-content: space-between;
     align-items: center;

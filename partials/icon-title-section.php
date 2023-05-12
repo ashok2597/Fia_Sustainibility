@@ -1,5 +1,3 @@
-<!-- Icon Section -->
-<!-- <section class="IconTitleSection SectionSpace"> -->
 <?php $icon_title_repeater = get_field('icon_title_repeater'); ?>
 <?php if($icon_title_repeater): ?>
 <section class="IconTitleSection">
@@ -36,7 +34,6 @@
 </section>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("icon_title_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

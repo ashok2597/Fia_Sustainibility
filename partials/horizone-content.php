@@ -1,6 +1,3 @@
-<!-- Title Listing Section -->
-<!-- Wysiswyg after -->
-
 <?php if (have_rows('horizone_sec_card')) : ?>
 <section class="TitleListingSection pt60">
   <div class="wrapper">
@@ -34,7 +31,6 @@
   </section>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("horizone_content");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

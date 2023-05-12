@@ -1,6 +1,3 @@
-<!-- Content Image Group Section -->
-<!-- Wysiswyg after -->
-
 <?php if (have_rows('measurement_counter')): ?>
 <div class="CounterBoxParentV3Part  marginRight pt60" data-aos="fade-up">
 

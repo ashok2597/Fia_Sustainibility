@@ -1,6 +1,3 @@
-<!-- Image Grid -->
-<!-- Wysiswyg after -->
-
 <?php $image_grid_gallery = get_field('image_grid_gallery'); ?>
 <?php if (!empty($image_grid_gallery)) : ?>
   <div class="GrpILogoParentMain  marginRight pt70">
@@ -14,7 +11,6 @@
   </div>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("image_grid_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">

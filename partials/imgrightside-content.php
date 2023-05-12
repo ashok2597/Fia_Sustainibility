@@ -27,7 +27,6 @@ if(!empty($sa_content) && !empty($sa_sub_image)):
   </div>
 <?php endif; ?>
 
-<!-- Single Content section -->
 <?php $get_content = get_field("image_content_columns_content_after");?>
 <?php if (!empty($get_content)):?>
   <section class="SingleContentsection pt60">
