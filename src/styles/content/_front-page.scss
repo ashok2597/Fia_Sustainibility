@@ -18,6 +18,9 @@
     z-index:2;
     position:absolute;
     background: linear-gradient(180deg, color('background', 0) 75%, color('background', 1) 100%);
+    // @media #{$only-phone} {
+      background: linear-gradient(180deg, color('background', 0) 90%, color('background', 1) 100%);
+    // }
   }
   &:after {
     content:'';
@@ -29,6 +32,9 @@
     position:absolute;
     background: color('foreground', .25);
   }
+  .wrapper {
+    // position: relative;
+  }
 }
 
 .BannerVideoParent {
@@ -38,9 +44,9 @@
   right: 0;
   bottom: 0;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   // z-index: 10;
 }
 

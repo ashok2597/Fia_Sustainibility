@@ -5,6 +5,7 @@
     <video id="hero-video" class="video" playsinline="" autoplay="" loop="" muted="" preload="auto">
       <source src="<?php echo get_field("fp-banner_video"); ?>" type="video/mp4">
     </video>
+    
     <div class="VideoContentsMain">
       <div class="wrapper">
         <div class="bannerContentParentMain">

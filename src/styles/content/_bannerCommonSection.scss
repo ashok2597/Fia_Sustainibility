@@ -47,6 +47,8 @@
     height: auto;  background-size: 90% 100%;  padding-top: 30px;  padding-bottom: 30px;}
 }
 
+
+
 .BannerSection {
   position: relative;
   // TODO: @Pratiksha / WebOccult
@@ -65,29 +67,25 @@
       }
     }
   }
-}
-
-// * {
-//   border: 1px solid red;
-// }
-
-@media (max-width:1699px ){
-	.BannerSection {  position: relative; 
-    // height: calc(100vh - 80px);
-    height: calc(100vh - #{var(--nav-height)});
-  }
-}
-
-@media (max-width:991px ) {
-  .BannerSection {  height: 420px; }
-}
-
-@media (max-width:767px ) {
-  .BannerSection {  height: 380px; }
-}
-
-@media (max-width:640px ) {
-	.BannerSection {  height: 310px;}
+  // @media (max-width:1080px ) {
+  //   height: 560px;
+  // }
+  // @media (max-width:1699px ){
+  //   position: relative; 
+  //   height: calc(100vh - #{var(--nav-height)});
+  // }
+  // @media (max-width:991px ) {
+  //   height: 420px;
+  // }
+  
+  // @media (max-width:767px ) {
+  //   height: 380px;
+  // }
+  
+  // @media (max-width:640px ) {
+  //   height: 310px;
+  // }
+  
 }
 
 video#hero-video { 
@@ -107,5 +105,67 @@ video#hero-video {
     height: 100%;
     width: auto;
     margin-left: auto;
+  }
+}
+
+.BannerVideoParent {  
+  // position: absolute;
+    // left: 0;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    overflow: hidden;
+  //  display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+}
+
+.AngleBoxMain {  width: 200px;
+    position: absolute;
+    right: 15px; // mobile padding
+    bottom: 30px;
+    @media #{$tablet} {
+      // right: 0;
+      bottom: 60px;
+    }
+    img {
+      opacity: .75;
+    }
+    .AngleImgTxt {
+      span {
+        font-weight: 400;
+      }
+    }
+}
+.AngleImgTxt span {  display: inline-block;
+    font-size: 24px;
+    // font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 170px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+@media (min-width:1900px ){
+	.BlogSliderFeatureImg {  height: 600px;
+   }
+}
+
+@media (max-width:1230px ) {
+	.AngleBoxMain { width: 100%;
+      max-width: 100px;
+  }
+}
+
+.VideoContentsMain {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  .wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }
