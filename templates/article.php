@@ -8,6 +8,8 @@ include get_template_directory() . '/partials/banner-part.php';
 ?>
 
 <main class="article-page-wrapper">
+  <?php  //include get_template_directory() . '/partials/next-prev-new.php';
+?>
   <section class="ContentImgGrpSection pt80">
     <div class="wrapper">
       <div class="ContentImgGrpParent">

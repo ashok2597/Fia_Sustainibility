@@ -52,7 +52,7 @@
                   ?>
                   <li class="childmenu Megachildmenu childmenu-Mob">
                     <a href="javascript:void(0);"><?php echo $gen_menu_page['title']; ?></a>
-                    <span class="childExpand"><i></i><i></i></span>
+                    <!-- <span class="childExpand"><i></i><i></i></span> -->
                     <ul class="Mega-dropdown-menu dropdown-menu-icon dropdown-mob">
                     <li>
                       <div class="wrapper">

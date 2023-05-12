@@ -495,11 +495,16 @@
   }
 }
 
-.BannerCommonInnerParent {  background-size: 75% 100%;  background-position: right;  height: 514px;}
+// .BannerCommonInnerParent {  
+//   // background-size: 75% 100%;
+//   // background-position: right;
+//   // height: 514px;
+// }
 
 .BannerCommonsection {
   .wrapper {
     position: relative;
+    
     height: 100%;
     padding: 0;
   }
@@ -512,10 +517,17 @@
     bottom: 0;
     // left: 0;
     right: size(lg, -1);
+    @media #{$only-phone} {
+      right: -15px;
+    }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: -1;
+    // &:after {
+    //   content: "";
+    //   display;
+    // }
     &:before {
       content: "";
       display: block;
@@ -572,6 +584,7 @@
 
 main.article-page-wrapper {
   position: relative;
+  padding-bottom: size('lg');
   // z-index: 0;
 }
 
@@ -588,11 +601,14 @@ main.article-page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: size('lg', -2);
+  // margin-bottom: size('lg', -1);
   .wrapper {
     overflow: hidden;
+    
     padding: size('lg') 0;
     max-width: 100%;
-    padding: 0;
+    // padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -659,8 +675,13 @@ main.article-page-wrapper {
     flex-direction: column;
     align-items: flex-start;
     transition: margin 300ms;
+    span {
+      font-size: 1.2rem;
+    }
+    .LabelPageName {
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
   }
-  .LabelPageName {
-    font-weight: 500;
-  }
+  
 }

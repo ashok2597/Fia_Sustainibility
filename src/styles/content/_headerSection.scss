@@ -332,6 +332,9 @@ section.headerSectionMain {
           border-top: 1px solid color('white') !important;
         }
         &.childmenu {
+          // display: flex;
+          // align-items: center;
+          // justify-content: space-between;
 
           &:first-child {
             a {
@@ -429,9 +432,12 @@ section.headerSectionMain {
 .noListStyle ul, .listStyleDoubleAngle ul, .listStyle ul, .listStyleDisk ul { margin:0; padding:0; list-style:none; } /* put listStyle class to "parent" tag of "ul" */
 
 .V2headerSection { 
-  @media (max-width:991px ) {
+  @media #{$upto-desktop-md} {
     height: 65px;
-  } 
+  }
+  // @media (max-width:991px ) {
+  //   height: 65px;
+  // } 
   top: var(--wp-admin-bar-height); // Fallback when no WP bar is present
   top: calc(#{var(--nav-height)} + #{var(--wp-admin-bar-height)});
   box-shadow: 0px 1px 5px color('foreground', .25);
@@ -475,31 +481,54 @@ section.headerSectionMain {
 }
 .V2navbar ul.V2-dropdown-menu li:last-child {  border-bottom: 0; }
 
-@media(max-width: 991px) {
-  .V2navbar {display:none;  width: 100%; margin-right: 0; position: absolute; left: 0; text-align: left; z-index: 99; top: 100%;}
+@media($upto-desktop-md) {
+// @media(max-width: 991px) {
+  .V2navbar {display:none;
+    width: 100%;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    z-index: 99;
+    top: 100%;
+  }
 	.V2navbar ul li{
     position: relative;
-     display: block;
-      float: left;
-       width: 100%;
-      }
-	.V2navbar ul li a {position: relative;
-     display: block;
-      background: color('foreground');
-       color: #fff;
-          border-top: 1px solid #fff !important;
-        }
-	.V2navbar ul { display: block; width: 100%;}
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+	.V2navbar ul li a {
+    position: relative;
+    display: block;
+    background: color('foreground');
+    color: #fff;
+    border-top: 1px solid #fff !important;
+  }
+
+	.V2navbar ul { 
+    display: block;
+    width: 100%;
+  }
 	.V2navbar ul li:last-child {  
     padding: 0;
    }
-	.V2navbar ul.V2-dropdown-menu{ width: 100%; background-color: color('foreground'); transition: none; position: static; display: none;}
+	.V2navbar ul.V2-dropdown-menu{
+    width: 100%;
+    background-color: color('foreground');
+    transition: none;
+    position: static;
+    display: none;
+  }
 
 	.V2navbar ul.V2-dropdown-menu li{
     padding: 0;
   }
 
-	.V2navbar ul.V2-dropdown-menu li a {  background: color('foreground'); }
+	.V2navbar ul.V2-dropdown-menu li a {  
+    background: color('foreground');
+  }
 }
 
 .V2headerSection {
@@ -511,7 +540,8 @@ section.headerSectionMain {
   justify-content: center;
 }
 
-@media (max-width:991px ) {
+@media ($upto-desktop-md ) {
+// @media (max-width:991px ) {
 	a.V2expandMenu { width: 30px;
     display: block;
     cursor: pointer;
@@ -547,6 +577,7 @@ section.headerSectionMain {
   }
 }
 
+// @media ($upto-desktop-md ) {
 @media (max-width:991px ) {
   a.expandMenu {
     margin-left: 15px;
@@ -586,9 +617,43 @@ section.headerSectionMain {
   }
 }
 
-@media (max-width:991px ) {
+@media ($upto-desktop-md ) {
+// @media (max-width:991px ) {
 	.LogoMenuMain {position: initial;
     justify-content: space-between;
     align-items: center;
   }
+}
+
+@media (max-width:991px ) {
+.childExpand { 
+  position: absolute;
+  z-index: 5;
+   top: 10px;
+   right: 10px;
+   width: 32px;
+   text-align: center;
+   height: 32px;
+   margin: 0;
+   padding:6px;
+   cursor:pointer;
+ }
+.childExpand i { position:relative;
+  //  width: 15px;
+   left:0;
+   height: 1px;
+   opacity:1;
+   display: block;
+   background:#fff;
+   margin: 6px 0;
+   transition:all ease 0.3s;
+ }
+.childExpand i + i { position: relative;
+   transform: rotate(90deg);
+   top:-7px;
+ }
+.childExpand.open i { transform: rotate(180deg);
+ }
+.childExpand.open i+i { transform: rotate(360deg);
+ }
 }
