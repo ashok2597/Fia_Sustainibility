@@ -183,3 +183,4 @@ https://www.semrush.com/blog/semantic-html5-guide/
 
 1. Implementations of icons in the backend CMS in ACF (Advanced custom fields) is inconsistent, sometimes (such as homepage mission 3 boxes) the icons are image file uploads, other times (in article page template) the icon is given as a svg code
 
+# Wordpress_Themes
